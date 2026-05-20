@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OpenEnvision | Open Vision Intelligence</title>
+    <meta
+      name="description"
+      content="OpenEnvision is a joint research hub advancing open vision intelligence through academia-industry collaboration."
+    />
+    <meta name="theme-color" content="#080909" />
+    <link rel="icon" href="openenvision_mark.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="home-page" data-page="home">
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="OpenEnvision home">
+        <img class="brand-logo" src="openenvision_mark.png" alt="OpenEnvision logo" />
+        <span>OpenEnvision</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Primary navigation" data-nav>
+        <a href="index.html" data-page-link="home">Home</a>
+        <a href="team.html" data-page-link="team">Team</a>
+        <a href="research.html" data-page-link="research">Research</a>
+        <a href="publications.html" data-page-link="publications">Publications</a>
+        <a href="code-datasets.html" data-page-link="code-datasets">Code | Datasets</a>
+        <a href="join-us.html" data-page-link="join">Join Us</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="home-hero" aria-label="OpenEnvision introduction">
+        <canvas id="starfield" aria-hidden="true"></canvas>
+        <div class="hero-shade" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <p class="eyebrow">Open vision intelligence</p>
+          <h1>OpenEnvision</h1>
+          <p class="hero-copy">
+            OpenEnvision is a joint research hub advancing open vision intelligence through
+            academia-industry collaboration.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-primary" href="research.html">Explore Research</a>
+            <a class="button button-secondary" href="join-us.html">Collaborate</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section statement-section">
+        <div class="statement">
+          <p class="section-kicker">Research hub</p>
+          <h2>Built for work that can be inspected, reproduced, and extended.</h2>
+          <p>
+            The hub connects academic research with industry-scale data, engineering, and deployment
+            feedback. The result is a quiet, practical space for open models, datasets, benchmarks,
+            and visual systems.
+          </p>
+        </div>
+        <div class="metric-strip" aria-label="OpenEnvision overview">
+          <div>
+            <strong>4</strong>
+            <span>research pillars</span>
+          </div>
+          <div>
+            <strong>Open</strong>
+            <span>research artifacts</span>
+          </div>
+          <div>
+            <strong>Global</strong>
+            <span>collaboration network</span>
+          </div>
+          <div>
+            <strong>Shared</strong>
+            <span>community infrastructure</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section preview-section">
+        <div class="section-head">
+          <p class="section-kicker">Research directions</p>
+          <h2>From world models to physically grounded visual systems.</h2>
+        </div>
+
+        <div class="preview-grid">
+          <a class="preview-card" href="research.html#world-model">
+            <span>01</span>
+            <h3>World Model</h3>
+            <p>Predictive representations for temporal dynamics, action, and scene evolution.</p>
+          </a>
+          <a class="preview-card" href="research.html#multimodal-intelligence">
+            <span>02</span>
+            <h3>Multimodal Intelligence</h3>
+            <p>Grounded reasoning across images, video, language, and structured signals.</p>
+          </a>
+          <a class="preview-card" href="research.html#vision-intelligence">
+            <span>03</span>
+            <h3>Vision Intelligence</h3>
+            <p>Visual perception, generation, editing, restoration, and dense understanding.</p>
+          </a>
+          <a class="preview-card" href="research.html#physical-intelligence">
+            <span>04</span>
+            <h3>Physical Intelligence</h3>
+            <p>Embodied data and policies that connect perception with grounded action.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="section home-system-section" aria-labelledby="home-system-title">
+        <div class="home-system-shell">
+          <div class="home-system-copy">
+            <p class="section-kicker">Operating model</p>
+            <h2 id="home-system-title">From open questions to shared research infrastructure.</h2>
+            <p>
+              OpenEnvision treats research as a complete system: precise questions, rigorous
+              modeling, careful evaluation, and releases that other teams can inspect and extend.
+            </p>
+          </div>
+
+          <div class="home-system-flow" aria-label="OpenEnvision operating model">
+            <article>
+              <span>01</span>
+              <div>
+                <h3>Frame</h3>
+                <p>Turn broad capability goals into measurable research questions and shared task definitions.</p>
+              </div>
+            </article>
+            <article>
+              <span>02</span>
+              <div>
+                <h3>Build</h3>
+                <p>Develop models, data pipelines, benchmarks, and tools with reproducibility in mind.</p>
+              </div>
+            </article>
+            <article>
+              <span>03</span>
+              <div>
+                <h3>Verify</h3>
+                <p>Evaluate grounding, fidelity, robustness, utility, and behavior under realistic constraints.</p>
+              </div>
+            </article>
+            <article>
+              <span>04</span>
+              <div>
+                <h3>Release</h3>
+                <p>Publish code, datasets, models, result files, and documentation for community reuse.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section resources-band">
+        <div>
+          <p class="section-kicker">Open artifacts</p>
+          <h2>Models, datasets, and result files are organized for reuse.</h2>
+        </div>
+        <a class="button button-dark" href="code-datasets.html">Browse Code | Datasets</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <a class="footer-brand" href="index.html">OpenEnvision</a>
+        <p>Open vision intelligence through academia-industry collaboration.</p>
+      </div>
+      <div class="footer-links">
+        <a href="team.html">Team</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="code-datasets.html">Code | Datasets</a>
+        <a href="join-us.html">Join Us</a>
+      </div>
+      <p class="footer-copyright">© 2026 OpenEnvision. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

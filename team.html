@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Team | OpenEnvision</title>
+    <meta
+      name="description"
+      content="The OpenEnvision team brings together researchers and builders working on open vision intelligence."
+    />
+    <link rel="icon" href="openenvision_mark.png" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="team">
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="OpenEnvision home">
+        <img class="brand-logo" src="openenvision_mark.png" alt="OpenEnvision logo" />
+        <span>OpenEnvision</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation" data-nav>
+        <a href="index.html" data-page-link="home">Home</a>
+        <a href="team.html" data-page-link="team">Team</a>
+        <a href="research.html" data-page-link="research">Research</a>
+        <a href="publications.html" data-page-link="publications">Publications</a>
+        <a href="code-datasets.html" data-page-link="code-datasets">Code | Datasets</a>
+        <a href="join-us.html" data-page-link="join">Join Us</a>
+      </nav>
+    </header>
+
+    <main class="team-main">
+      <section class="network-section" aria-labelledby="network-title">
+        <div class="network-head">
+          <div>
+            <p class="eyebrow">Collaboration Network</p>
+            <h1 id="network-title">Global partnerships</h1>
+          </div>
+          <p>
+            OpenEnvision collaborates with universities and industry labs across Hong Kong, Mainland
+            China, the United States, and Singapore, while continuing to expand the network for the
+            open vision community.
+          </p>
+        </div>
+
+        <div class="network-shell">
+          <div class="map-card">
+            <div class="map-toolbar" aria-label="Filter collaboration map">
+              <button type="button" class="is-active" data-map-filter="all">All</button>
+              <button type="button" data-map-filter="hong-kong">Hong Kong SAR</button>
+              <button type="button" data-map-filter="mainland-china">Mainland China</button>
+              <button type="button" data-map-filter="united-states">United States</button>
+              <button type="button" data-map-filter="singapore">Singapore</button>
+            </div>
+            <div id="collab-map" class="collab-map" aria-label="Interactive world map of OpenEnvision collaborators"></div>
+          </div>
+
+          <aside class="network-detail" aria-live="polite">
+            <p class="detail-label">Selected region</p>
+            <h2 data-partner-name>OpenEnvision Network</h2>
+            <p data-partner-location>17 collaborators across 4 regions</p>
+            <p data-partner-description>
+              A growing collaboration network linking open vision research, evaluation, and public
+              artifact releases.
+            </p>
+            <div class="network-counts" aria-label="Collaboration summary">
+              <span><strong>17</strong> collaborators</span>
+              <span><strong>4</strong> regions</span>
+              <span><strong>3</strong> industry labs</span>
+            </div>
+          </aside>
+        </div>
+
+        <div class="partner-strip" aria-label="Partner regions">
+          <div>
+            <span>Hong Kong, China</span>
+            <p>HKU · CUHK · HKUST</p>
+          </div>
+          <div>
+            <span>Mainland China</span>
+            <p>PKU · THU · ZJU · SJTU · HKUST(GZ) · CUHK(SZ) · ByteDance Seed</p>
+          </div>
+          <div>
+            <span>United States</span>
+            <p>PrincetonU · UCSD · UIUC · Adobe · Meta</p>
+          </div>
+          <div>
+            <span>Singapore</span>
+            <p>NTU · NUS</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="team-showcase" aria-labelledby="team-title">
+        <div class="team-title-block">
+          <p class="eyebrow">OpenEnvision</p>
+          <h1 id="team-title">Team</h1>
+        </div>
+
+        <div class="team-roster" aria-label="OpenEnvision members">
+          <article class="team-member team-member-featured">
+            <div class="member-index">01</div>
+            <div class="member-portrait">JT</div>
+            <div class="member-copy">
+              <p>OpenEnvision Member</p>
+              <h2>Juanxi Tian</h2>
+              <div class="member-tags" aria-label="Member tags">
+                <span>OpenEnvision</span>
+                <span>Member</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-member">
+            <div class="member-index">02</div>
+            <div class="member-portrait">FL</div>
+            <div class="member-copy">
+              <p>OpenEnvision Member</p>
+              <h2>Fengyuan Liu</h2>
+              <div class="member-tags" aria-label="Member tags">
+                <span>OpenEnvision</span>
+                <span>Member</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-member">
+            <div class="member-index">03</div>
+            <div class="member-portrait">HJ</div>
+            <div class="member-copy">
+              <p>OpenEnvision Member</p>
+              <h2>Hou Jiadong</h2>
+              <div class="member-tags" aria-label="Member tags">
+                <span>OpenEnvision</span>
+                <span>Member</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-member">
+            <div class="member-index">04</div>
+            <div class="member-portrait">XL</div>
+            <div class="member-copy">
+              <p>OpenEnvision Member</p>
+              <h2>Xin Lin</h2>
+              <div class="member-tags" aria-label="Member tags">
+                <span>OpenEnvision</span>
+                <span>Member</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <a class="footer-brand" href="index.html">OpenEnvision</a>
+        <p>Open vision intelligence through academia-industry collaboration.</p>
+      </div>
+      <div class="footer-links">
+        <a href="team.html">Team</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="code-datasets.html">Code | Datasets</a>
+        <a href="join-us.html">Join Us</a>
+      </div>
+      <p class="footer-copyright">© 2026 OpenEnvision. All rights reserved.</p>
+    </footer>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="data/highlight-countries.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Code | Datasets | OpenEnvision</title>
+    <meta
+      name="description"
+      content="OpenEnvision resource hub for code, models, datasets, benchmarks, and reproducible research artifacts."
+    />
+    <link rel="icon" href="openenvision_mark.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="code-datasets">
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="OpenEnvision home">
+        <img class="brand-logo" src="openenvision_mark.png" alt="OpenEnvision logo" />
+        <span>OpenEnvision</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation" data-nav>
+        <a href="index.html" data-page-link="home">Home</a>
+        <a href="team.html" data-page-link="team">Team</a>
+        <a href="research.html" data-page-link="research">Research</a>
+        <a href="publications.html" data-page-link="publications">Publications</a>
+        <a href="code-datasets.html" data-page-link="code-datasets">Code | Datasets</a>
+        <a href="join-us.html" data-page-link="join">Join Us</a>
+      </nav>
+    </header>
+
+    <main class="resources-main">
+      <section class="resources-hero" aria-labelledby="resources-title">
+        <div class="resources-hero-inner">
+          <div class="resources-hero-copy">
+            <p class="eyebrow">Code | Datasets</p>
+            <h1 id="resources-title">Open Resources.</h1>
+            <p>
+              OpenEnvision organizes research artifacts as clean, reusable releases. Code,
+              checkpoints, datasets, evaluation files, and documentation are treated as part of the
+              same scientific record.
+            </p>
+            <nav class="resource-anchors" aria-label="Resource sections">
+              <a href="#resource-types">Resource Types</a>
+              <a href="#catalog-preview">Catalog Preview</a>
+              <a href="#release-workflow">Release Workflow</a>
+              <a href="#release-standards">Standards</a>
+            </nav>
+          </div>
+
+          <aside class="resource-console" aria-label="Open resource release overview">
+            <div class="console-top">
+              <span>OpenEnvision Resource Hub</span>
+              <strong>curating</strong>
+            </div>
+            <div class="console-window" aria-hidden="true">
+              <div class="console-line console-line-long"></div>
+              <div class="console-line"></div>
+              <div class="console-line console-line-short"></div>
+              <div class="console-grid">
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+            </div>
+            <div class="console-status">
+              <div>
+                <span>Scope</span>
+                <strong>code · models · data</strong>
+              </div>
+              <div>
+                <span>Format</span>
+                <strong>documented releases</strong>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="resource-types-section" id="resource-types" aria-labelledby="resource-types-title">
+        <div class="resource-section-head">
+          <div>
+            <p class="section-kicker">Resource Types</p>
+            <h2 id="resource-types-title">A release surface for every part of the research stack.</h2>
+          </div>
+          <p>
+            Rather than listing individual projects here, this page defines the resource categories
+            OpenEnvision uses for future public releases.
+          </p>
+        </div>
+
+        <div class="resource-type-grid">
+          <article class="resource-type-card resource-code-card">
+            <span class="resource-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M18 14L8 24l10 10"></path>
+                <path d="M30 14l10 10-10 10"></path>
+                <path d="M27 10l-6 28"></path>
+              </svg>
+            </span>
+            <p>01</p>
+            <h3>Code</h3>
+            <span>
+              Training, evaluation, data processing, and visualization code prepared with clear
+              dependencies, runnable entry points, and minimal setup friction.
+            </span>
+          </article>
+
+          <article class="resource-type-card resource-model-card">
+            <span class="resource-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <rect x="9" y="10" width="30" height="28" rx="4"></rect>
+                <path d="M16 18h16"></path>
+                <path d="M16 24h10"></path>
+                <path d="M16 30h14"></path>
+              </svg>
+            </span>
+            <p>02</p>
+            <h3>Models</h3>
+            <span>
+              Checkpoints, adapters, model cards, intended-use notes, and evaluation summaries for
+              released systems.
+            </span>
+          </article>
+
+          <article class="resource-type-card resource-data-card">
+            <span class="resource-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M10 15c0-4 28-4 28 0v18c0 4-28 4-28 0V15Z"></path>
+                <path d="M10 15c0 4 28 4 28 0"></path>
+                <path d="M10 24c0 4 28 4 28 0"></path>
+              </svg>
+            </span>
+            <p>03</p>
+            <h3>Datasets</h3>
+            <span>
+              Curated multimodal, temporal, spatial, and embodied data with task definitions,
+              metadata, splits, and responsible-use notes.
+            </span>
+          </article>
+
+          <article class="resource-type-card resource-benchmark-card">
+            <span class="resource-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M12 35h24"></path>
+                <path d="M15 31V18"></path>
+                <path d="M24 31V12"></path>
+                <path d="M33 31V22"></path>
+                <circle cx="24" cy="12" r="3"></circle>
+              </svg>
+            </span>
+            <p>04</p>
+            <h3>Benchmarks & Results</h3>
+            <span>
+              Evaluation protocols, leaderboards, result files, metric definitions, and comparison
+              artifacts for reproducible analysis.
+            </span>
+          </article>
+        </div>
+      </section>
+
+      <section class="catalog-preview-section" id="catalog-preview" aria-labelledby="catalog-preview-title">
+        <div class="catalog-preview-panel">
+          <div class="catalog-preview-copy">
+            <p class="section-kicker">Catalog Preview</p>
+            <h2 id="catalog-preview-title">A clean release index without exposing incomplete project pages.</h2>
+            <p>
+              The public catalog is being organized around reusable release entries. Each entry will
+              pair the research claim with the exact files, documentation, and evaluation evidence
+              needed for reuse.
+            </p>
+          </div>
+
+          <div class="catalog-board" aria-label="Planned release catalog structure">
+            <div class="catalog-board-head">
+              <span>Release Entry</span>
+              <span>Status</span>
+            </div>
+            <div class="catalog-row">
+              <div>
+                <strong>Code package</strong>
+                <p>setup · scripts · configs</p>
+              </div>
+              <em>template</em>
+            </div>
+            <div class="catalog-row">
+              <div>
+                <strong>Data card</strong>
+                <p>metadata · splits · policy</p>
+              </div>
+              <em>template</em>
+            </div>
+            <div class="catalog-row">
+              <div>
+                <strong>Evaluation packet</strong>
+                <p>metrics · logs · result files</p>
+              </div>
+              <em>template</em>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="release-workflow-section" id="release-workflow" aria-labelledby="release-workflow-title">
+        <div class="release-workflow-panel">
+          <div class="release-workflow-copy">
+            <p class="section-kicker">Release Workflow</p>
+            <h2 id="release-workflow-title">From internal experiments to public resources.</h2>
+            <p>
+              Every release is prepared to make the surrounding research legible: what data was
+              used, what model behavior was measured, what claims are supported, and what artifacts
+              can be reused.
+            </p>
+          </div>
+          <div class="release-steps" aria-label="OpenEnvision release workflow">
+            <div>
+              <span>01</span>
+              <h3>Package</h3>
+              <p>Collect code, data manifests, checkpoints, configuration, and result files.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <h3>Document</h3>
+              <p>Write usage scope, metadata, limitations, evaluation setup, and citation details.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <h3>Verify</h3>
+              <p>Check links, file structure, minimal loading paths, and reproducibility notes.</p>
+            </div>
+            <div>
+              <span>04</span>
+              <h3>Publish</h3>
+              <p>Release stable artifacts with a clear version, license, and update path.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="release-standards-section" id="release-standards" aria-labelledby="release-standards-title">
+        <div class="release-standards-head">
+          <p class="section-kicker">Standards</p>
+          <h2 id="release-standards-title">What every public resource should make clear.</h2>
+        </div>
+        <div class="release-standards-grid">
+          <div>
+            <span>Version</span>
+            <p>Stable identifiers, update notes, and compatibility expectations.</p>
+          </div>
+          <div>
+            <span>Scope</span>
+            <p>Intended use, task definitions, data coverage, and known limitations.</p>
+          </div>
+          <div>
+            <span>Evidence</span>
+            <p>Evaluation settings, metrics, result files, and comparison context.</p>
+          </div>
+          <div>
+            <span>Reuse</span>
+            <p>License, citation, file layout, and practical loading instructions.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <a class="footer-brand" href="index.html">OpenEnvision</a>
+        <p>Open vision intelligence through academia-industry collaboration.</p>
+      </div>
+      <div class="footer-links">
+        <a href="team.html">Team</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="code-datasets.html">Code | Datasets</a>
+        <a href="join-us.html">Join Us</a>
+      </div>
+      <p class="footer-copyright">© 2026 OpenEnvision. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

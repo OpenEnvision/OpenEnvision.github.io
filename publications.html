@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Publications | OpenEnvision</title>
+    <meta
+      name="description"
+      content="OpenEnvision publications with papers, models, project pages, and reusable research artifacts."
+    />
+    <link rel="icon" href="openenvision_mark.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="publications">
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="OpenEnvision home">
+        <img class="brand-logo" src="openenvision_mark.png" alt="OpenEnvision logo" />
+        <span>OpenEnvision</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation" data-nav>
+        <a href="index.html" data-page-link="home">Home</a>
+        <a href="team.html" data-page-link="team">Team</a>
+        <a href="research.html" data-page-link="research">Research</a>
+        <a href="publications.html" data-page-link="publications">Publications</a>
+        <a href="code-datasets.html" data-page-link="code-datasets">Code | Datasets</a>
+        <a href="join-us.html" data-page-link="join">Join Us</a>
+      </nav>
+    </header>
+
+    <main class="publications-main">
+      <section class="publications-hero" aria-labelledby="publications-title">
+        <div class="publications-hero-inner">
+          <div class="publications-hero-copy">
+            <p class="eyebrow">Publications</p>
+            <h1 id="publications-title">Publications.</h1>
+            <p>
+              Papers are paired with the artifacts needed to inspect, reproduce, and extend the work.
+            </p>
+            <nav class="publication-anchors" aria-label="Publication page navigation">
+              <a href="#featured-publication-title">Featured</a>
+              <a href="#publication-index-title">Index</a>
+              <a href="code-datasets.html">Artifacts</a>
+            </nav>
+          </div>
+
+          <aside class="publication-record-panel" aria-label="Publication overview">
+            <div class="publication-record-top">
+              <span>OpenEnvision Library</span>
+              <strong>Research record</strong>
+            </div>
+
+            <div class="publication-record-feature">
+              <span>Featured paper</span>
+              <h2>Auto-Rubric as Reward</h2>
+              <p>From implicit preferences to explicit multimodal generative criteria.</p>
+            </div>
+
+            <div class="publication-record-list" aria-label="Attached publication artifacts">
+              <div>
+                <span>Manuscript</span>
+                <strong>arXiv 2605.08354</strong>
+              </div>
+              <div>
+                <span>Artifacts</span>
+                <strong>Model and release files</strong>
+              </div>
+              <div>
+                <span>Project page</span>
+                <strong>Public research record</strong>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="publication-feature-section" aria-labelledby="featured-publication-title">
+        <div class="publication-section-head">
+          <div>
+            <p class="section-kicker">Featured Publication</p>
+            <h2 id="featured-publication-title">Selected work</h2>
+          </div>
+          <p>
+            The list is intentionally conservative: only released OpenEnvision papers are shown, with
+            artifact links attached where they are public.
+          </p>
+        </div>
+
+        <article class="publication-featured-card">
+          <div class="publication-year-block">
+            <div class="year-block-meta">
+              <span>2026</span>
+              <strong>arXiv</strong>
+              <em>2605.08354</em>
+            </div>
+            <div class="publication-mini-figure" aria-hidden="true">
+              <div class="mini-figure-head">
+                <span>Criteria</span>
+                <span>Reward</span>
+              </div>
+              <i class="mini-bar mini-bar-one"></i>
+              <i class="mini-bar mini-bar-two"></i>
+              <i class="mini-bar mini-bar-three"></i>
+              <div class="mini-node-row">
+                <b></b>
+                <b></b>
+                <b></b>
+              </div>
+            </div>
+          </div>
+
+          <div class="publication-feature-copy">
+            <div class="publication-tags" aria-label="Research areas">
+              <span>Multimodal Intelligence</span>
+              <span>Vision Intelligence</span>
+              <span>Generative Criteria</span>
+            </div>
+            <h3>Auto-Rubric as Reward: From Implicit Preferences to Explicit Multimodal Generative Criteria</h3>
+            <p class="publication-authors">
+              Juanxi Tian, Fengyuan Liu, Jiaming Han, Yilei Jiang, Yongliang Wu, Yesheng Liu,
+              Haodong Li, Furong Xu, Wanhua Li
+            </p>
+            <p>
+              ARR turns implicit visual preferences into explicit multimodal rubrics, then uses
+              Rubric Policy Optimization to improve text-to-image generation and image editing. The
+              work emphasizes inspectable criteria, reusable reward structure, and artifact-backed
+              evaluation.
+            </p>
+
+            <div class="publication-insight-panel" aria-label="Publication contribution summary">
+              <div>
+                <span>Key Idea</span>
+                <p>Convert human visual preference into explicit criteria that can be read, audited, and reused.</p>
+              </div>
+              <div>
+                <span>Reusable Artifact</span>
+                <p>Released model artifacts support generation and editing experiments built around rubric rewards.</p>
+              </div>
+            </div>
+
+            <div class="publication-facts" aria-label="Publication highlights">
+              <div>
+                <span>Method</span>
+                <strong>Rubric Policy Optimization</strong>
+              </div>
+              <div>
+                <span>Tasks</span>
+                <strong>Generation · Editing</strong>
+              </div>
+              <div>
+                <span>Release</span>
+                <strong>Paper · Model · Project</strong>
+              </div>
+            </div>
+
+            <div class="publication-actions" aria-label="Publication links">
+              <a href="https://arxiv.org/abs/2605.08354" target="_blank" rel="noreferrer">Paper</a>
+              <a href="https://huggingface.co/OpenEnvisionLab/Auto-Rubric-as-Reward" target="_blank" rel="noreferrer">
+                Model
+              </a>
+              <a href="https://openenvision.github.io/" target="_blank" rel="noreferrer">Project</a>
+            </div>
+
+            <details class="publication-bibtex">
+              <summary>
+                <span>BibTeX</span>
+                <strong>@misc</strong>
+              </summary>
+              <pre>@misc{tian2026autorubricreward,
+  title={Auto-Rubric as Reward: From Implicit Preferences to Explicit Multimodal Generative Criteria},
+  author={Juanxi Tian and Fengyuan Liu and Jiaming Han and Yilei Jiang and Yongliang Wu and Yesheng Liu and Haodong Li and Furong Xu and Wanhua Li},
+  year={2026},
+  eprint={2605.08354},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}</pre>
+            </details>
+          </div>
+        </article>
+      </section>
+
+      <section class="publication-index-section" aria-labelledby="publication-index-title">
+        <div class="publication-section-head compact-head">
+          <div>
+            <p class="section-kicker">Index</p>
+            <h2 id="publication-index-title">Publication list</h2>
+          </div>
+        </div>
+
+        <div class="publication-index">
+          <article class="publication-index-row">
+            <div class="index-year">2026</div>
+            <div class="index-main">
+              <p>arXiv 2605.08354</p>
+              <h3>Auto-Rubric as Reward</h3>
+              <span>Explicit multimodal generative criteria for visual generation and editing.</span>
+            </div>
+            <div class="index-links">
+              <a href="https://arxiv.org/abs/2605.08354" target="_blank" rel="noreferrer">Paper</a>
+              <a href="https://huggingface.co/OpenEnvisionLab/Auto-Rubric-as-Reward" target="_blank" rel="noreferrer">
+                Artifact
+              </a>
+            </div>
+          </article>
+
+          <div class="publication-next">
+            <p class="section-kicker">Coming Next</p>
+            <h3>Additional OpenEnvision papers will appear here as projects are released.</h3>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <a class="footer-brand" href="index.html">OpenEnvision</a>
+        <p>Open vision intelligence through academia-industry collaboration.</p>
+      </div>
+      <div class="footer-links">
+        <a href="team.html">Team</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="code-datasets.html">Code | Datasets</a>
+        <a href="join-us.html">Join Us</a>
+      </div>
+      <p class="footer-copyright">© 2026 OpenEnvision. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
