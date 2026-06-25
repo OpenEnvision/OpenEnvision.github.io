@@ -46,13 +46,106 @@ let width = 0;
 let height = 0;
 let animationFrame = null;
 let stars = [];
-let dust = [];
+
+initNewsMonthAnimations();
 
 if (canvas) {
   ctx = canvas.getContext("2d");
   startStars();
   window.addEventListener("resize", restartStars);
   reduceMotion.addEventListener("change", restartStars);
+}
+
+function initNewsMonthAnimations() {
+  const months = [...document.querySelectorAll(".news-month")];
+  if (!months.length) return;
+
+  months.forEach((month) => {
+    const summary = month.querySelector(".news-month-summary");
+    const list = month.querySelector(".news-month-list");
+    if (!summary || !list) return;
+
+    list.style.overflow = "hidden";
+
+    summary.addEventListener("click", (event) => {
+      event.preventDefault();
+      if (month.dataset.animating === "true") return;
+      animateNewsMonth(month, list, !month.classList.contains("is-open"));
+    });
+  });
+}
+
+function animateNewsMonth(month, list, shouldOpen) {
+  if (reduceMotion.matches) {
+    setNewsMonthState(month, shouldOpen);
+    resetNewsMonthList(list);
+    return;
+  }
+
+  list.getAnimations().forEach((animation) => animation.cancel());
+  month.dataset.animating = "true";
+  month.classList.add("is-animating");
+
+  if (shouldOpen) {
+    setNewsMonthState(month, true);
+    const targetHeight = list.scrollHeight;
+    runNewsMonthAnimation(month, list, true, 0, targetHeight);
+    return;
+  }
+
+  runNewsMonthAnimation(month, list, false, list.offsetHeight, 0);
+}
+
+function runNewsMonthAnimation(month, list, shouldStayOpen, fromHeight, toHeight) {
+  const duration = Math.max(820, Math.min(1200, Math.round(Math.max(fromHeight, toHeight) * 1.8)));
+  list.style.height = `${fromHeight}px`;
+  list.style.opacity = shouldStayOpen ? "0" : "1";
+  list.style.transform = shouldStayOpen ? "translateY(-10px)" : "translateY(0)";
+
+  const animation = list.animate(
+    [
+      {
+        height: `${fromHeight}px`,
+        opacity: shouldStayOpen ? 0 : 1,
+        transform: shouldStayOpen ? "translateY(-10px)" : "translateY(0)",
+      },
+      {
+        height: `${toHeight}px`,
+        opacity: shouldStayOpen ? 1 : 0,
+        transform: shouldStayOpen ? "translateY(0)" : "translateY(-10px)",
+      },
+    ],
+    {
+      duration,
+      easing: "cubic-bezier(0.33, 0, 0.2, 1)",
+      fill: "forwards",
+    },
+  );
+
+  animation.finished
+    .then(() => {
+      setNewsMonthState(month, shouldStayOpen);
+      delete month.dataset.animating;
+      month.classList.remove("is-animating");
+      resetNewsMonthList(list);
+    })
+    .catch(() => {
+      delete month.dataset.animating;
+      month.classList.remove("is-animating");
+      resetNewsMonthList(list);
+    });
+}
+
+function resetNewsMonthList(list) {
+  list.style.height = "";
+  list.style.opacity = "";
+  list.style.transform = "";
+}
+
+function setNewsMonthState(month, isOpen) {
+  month.classList.toggle("is-open", isOpen);
+  const summary = month.querySelector(".news-month-summary");
+  if (summary) summary.setAttribute("aria-expanded", String(isOpen));
 }
 
 function restartStars() {
@@ -86,27 +179,48 @@ function resizeStars() {
 }
 
 function seedStars() {
-  const starCount = Math.max(120, Math.min(300, Math.round(width * height * 0.00022)));
-  const dustCount = Math.max(34, Math.min(92, Math.round(width / 15)));
+  const fieldStarCount = Math.max(90, Math.min(240, Math.round(width * height * 0.00013)));
+  const galaxyStarCount = Math.max(260, Math.min(760, Math.round(width * height * 0.00042)));
+  const bandWidth = getGalaxyBandWidth();
 
-  stars = Array.from({ length: starCount }, (_, index) => ({
+  const fieldStars = Array.from({ length: fieldStarCount }, (_, index) => ({
+    band: false,
     x: Math.random() * width,
-    y: Math.random() * height * 0.88,
-    r: index % 17 === 0 ? 1.7 + Math.random() * 0.8 : 0.45 + Math.random() * 1.1,
-    a: 0.28 + Math.random() * 0.72,
-    twinkle: 0.35 + Math.random() * 1.2,
-    drift: 0.015 + Math.random() * 0.035,
-    tint: ["255,255,255", "214,226,255", "255,223,188"][index % 3],
+    y: Math.random() * height * 0.94,
+    r: index % 31 === 0 ? 1.55 + Math.random() * 0.8 : 0.22 + Math.random() * 0.88,
+    a: 0.18 + Math.random() * 0.58,
+    twinkle: 0.34 + Math.random() * 1.34,
+    drift: 0.004 + Math.random() * 0.018,
+    depth: 0.38 + Math.random() * 1.1,
+    phase: Math.random() * Math.PI * 2,
+    halo: index % 27 === 0,
+    tint: ["255,255,255", "213,229,255", "255,228,190", "198,214,255"][index % 4],
   }));
 
-  dust = Array.from({ length: dustCount }, (_, index) => ({
-    x: Math.random() * width,
-    y: height * (0.08 + Math.random() * 0.7),
-    r: 46 + Math.random() * 132,
-    a: 0.012 + Math.random() * 0.032,
-    drift: 0.01 + index * 0.0006,
-    tint: index % 2 === 0 ? "76,99,158" : "141,76,126",
-  }));
+  const galaxyStars = Array.from({ length: galaxyStarCount }, (_, index) => {
+    const u = (Math.random() - 0.5) * width * 1.62;
+    const laneOffset = Math.sin(u * 0.006) * bandWidth * 0.14;
+    const v = bellRandom() * bandWidth * (0.42 + Math.random() * 0.86);
+    const lane = Math.abs(v - laneOffset) < bandWidth * 0.09 && Math.random() > 0.28;
+    const core = 1 - Math.min(1, Math.abs(v) / (bandWidth * 1.32));
+    const point = projectGalaxyPoint(u, v);
+
+    return {
+      band: true,
+      x: point.x,
+      y: point.y,
+      r: 0.18 + Math.random() * 0.74 + core * 0.28,
+      a: lane ? 0.04 + core * 0.1 : 0.14 + core * 0.6 + Math.random() * 0.16,
+      twinkle: 0.18 + Math.random() * 0.82,
+      drift: 0.012 + Math.random() * 0.026,
+      depth: 0.8 + Math.random() * 1.8,
+      phase: Math.random() * Math.PI * 2,
+      halo: core > 0.62 && index % 34 === 0,
+      tint: ["255,248,224", "225,235,255", "181,204,255", "246,198,224", "149,180,255"][index % 5],
+    };
+  });
+
+  stars = [...fieldStars, ...galaxyStars];
 }
 
 function animateStars(time) {
@@ -115,131 +229,87 @@ function animateStars(time) {
 }
 
 function drawStarScene(t) {
-  drawSkyGradient();
-  drawNebula(t);
+  ctx.clearRect(0, 0, width, height);
   drawStars(t);
-  drawConstellation(t);
-  drawMeteor(t);
-}
-
-function drawSkyGradient() {
-  const sky = ctx.createLinearGradient(0, 0, width, height);
-  sky.addColorStop(0, "#02030a");
-  sky.addColorStop(0.38, "#071020");
-  sky.addColorStop(0.68, "#050815");
-  sky.addColorStop(1, "#01020a");
-  ctx.fillStyle = sky;
-  ctx.fillRect(0, 0, width, height);
-
-  const horizon = ctx.createRadialGradient(width * 0.72, height * 0.34, 0, width * 0.72, height * 0.34, width * 0.58);
-  horizon.addColorStop(0, "rgba(84, 111, 174, 0.18)");
-  horizon.addColorStop(0.48, "rgba(36, 59, 110, 0.08)");
-  horizon.addColorStop(1, "rgba(36, 59, 110, 0)");
-  ctx.fillStyle = horizon;
-  ctx.fillRect(0, 0, width, height);
-}
-
-function drawNebula(t) {
-  ctx.save();
-  ctx.globalCompositeOperation = "screen";
-
-  dust.forEach((cloud, index) => {
-    cloud.x += cloud.drift;
-    if (cloud.x - cloud.r > width) cloud.x = -cloud.r;
-
-    const pulse = 0.78 + Math.sin(t * 0.25 + index) * 0.22;
-    const gradient = ctx.createRadialGradient(cloud.x, cloud.y, 0, cloud.x, cloud.y, cloud.r);
-    gradient.addColorStop(0, `rgba(${cloud.tint}, ${cloud.a * pulse})`);
-    gradient.addColorStop(0.46, `rgba(${cloud.tint}, ${cloud.a * 0.38 * pulse})`);
-    gradient.addColorStop(1, `rgba(${cloud.tint}, 0)`);
-    ctx.fillStyle = gradient;
-    ctx.beginPath();
-    ctx.arc(cloud.x, cloud.y, cloud.r, 0, Math.PI * 2);
-    ctx.fill();
-  });
-
-  ctx.restore();
 }
 
 function drawStars(t) {
   stars.forEach((star, index) => {
-    star.x += star.drift;
-    if (star.x > width + 4) star.x = -4;
+    let x = star.x;
+    let y = star.y;
 
-    const alpha = star.a * (0.66 + Math.sin(t * star.twinkle + index) * 0.22);
+    if (star.band) {
+      const basis = getGalaxyBasis();
+      const driftAlong = Math.sin(t * star.drift + star.phase) * star.depth * 5.6;
+      const driftAcross = Math.cos(t * star.drift * 0.7 + star.phase) * star.depth * 1.8;
+      x += driftAlong * basis.cos - driftAcross * basis.sin;
+      y += driftAlong * basis.sin + driftAcross * basis.cos;
+    } else {
+      star.x += star.drift * star.depth;
+      if (star.x > width + 8) star.x = -8;
+      x = star.x;
+      y += Math.sin(t * 0.16 + star.phase + index) * star.depth * 1.3;
+    }
+
+    const alpha = star.a * (0.72 + Math.sin(t * star.twinkle + star.phase + index) * 0.22);
+
+    if (star.halo) {
+      const glow = ctx.createRadialGradient(x, y, 0, x, y, star.r * 7);
+      glow.addColorStop(0, `rgba(${star.tint}, ${alpha * 0.22})`);
+      glow.addColorStop(1, `rgba(${star.tint}, 0)`);
+      ctx.fillStyle = glow;
+      ctx.beginPath();
+      ctx.arc(x, y, star.r * 7, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
     ctx.beginPath();
     ctx.fillStyle = `rgba(${star.tint}, ${alpha})`;
-    ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+    ctx.arc(x, y, star.r, 0, Math.PI * 2);
     ctx.fill();
 
-    if (star.r > 1.45) {
+    if (star.r > 1.45 || star.halo) {
       ctx.beginPath();
-      ctx.strokeStyle = `rgba(${star.tint}, ${alpha * 0.28})`;
+      ctx.strokeStyle = `rgba(${star.tint}, ${alpha * 0.22})`;
       ctx.lineWidth = 1;
-      ctx.moveTo(star.x - star.r * 3.5, star.y);
-      ctx.lineTo(star.x + star.r * 3.5, star.y);
-      ctx.moveTo(star.x, star.y - star.r * 3.5);
-      ctx.lineTo(star.x, star.y + star.r * 3.5);
+      ctx.moveTo(x - star.r * 3.5, y);
+      ctx.lineTo(x + star.r * 3.5, y);
+      ctx.moveTo(x, y - star.r * 3.5);
+      ctx.lineTo(x, y + star.r * 3.5);
       ctx.stroke();
     }
   });
 }
 
-function drawConstellation(t) {
-  const points = [
-    [0.58, 0.22],
-    [0.67, 0.17],
-    [0.76, 0.24],
-    [0.71, 0.34],
-    [0.83, 0.4],
-  ].map(([x, y], index) => ({
-    x: width * x + Math.sin(t * 0.12 + index) * 5,
-    y: height * y + Math.cos(t * 0.11 + index) * 4,
-  }));
-
-  ctx.save();
-  ctx.globalAlpha = width < 700 ? 0.18 : 0.34;
-  ctx.strokeStyle = "rgba(224, 232, 255, 0.28)";
-  ctx.lineWidth = 1;
-  ctx.beginPath();
-  points.forEach((point, index) => {
-    if (index === 0) {
-      ctx.moveTo(point.x, point.y);
-    } else {
-      ctx.lineTo(point.x, point.y);
-    }
-  });
-  ctx.stroke();
-
-  points.forEach((point) => {
-    ctx.beginPath();
-    ctx.fillStyle = "rgba(255, 255, 255, 0.82)";
-    ctx.arc(point.x, point.y, 1.8, 0, Math.PI * 2);
-    ctx.fill();
-  });
-  ctx.restore();
+function bellRandom() {
+  return (Math.random() + Math.random() + Math.random() + Math.random() - 2) / 2;
 }
 
-function drawMeteor(t) {
-  const cycle = (t * 0.12) % 1;
-  if (cycle < 0.18) {
-    const progress = cycle / 0.18;
-    const x = width * (0.88 - progress * 0.42);
-    const y = height * (0.16 + progress * 0.22);
-    const trail = 170;
+function getGalaxyAngle() {
+  return width < 640 ? -0.72 : -0.5;
+}
 
-    const meteor = ctx.createLinearGradient(x, y, x + trail, y - trail * 0.46);
-    meteor.addColorStop(0, "rgba(255, 255, 255, 0.78)");
-    meteor.addColorStop(0.34, "rgba(167, 198, 255, 0.28)");
-    meteor.addColorStop(1, "rgba(167, 198, 255, 0)");
+function getGalaxyBandWidth() {
+  return Math.max(120, Math.min(260, height * (width < 640 ? 0.23 : 0.19)));
+}
 
-    ctx.beginPath();
-    ctx.strokeStyle = meteor;
-    ctx.lineWidth = 2;
-    ctx.moveTo(x, y);
-    ctx.lineTo(x + trail, y - trail * 0.46);
-    ctx.stroke();
-  }
+function getGalaxyBasis() {
+  const angle = getGalaxyAngle();
+  return {
+    cos: Math.cos(angle),
+    sin: Math.sin(angle),
+  };
+}
+
+function projectGalaxyPoint(u, v) {
+  const basis = getGalaxyBasis();
+  const centerX = width * (width < 640 ? 0.61 : 0.64);
+  const centerY = height * (width < 640 ? 0.58 : 0.46);
+
+  return {
+    x: centerX + u * basis.cos - v * basis.sin,
+    y: centerY + u * basis.sin + v * basis.cos,
+  };
 }
 
 const collaborationMap = document.getElementById("collab-map");
@@ -281,8 +351,8 @@ function initCollaborationMap() {
       region: "mainland-china",
       lat: 30.2741,
       lng: 120.1551,
-      partners: ["ZJU"],
-      description: "Academic collaborator in Hangzhou.",
+      partners: ["ZJU", "Qwen"],
+      description: "Academic and industry collaborators in Hangzhou.",
     },
     {
       id: "shanghai",
@@ -321,6 +391,15 @@ function initCollaborationMap() {
       description: "Academic collaborator in Princeton.",
     },
     {
+      id: "pittsburgh",
+      city: "Pittsburgh, PA",
+      region: "united-states",
+      lat: 40.4406,
+      lng: -79.9959,
+      partners: ["CMU"],
+      description: "Academic collaborator in Pittsburgh.",
+    },
+    {
       id: "san-diego",
       city: "San Diego, CA",
       region: "united-states",
@@ -357,6 +436,24 @@ function initCollaborationMap() {
       description: "Industry collaborator in California.",
     },
     {
+      id: "santa-clara",
+      city: "Santa Clara, CA",
+      region: "united-states",
+      lat: 37.3541,
+      lng: -121.9552,
+      partners: ["Nvidia"],
+      description: "Industry collaborator in California.",
+    },
+    {
+      id: "oxford",
+      city: "Oxford",
+      region: "united-kingdom",
+      lat: 51.752,
+      lng: -1.2577,
+      partners: ["Oxford"],
+      description: "Academic collaborator in Oxford.",
+    },
+    {
       id: "singapore",
       city: "Singapore",
       region: "singapore",
@@ -372,6 +469,7 @@ function initCollaborationMap() {
     "hong-kong": "Hong Kong SAR",
     "mainland-china": "Mainland China",
     "united-states": "United States",
+    "united-kingdom": "United Kingdom",
     singapore: "Singapore",
   };
   const regionBounds = {
@@ -396,6 +494,13 @@ function initCollaborationMap() {
       ],
       zoom: 4,
     },
+    "united-kingdom": {
+      bounds: [
+        [49.8, -8.6],
+        [58.8, 2],
+      ],
+      zoom: 5.4,
+    },
     singapore: {
       bounds: [
         [1.14, 103.56],
@@ -416,6 +521,11 @@ function initCollaborationMap() {
       regions: ["united-states"],
     },
     {
+      id: "united-kingdom",
+      iso: "GBR",
+      regions: ["united-kingdom"],
+    },
+    {
       id: "singapore",
       iso: "SGP",
       regions: ["singapore"],
@@ -423,6 +533,7 @@ function initCollaborationMap() {
   ];
 
   const totalCollaborators = locations.reduce((count, item) => count + item.partners.length, 0);
+  const totalRegions = new Set(locations.map((item) => item.region)).size;
 
   if (!window.L) {
     collaborationMap.classList.add("map-fallback");
@@ -522,7 +633,7 @@ function initCollaborationMap() {
     if (region === "all") {
       return {
         city: "OpenEnvision Network",
-        partners: [`${totalCollaborators} collaborators`, "4 regions", "3 industry labs"],
+        partners: [`${totalCollaborators} collaborators`, `${totalRegions} regions`, "5 industry labs"],
         description:
           "A growing collaboration network linking open vision research, evaluation, and public artifact releases.",
       };
