@@ -378,8 +378,8 @@ function initCollaborationMap() {
       region: "mainland-china",
       lat: 22.5431,
       lng: 114.0579,
-      partners: ["CUHK(SZ)"],
-      description: "Academic collaborator in Shenzhen.",
+      partners: ["CUHK(SZ)", "Tencent Hunyuan"],
+      description: "Academic and industry collaborators in Shenzhen.",
     },
     {
       id: "princeton",
@@ -416,6 +416,15 @@ function initCollaborationMap() {
       lng: -88.2272,
       partners: ["UIUC"],
       description: "Academic collaborator in Urbana-Champaign.",
+    },
+    {
+      id: "new-york",
+      city: "New York, NY",
+      region: "united-states",
+      lat: 40.73,
+      lng: -73.995,
+      partners: ["NYU"],
+      description: "Academic collaborator in New York.",
     },
     {
       id: "san-jose",

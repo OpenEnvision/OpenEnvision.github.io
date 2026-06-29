@@ -2984,6 +2984,16 @@ canvas {
   font-weight: 880;
 }
 
+.footer-logo {
+  display: block;
+  width: 62px;
+  height: 52px;
+  margin-bottom: 10px;
+  object-fit: contain;
+  filter: grayscale(1) invert(1) brightness(1.32);
+  opacity: 0.9;
+}
+
 .site-footer p {
   margin: 0;
 }
