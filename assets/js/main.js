@@ -48,6 +48,7 @@ let animationFrame = null;
 let stars = [];
 
 initNewsMonthAnimations();
+initJoinPage();
 
 if (canvas) {
   ctx = canvas.getContext("2d");
@@ -72,6 +73,50 @@ function initNewsMonthAnimations() {
       if (month.dataset.animating === "true") return;
       animateNewsMonth(month, list, !month.classList.contains("is-open"));
     });
+  });
+}
+
+function initJoinPage() {
+  const revealItems = [...document.querySelectorAll("[data-join-reveal]")];
+  const network = document.querySelector("[data-join-network]");
+  if (!revealItems.length && !network) return;
+
+  document.body.classList.add("join-motion-ready");
+
+  const revealEverything = () => {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+  };
+
+  if (reduceMotion.matches || !("IntersectionObserver" in window)) {
+    revealEverything();
+  } else {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      { rootMargin: "0px 0px -8%", threshold: 0.12 },
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+  }
+
+  if (!network || reduceMotion.matches || !window.matchMedia("(pointer: fine)").matches) return;
+
+  network.addEventListener("pointermove", (event) => {
+    const bounds = network.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+    network.style.setProperty("--join-shift-x", `${(x * 9).toFixed(2)}px`);
+    network.style.setProperty("--join-shift-y", `${(y * 7).toFixed(2)}px`);
+  });
+
+  network.addEventListener("pointerleave", () => {
+    network.style.setProperty("--join-shift-x", "0px");
+    network.style.setProperty("--join-shift-y", "0px");
   });
 }
 
@@ -427,6 +472,24 @@ function initCollaborationMap() {
       description: "Academic collaborator in New York.",
     },
     {
+      id: "evanston",
+      city: "Evanston, IL",
+      region: "united-states",
+      lat: 42.0565,
+      lng: -87.6753,
+      partners: ["Northwestern"],
+      description: "Academic collaborator in Evanston.",
+    },
+    {
+      id: "new-haven",
+      city: "New Haven, CT",
+      region: "united-states",
+      lat: 41.3163,
+      lng: -72.9223,
+      partners: ["Yale"],
+      description: "Academic collaborator in New Haven.",
+    },
+    {
       id: "san-jose",
       city: "San Jose, CA",
       region: "united-states",
@@ -541,7 +604,6 @@ function initCollaborationMap() {
     },
   ];
 
-  const totalCollaborators = locations.reduce((count, item) => count + item.partners.length, 0);
   const totalRegions = new Set(locations.map((item) => item.region)).size;
 
   if (!window.L) {
@@ -642,7 +704,7 @@ function initCollaborationMap() {
     if (region === "all") {
       return {
         city: "OpenEnvision Network",
-        partners: [`${totalCollaborators} collaborators`, `${totalRegions} regions`, "5 industry labs"],
+        partners: ["50+ collaborators", `${totalRegions} regions`, "6 industry labs"],
         description:
           "A growing collaboration network linking open vision research, evaluation, and public artifact releases.",
       };

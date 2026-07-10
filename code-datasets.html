@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" href="assets/img/brand/openenvision_mark.png?v=tab-logo" />
     <link rel="shortcut icon" type="image/png" href="assets/img/brand/openenvision_mark.png?v=tab-logo" />
     <link rel="apple-touch-icon" href="assets/img/brand/openenvision_mark.png?v=tab-logo" />
-    <link rel="stylesheet" href="assets/css/styles.css?v=footer-logo" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=resources-worldfoundry-links" />
   </head>
   <body data-page="code-datasets">
     <header class="site-header" data-header>
@@ -47,7 +47,7 @@
             </p>
             <nav class="resource-anchors" aria-label="Resource sections">
               <a href="#resource-types">Resource Types</a>
-              <a href="#catalog-preview">Catalog Preview</a>
+              <a href="#worldfoundry">WorldFoundry</a>
               <a href="#release-workflow">Release Workflow</a>
               <a href="#release-standards">Standards</a>
             </nav>
@@ -94,8 +94,8 @@
             <h2 id="resource-types-title">A release surface for every part of the research stack.</h2>
           </div>
           <p>
-            Rather than listing individual projects here, this page defines the resource categories
-            OpenEnvision uses for future public releases.
+            This page defines the resource categories OpenEnvision uses for public releases and
+            highlights available open-source artifacts.
           </p>
         </div>
 
@@ -169,45 +169,80 @@
         </div>
       </section>
 
-      <section class="catalog-preview-section" id="catalog-preview" aria-labelledby="catalog-preview-title">
-        <div class="catalog-preview-panel">
-          <div class="catalog-preview-copy">
-            <p class="section-kicker">Catalog Preview</p>
-            <h2 id="catalog-preview-title">A clean release index without exposing incomplete project pages.</h2>
+      <section class="worldfoundry-section" id="worldfoundry" aria-labelledby="worldfoundry-title">
+        <div class="worldfoundry-panel">
+          <div class="worldfoundry-copy">
+            <p class="section-kicker">Featured Open Resource</p>
+            <h2 id="worldfoundry-title">WorldFoundry</h2>
             <p>
-              The public catalog is being organized around reusable release entries. Each entry will
-              pair the research claim with the exact files, documentation, and evaluation evidence
-              needed for reuse.
+              Explore the public source repository and documentation for WorldFoundry. The code,
+              setup instructions, technical references, and usage guides are available through the
+              two official entry points below.
             </p>
+
+            <div class="worldfoundry-tags" aria-label="WorldFoundry resource tags">
+              <span>Open Source</span>
+              <span>GitHub</span>
+              <span>Documentation</span>
+            </div>
+
+            <div class="worldfoundry-actions" aria-label="WorldFoundry links">
+              <a
+                href="https://github.com/OpenEnvision/WorldFoundry"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open WorldFoundry on GitHub in a new tab"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <circle cx="6" cy="6" r="2.5"></circle>
+                  <circle cx="6" cy="18" r="2.5"></circle>
+                  <circle cx="18" cy="12" r="2.5"></circle>
+                  <path d="M8.5 6v5.2c0 1.4 1.1 2.5 2.5 2.5h4.5M8.5 18h2.2c1.4 0 2.5-1.1 2.5-2.5v-1.8"></path>
+                </svg>
+                View on GitHub
+              </a>
+              <a
+                class="is-docs"
+                href="https://openenvision.github.io/WorldFoundry/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open WorldFoundry documentation in a new tab"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M5 4.5h9.5L19 9v10.5H5V4.5Z"></path>
+                  <path d="M14.5 4.5V9H19M8.5 13h7M8.5 16h5"></path>
+                </svg>
+                Read the Docs
+              </a>
+            </div>
           </div>
 
-          <div class="catalog-board" aria-label="Planned release catalog structure">
-            <div class="catalog-board-head">
-              <span>Release Entry</span>
-              <span>Status</span>
+          <aside class="worldfoundry-release-card" aria-label="WorldFoundry public links">
+            <div class="worldfoundry-card-top">
+              <span>Featured release</span>
+              <strong>WorldFoundry</strong>
             </div>
-            <div class="catalog-row">
-              <div>
-                <strong>Code package</strong>
-                <p>setup · scripts · configs</p>
-              </div>
-              <em>template</em>
-            </div>
-            <div class="catalog-row">
-              <div>
-                <strong>Data card</strong>
-                <p>metadata · splits · policy</p>
-              </div>
-              <em>template</em>
-            </div>
-            <div class="catalog-row">
-              <div>
-                <strong>Evaluation packet</strong>
-                <p>metrics · logs · result files</p>
-              </div>
-              <em>template</em>
-            </div>
-          </div>
+            <a
+              class="worldfoundry-card-row"
+              href="https://github.com/OpenEnvision/WorldFoundry"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="WorldFoundry GitHub repository"
+            >
+              <span>GitHub</span>
+              <strong>github.com/OpenEnvision/WorldFoundry</strong>
+            </a>
+            <a
+              class="worldfoundry-card-row"
+              href="https://openenvision.github.io/WorldFoundry/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="WorldFoundry documentation"
+            >
+              <span>Docs</span>
+              <strong>openenvision.github.io/WorldFoundry/</strong>
+            </a>
+          </aside>
         </div>
       </section>
 
@@ -254,19 +289,49 @@
         </div>
         <div class="release-standards-grid">
           <div>
-            <span>Version</span>
+            <span class="release-standard-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M13 7h14l8 8v26H13V7Z"></path>
+                <path d="M27 7v9h9"></path>
+                <path d="M18 27h12"></path>
+                <path d="M18 33h8"></path>
+              </svg>
+            </span>
+            <span class="release-standard-label">Version</span>
             <p>Stable identifiers, update notes, and compatibility expectations.</p>
           </div>
           <div>
-            <span>Scope</span>
+            <span class="release-standard-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <circle cx="24" cy="24" r="14"></circle>
+                <circle cx="24" cy="24" r="5"></circle>
+                <path d="M24 5v8M24 35v8M5 24h8M35 24h8"></path>
+              </svg>
+            </span>
+            <span class="release-standard-label">Scope</span>
             <p>Intended use, task definitions, data coverage, and known limitations.</p>
           </div>
           <div>
-            <span>Evidence</span>
+            <span class="release-standard-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M8 39h32"></path>
+                <path d="M12 34V23h7v11M22 34V14h7v20M32 34v-7h7v7"></path>
+                <path d="m31 10 3 3 6-7"></path>
+              </svg>
+            </span>
+            <span class="release-standard-label">Evidence</span>
             <p>Evaluation settings, metrics, result files, and comparison context.</p>
           </div>
           <div>
-            <span>Reuse</span>
+            <span class="release-standard-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M13 19a13 13 0 0 1 22-5l4 5"></path>
+                <path d="M39 10v9h-9"></path>
+                <path d="M35 29a13 13 0 0 1-22 5l-4-5"></path>
+                <path d="M9 38v-9h9"></path>
+              </svg>
+            </span>
+            <span class="release-standard-label">Reuse</span>
             <p>License, citation, file layout, and practical loading instructions.</p>
           </div>
         </div>

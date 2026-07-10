@@ -11,9 +11,9 @@
     <link rel="icon" type="image/png" href="assets/img/brand/openenvision_mark.png?v=tab-logo" />
     <link rel="shortcut icon" type="image/png" href="assets/img/brand/openenvision_mark.png?v=tab-logo" />
     <link rel="apple-touch-icon" href="assets/img/brand/openenvision_mark.png?v=tab-logo" />
-    <link rel="stylesheet" href="assets/css/styles.css?v=footer-logo" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=join-redesign-20260710-c" />
   </head>
-  <body data-page="join">
+  <body class="join-page" data-page="join">
     <header class="site-header" data-header>
       <a class="brand" href="index.html" aria-label="OpenEnvision home">
         <img class="brand-logo" src="assets/img/brand/openenvision_mark.png" alt="OpenEnvision logo" />
@@ -37,7 +37,7 @@
     <main class="join-main">
       <section class="join-landing" aria-labelledby="join-title">
         <div class="join-landing-inner">
-          <div class="join-landing-copy">
+          <div class="join-landing-copy" data-join-reveal>
             <p class="eyebrow">Join Us</p>
             <h1 id="join-title">Build open vision intelligence with a global research community.</h1>
             <p>
@@ -49,49 +49,92 @@
               <a class="button button-primary" href="#opportunities">Explore Opportunities</a>
             </div>
             <nav class="join-anchors" aria-label="Join page navigation">
-              <a href="#opportunities">Opportunities</a>
-              <a href="#fit">What We Value</a>
-              <a href="#contact">Contact</a>
+              <a href="#opportunities">
+                Opportunities
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" /></svg>
+              </a>
+              <a href="#fit">
+                What We Value
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" /></svg>
+              </a>
+              <a href="#contact">
+                Contact
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" /></svg>
+              </a>
             </nav>
           </div>
 
-          <aside class="join-brief" aria-label="OpenEnvision collaboration snapshot">
-            <div class="join-brief-top">
+          <div class="join-network-visual" data-join-network data-join-reveal aria-hidden="true">
+            <div class="join-network-topline">
               <span>OpenEnvision</span>
-              <strong>Research Hub</strong>
+              <span>Research Hub</span>
             </div>
-            <div class="join-brief-statement">
-              <span>Collaboration scope</span>
-              <strong>World models, multimodal intelligence, vision intelligence, and physical intelligence.</strong>
+            <svg class="join-network-map" viewBox="0 0 660 600" focusable="false">
+              <g class="network-grid-lines">
+                <circle cx="330" cy="300" r="82" />
+                <circle cx="330" cy="300" r="148" />
+                <circle cx="330" cy="300" r="220" />
+                <circle cx="330" cy="300" r="274" stroke-dasharray="3 8" />
+                <path d="M330 26v548M56 300h548M136 106l388 388M524 106 136 494" />
+              </g>
+              <g class="network-links">
+                <path d="M330 300C300 226 308 170 330 104" />
+                <path d="M330 300C250 282 205 284 135 300" />
+                <path d="M330 300C410 282 455 284 525 300" />
+                <path d="M330 300C300 374 308 430 330 496" />
+                <path d="M330 104C430 146 480 212 525 300" />
+                <path d="M525 300C466 400 410 462 330 496" />
+                <path d="M330 496C232 456 176 398 135 300" />
+                <path d="M135 300C182 202 236 142 330 104" />
+              </g>
+              <g class="network-signals">
+                <rect x="324" y="92" width="12" height="12" />
+                <rect x="519" y="294" width="12" height="12" />
+                <rect x="324" y="490" width="12" height="12" />
+                <rect x="129" y="294" width="12" height="12" />
+                <rect x="426" y="164" width="9" height="9" />
+                <rect x="448" y="414" width="9" height="9" />
+                <rect x="206" y="414" width="9" height="9" />
+                <rect x="218" y="158" width="9" height="9" />
+              </g>
+            </svg>
+            <div class="network-core">
+              <img src="assets/img/brand/openenvision_mark.png" alt="" />
+              <strong>OpenEnvision</strong>
             </div>
-            <div class="join-brief-grid" aria-label="Collaboration formats">
-              <div>
-                <span>01</span>
-                <p>Joint research</p>
-              </div>
-              <div>
-                <span>02</span>
-                <p>Open-source systems</p>
-              </div>
-              <div>
-                <span>03</span>
-                <p>Datasets and benchmarks</p>
-              </div>
-              <div>
-                <span>04</span>
-                <p>Academic-industry partnership</p>
-              </div>
+            <div class="network-node network-node-world">
+              <svg viewBox="0 0 30 30"><circle cx="15" cy="15" r="10" /><path d="M5 15h20M15 5c4 4 4 16 0 20M15 5c-4 4-4 16 0 20" /></svg>
+              <span>World<br />models</span>
             </div>
-            <p class="join-brief-note">
-              Formal roles, visiting arrangements, internships, and student supervision are handled
-              through the relevant partner institutions and project mentors.
-            </p>
-          </aside>
+            <div class="network-node network-node-multi">
+              <svg viewBox="0 0 30 30"><circle cx="11" cy="15" r="7" /><circle cx="19" cy="15" r="7" /><circle cx="15" cy="10" r="7" /></svg>
+              <span>Multimodal<br />intelligence</span>
+            </div>
+            <div class="network-node network-node-vision">
+              <svg viewBox="0 0 30 30"><path d="M3 15s5-8 12-8 12 8 12 8-5 8-12 8S3 15 3 15Z" /><circle cx="15" cy="15" r="4" /></svg>
+              <span>Vision<br />intelligence</span>
+            </div>
+            <div class="network-node network-node-physical">
+              <svg viewBox="0 0 30 30"><path d="m7 11 8-5 8 5-8 5-8-5Z" /><path d="m7 11v9l8 5 8-5v-9M15 16v9" /></svg>
+              <span>Physical<br />intelligence</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="join-scope-rail" aria-label="OpenEnvision collaboration snapshot">
+          <div class="join-scope-summary">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="9" cy="20" r="5" /><circle cx="31" cy="10" r="5" /><circle cx="31" cy="30" r="5" /><path d="m13 18 13-6M13 22l13 6" /></svg>
+            <span>World models, multimodal intelligence, vision intelligence, and physical intelligence.</span>
+          </div>
+          <div><span>01</span><strong>Joint research</strong></div>
+          <div><span>02</span><strong>Open-source systems</strong></div>
+          <div><span>03</span><strong>Datasets and benchmarks</strong></div>
+          <div><span>04</span><strong>Academic-industry partnership</strong></div>
         </div>
       </section>
 
       <section class="join-opportunities-section" id="opportunities" aria-labelledby="join-opportunities-title">
-        <div class="join-section-head">
+        <div class="join-section-head" data-join-reveal>
           <div>
             <p class="section-kicker">Opportunities</p>
             <h2 id="join-opportunities-title">Different ways to join the work, held to one research standard.</h2>
@@ -103,74 +146,67 @@
           </p>
         </div>
 
-        <div class="join-opportunity-grid">
-          <article class="join-opportunity-card opportunity-students">
-            <span class="join-card-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" focusable="false">
-                <path d="M8 18l16-8 16 8-16 8-16-8Z"></path>
-                <path d="M15 23v8c5 5 13 5 18 0v-8"></path>
-                <path d="M40 18v12"></path>
-              </svg>
-            </span>
-            <p>Students and Visitors</p>
-            <h3>Research Students, Visiting Researchers, and Interns</h3>
-            <span>
+        <div class="join-opportunity-list">
+          <article class="join-opportunity-row opportunity-students" data-join-reveal>
+            <span class="join-opportunity-index">01</span>
+            <div class="join-opportunity-title">
+              <p>Students and Visitors</p>
+              <h3>Research Students, Visiting Researchers, and Interns</h3>
+            </div>
+            <p class="join-opportunity-copy">
               For PhD, master, undergraduate, and visiting researchers working with affiliated
               mentors. Strong candidates usually bring a clear research taste, implementation
               ability, and evidence of independent follow-through.
+            </p>
+            <span class="join-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false"><path d="M8 18l16-8 16 8-16 8-16-8Z" /><path d="M15 23v8c5 5 13 5 18 0v-8M40 18v12" /></svg>
             </span>
           </article>
 
-          <article class="join-opportunity-card opportunity-research">
-            <span class="join-card-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" focusable="false">
-                <path d="M12 11h18l6 6v20H12V11Z"></path>
-                <path d="M30 11v7h7"></path>
-                <path d="M17 26h14"></path>
-                <path d="M17 32h10"></path>
-              </svg>
-            </span>
-            <p>Research Collaboration</p>
-            <h3>Faculty, Scientists, and Research Teams</h3>
-            <span>
+          <article class="join-opportunity-row opportunity-research" data-join-reveal>
+            <span class="join-opportunity-index">02</span>
+            <div class="join-opportunity-title">
+              <p>Research Collaboration</p>
+              <h3>Faculty, Scientists, and Research Teams</h3>
+            </div>
+            <p class="join-opportunity-copy">
               We welcome collaborations around new methods, evaluation protocols, data resources,
               and reproducible releases across world modeling, multimodal reasoning, visual systems,
               and embodied intelligence.
+            </p>
+            <span class="join-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false"><path d="M12 11h18l6 6v20H12V11Z" /><path d="M30 11v7h7M17 26h14M17 32h10" /></svg>
             </span>
           </article>
 
-          <article class="join-opportunity-card opportunity-open">
-            <span class="join-card-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" focusable="false">
-                <path d="M18 14L8 24l10 10"></path>
-                <path d="M30 14l10 10-10 10"></path>
-                <path d="M27 10l-6 28"></path>
-              </svg>
-            </span>
-            <p>Open Infrastructure</p>
-            <h3>Open-Source Engineers and Dataset Builders</h3>
-            <span>
+          <article class="join-opportunity-row opportunity-open" data-join-reveal>
+            <span class="join-opportunity-index">03</span>
+            <div class="join-opportunity-title">
+              <p>Open Infrastructure</p>
+              <h3>Open-Source Engineers and Dataset Builders</h3>
+            </div>
+            <p class="join-opportunity-copy">
               Contributors can help with training and evaluation code, demos, documentation,
               dataset cards, benchmark maintenance, annotation tools, and release quality checks.
+            </p>
+            <span class="join-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false"><path d="M18 14 8 24l10 10M30 14l10 10-10 10M27 10l-6 28" /></svg>
             </span>
           </article>
 
-          <article class="join-opportunity-card opportunity-partner">
-            <span class="join-card-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" focusable="false">
-                <circle cx="15" cy="17" r="5"></circle>
-                <circle cx="33" cy="17" r="5"></circle>
-                <path d="M9 37c1-7 6-11 13-11"></path>
-                <path d="M26 26c7 0 12 4 13 11"></path>
-                <path d="M20 31h8"></path>
-              </svg>
-            </span>
-            <p>Institutional Partners</p>
-            <h3>Academic Labs and Industry Research Groups</h3>
-            <span>
+          <article class="join-opportunity-row opportunity-partner" data-join-reveal>
+            <span class="join-opportunity-index">04</span>
+            <div class="join-opportunity-title">
+              <p>Institutional Partners</p>
+              <h3>Academic Labs and Industry Research Groups</h3>
+            </div>
+            <p class="join-opportunity-copy">
               We look for partnerships with complementary expertise, credible data or deployment
               questions, shared evaluation needs, and a commitment to publish reusable outcomes
               whenever appropriate.
+            </p>
+            <span class="join-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false"><circle cx="15" cy="17" r="5" /><circle cx="33" cy="17" r="5" /><path d="M9 37c1-7 6-11 13-11M26 26c7 0 12 4 13 11M20 31h8" /></svg>
             </span>
           </article>
         </div>
@@ -178,7 +214,7 @@
 
       <section class="join-fit-section" id="fit" aria-labelledby="join-fit-title">
         <div class="join-fit-panel">
-          <div class="join-fit-copy">
+          <div class="join-fit-copy" data-join-reveal>
             <p class="section-kicker">What We Value</p>
             <h2 id="join-fit-title">The best fit is precise, open, and technically grounded.</h2>
             <p>
@@ -187,44 +223,20 @@
               reproduce, and extend.
             </p>
           </div>
-          <div class="join-fit-grid" aria-label="OpenEnvision collaboration values">
-            <div>
-              <span>01</span>
-              <strong>Research Taste</strong>
-              <p>Clear problem framing, thoughtful baselines, and an instinct for questions that matter.</p>
-            </div>
-            <div>
-              <span>02</span>
-              <strong>Execution</strong>
-              <p>Reliable code, clean experiments, strong writing, and visible progress under ambiguity.</p>
-            </div>
-            <div>
-              <span>03</span>
-              <strong>Evaluation Discipline</strong>
-              <p>Metrics, protocols, ablations, and qualitative analysis that support real claims.</p>
-            </div>
-            <div>
-              <span>04</span>
-              <strong>Open Release Mindset</strong>
-              <p>Reusable artifacts, documentation, licenses, model or data cards, and versioned updates.</p>
-            </div>
-            <div>
-              <span>05</span>
-              <strong>Collaboration Maturity</strong>
-              <p>Respectful communication, clear ownership, and readiness to work across institutions.</p>
-            </div>
-            <div>
-              <span>06</span>
-              <strong>Responsible Practice</strong>
-              <p>Attention to data provenance, limitations, intended use, and community impact.</p>
-            </div>
+          <div class="join-value-list" aria-label="OpenEnvision collaboration values">
+            <article data-join-reveal><span>01</span><strong>Research Taste</strong><p>Clear problem framing, thoughtful baselines, and an instinct for questions that matter.</p></article>
+            <article data-join-reveal><span>02</span><strong>Execution</strong><p>Reliable code, clean experiments, strong writing, and visible progress under ambiguity.</p></article>
+            <article data-join-reveal><span>03</span><strong>Evaluation Discipline</strong><p>Metrics, protocols, ablations, and qualitative analysis that support real claims.</p></article>
+            <article data-join-reveal><span>04</span><strong>Open Release Mindset</strong><p>Reusable artifacts, documentation, licenses, model or data cards, and versioned updates.</p></article>
+            <article data-join-reveal><span>05</span><strong>Collaboration Maturity</strong><p>Respectful communication, clear ownership, and readiness to work across institutions.</p></article>
+            <article data-join-reveal><span>06</span><strong>Responsible Practice</strong><p>Attention to data provenance, limitations, intended use, and community impact.</p></article>
           </div>
         </div>
       </section>
 
       <section class="join-contact-section" id="contact" aria-labelledby="join-contact-title">
         <div class="join-contact-inner">
-          <div>
+          <div class="join-contact-copy" data-join-reveal>
             <p class="section-kicker">Contact</p>
             <h2 id="join-contact-title">Reach Out</h2>
             <p>
@@ -234,36 +246,25 @@
               relevant universities, companies, and partner labs.
             </p>
           </div>
-          <div class="join-contact-actions">
+          <div class="join-contact-actions" data-join-reveal>
             <a class="contact-link-card" href="mailto:juanxitian1031@gmail.com" aria-label="Email OpenEnvision">
-              <span class="contact-logo-wrap">
-                <img src="assets/img/contact/gmail.svg" alt="" loading="lazy" decoding="async" />
-              </span>
-              <span>
-                <strong>Email</strong>
-                <small>juanxitian1031@gmail.com</small>
-              </span>
+              <span class="contact-logo-wrap"><img src="assets/img/contact/gmail.svg" alt="" loading="lazy" decoding="async" /></span>
+              <span><strong>Email</strong><small>juanxitian1031@gmail.com</small></span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg>
             </a>
             <a class="contact-link-card" href="https://github.com/OpenEnvision" target="_blank" rel="noreferrer" aria-label="OpenEnvision GitHub">
-              <span class="contact-logo-wrap">
-                <img src="assets/img/contact/github.svg" alt="" loading="lazy" decoding="async" />
-              </span>
-              <span>
-                <strong>GitHub</strong>
-                <small>github.com/OpenEnvision</small>
-              </span>
+              <span class="contact-logo-wrap"><img src="assets/img/contact/github.svg" alt="" loading="lazy" decoding="async" /></span>
+              <span><strong>GitHub</strong><small>github.com/OpenEnvision</small></span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg>
             </a>
             <a class="contact-link-card" href="https://huggingface.co/OpenEnvisionLab" target="_blank" rel="noreferrer" aria-label="OpenEnvision Hugging Face">
-              <span class="contact-logo-wrap">
-                <img src="assets/img/contact/huggingface.svg" alt="" loading="lazy" decoding="async" />
-              </span>
-              <span>
-                <strong>Hugging Face</strong>
-                <small>huggingface.co/OpenEnvisionLab</small>
-              </span>
+              <span class="contact-logo-wrap"><img src="assets/img/contact/huggingface.svg" alt="" loading="lazy" decoding="async" /></span>
+              <span><strong>Hugging Face</strong><small>huggingface.co/OpenEnvisionLab</small></span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg>
             </a>
           </div>
         </div>
+        <p class="join-formal-note">Formal roles, visiting arrangements, internships, and student supervision are handled through the relevant partner institutions and project mentors.</p>
       </section>
     </main>
 
