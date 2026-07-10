@@ -49,6 +49,7 @@ let stars = [];
 
 initNewsMonthAnimations();
 initJoinPage();
+initSiteReveals();
 
 if (canvas) {
   ctx = canvas.getContext("2d");
@@ -98,7 +99,7 @@ function initJoinPage() {
           observer.unobserve(entry.target);
         });
       },
-      { rootMargin: "0px 0px -8%", threshold: 0.12 },
+      { rootMargin: "0px 0px 4%", threshold: 0.05 },
     );
 
     revealItems.forEach((item) => observer.observe(item));
@@ -118,6 +119,68 @@ function initJoinPage() {
     network.style.setProperty("--join-shift-x", "0px");
     network.style.setProperty("--join-shift-y", "0px");
   });
+}
+
+function initSiteReveals() {
+  const revealSelectors = [
+    ".statement > *",
+    ".metric-strip > *",
+    ".section-head > *",
+    ".preview-card",
+    ".home-system-copy",
+    ".home-system-flow article",
+    ".resources-band > *",
+    ".research-focus-head > *",
+    ".research-focus-card",
+    ".research-method-copy",
+    ".research-loop-list > div",
+    ".publication-section-head > *",
+    ".publication-featured-card",
+    ".publication-index-row",
+    ".resource-section-head > *",
+    ".resource-type-card",
+    ".worldfoundry-panel",
+    ".release-workflow-copy",
+    ".release-steps > div",
+    ".release-standards-grid > div",
+    ".team-title-block > *",
+    ".team-member",
+    ".news-feed-head > *",
+    ".news-month",
+  ];
+  const revealItems = [...document.querySelectorAll(revealSelectors.join(","))].filter(
+    (item) => !item.hasAttribute("data-join-reveal"),
+  );
+
+  if (!revealItems.length) return;
+
+  revealItems.forEach((item, index) => {
+    item.setAttribute("data-site-reveal", "");
+    item.style.setProperty("--reveal-delay", `${(index % 4) * 45}ms`);
+  });
+  document.documentElement.classList.add("motion-ready");
+
+  const revealEverything = () => {
+    revealItems.forEach((item) => item.classList.add("is-site-visible"));
+  };
+
+  if (reduceMotion.matches || !("IntersectionObserver" in window)) {
+    revealEverything();
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-site-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "0px 0px -7%", threshold: 0.08 },
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
 }
 
 function animateNewsMonth(month, list, shouldOpen) {
@@ -368,6 +431,7 @@ function initCollaborationMap() {
   const locationEl = document.querySelector("[data-partner-location]");
   const descriptionEl = document.querySelector("[data-partner-description]");
   const filterButtons = [...document.querySelectorAll("[data-map-filter]")];
+  const logoCards = [...document.querySelectorAll(".partner-logo-card[data-region]")];
 
   if (!nameEl || !locationEl || !descriptionEl) return;
 
@@ -660,6 +724,12 @@ function initCollaborationMap() {
   function applyFilter(region, fit = true) {
     filterButtons.forEach((button) => {
       button.classList.toggle("is-active", button.dataset.mapFilter === region);
+    });
+
+    logoCards.forEach((card) => {
+      const isMatch = region === "all" || card.dataset.region === region;
+      card.classList.toggle("is-muted", !isMatch);
+      card.classList.toggle("is-highlighted", region !== "all" && isMatch);
     });
 
     const selected = region === "all" ? locations : locations.filter((item) => item.region === region);
