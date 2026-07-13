@@ -1628,6 +1628,29 @@ canvas {
   pointer-events: none;
 }
 
+.member-portrait-link {
+  pointer-events: auto;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 180ms ease;
+}
+
+.member-portrait-link:hover,
+.member-portrait-link:focus-visible {
+  color: rgba(7, 8, 9, 0.14);
+}
+
+.team-member-featured .member-portrait-link:hover,
+.team-member-featured .member-portrait-link:focus-visible {
+  color: rgba(255, 255, 255, 0.18);
+}
+
+.member-portrait-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 6px;
+}
+
 .team-member-featured .member-portrait {
   top: 54px;
   right: 22px;
