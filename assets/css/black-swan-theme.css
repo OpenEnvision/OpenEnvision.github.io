@@ -538,6 +538,8 @@ h3,
 }
 
 .resources-band::before {
+  right: 0;
+  left: 0;
   height: 2px;
   background: #fff;
 }
@@ -1110,10 +1112,6 @@ body.join-page {
   background: #fff;
 }
 
-.join-page .contact-logo-wrap img {
-  filter: grayscale(1) contrast(1.2);
-}
-
 /* Community wrapper; the external site remains legible but monochrome. */
 body.community-page {
   --community-border: rgba(255, 255, 255, 0.4);
@@ -1301,10 +1299,6 @@ body.community-page {
   box-shadow: 12px 12px 0 var(--red);
 }
 
-.community-mobile-blogxiv-logo {
-  filter: grayscale(1) contrast(1.12);
-}
-
 .community-mobile-launch p {
   color: var(--muted);
 }
@@ -1339,6 +1333,8 @@ body.community-page {
 
 .site-footer::before,
 .join-page .site-footer::before {
+  right: 0;
+  left: 0;
   height: 6px;
   background: var(--red);
 }
@@ -1750,6 +1746,12 @@ body.community-page {
 /* Team map: selected-region label matches other kickers */
 .detail-label {
   font-size: 13px;
+}
+
+/* Icons keep their real colours everywhere; filtered-out partner
+   cards dim with opacity only instead of going grey */
+.partner-logo-card.is-muted {
+  filter: none;
 }
 
 /* WorldFoundry: retire legacy teal accents; headline fits narrow screens */
