@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Foresight Community | OpenEnvision</title>
+    <meta
+      name="description"
+      content="Foresight is OpenEnvision's AI community for connecting academia and industry through shared knowledge, opportunities, talks, and events."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" type="image/png" href="assets/img/brand/openenvision_mark.png?v=tab-logo" />
+    <link rel="shortcut icon" type="image/png" href="assets/img/brand/openenvision_mark.png?v=tab-logo" />
+    <link rel="apple-touch-icon" href="assets/img/brand/openenvision_mark.png?v=tab-logo" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css?v=visual-system-20260710-community" />
+    <link rel="stylesheet" href="assets/css/black-swan-theme.css?v=20260801-foresight-observatory-v2" />
+  </head>
+  <body class="foresight-page" data-page="foresight">
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="OpenEnvision home">
+        <img class="brand-logo" src="assets/img/brand/openenvision_mark.png" alt="OpenEnvision logo" />
+        <span>OpenEnvision</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Primary navigation" data-nav>
+        <a href="index.html" data-page-link="home">Home</a>
+        <a href="team.html" data-page-link="team">Team</a>
+        <a href="news.html" data-page-link="news">News</a>
+        <a href="research.html" data-page-link="research">Research</a>
+        <a href="publications.html" data-page-link="publications">Publications</a>
+        <a href="code-datasets.html" data-page-link="code-datasets">Code | Datasets</a>
+        <a href="foresight.html" data-page-link="foresight">Community</a>
+        <details class="nav-dropdown" data-nav-dropdown>
+          <summary>
+            <span>Links</span>
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" /></svg>
+          </summary>
+          <div class="nav-dropdown-menu">
+            <a href="community.html" data-page-link="community">BlogrXiv</a>
+          </div>
+        </details>
+        <a href="join-us.html" data-page-link="join">Join Us</a>
+      </nav>
+    </header>
+
+    <main class="foresight-main">
+      <section class="foresight-hero" aria-labelledby="foresight-title">
+        <div class="foresight-hero-copy" data-foresight-reveal>
+          <h1 id="foresight-title">Foresight</h1>
+          <p>
+            OpenEnvision’s AI community for connecting academia and industry through shared
+            knowledge, opportunities, and collective action.
+          </p>
+          <div class="foresight-hero-actions" aria-label="Foresight community actions">
+            <a class="foresight-button foresight-button-primary" href="#resources">Explore Resources</a>
+            <a class="foresight-button foresight-button-secondary" href="#talks">View Talks</a>
+          </div>
+        </div>
+
+        <figure
+          class="foresight-observatory"
+          role="img"
+          aria-labelledby="foresight-observatory-caption"
+          data-foresight-reveal
+        >
+          <svg
+            class="foresight-observatory__geometry"
+            viewBox="0 0 720 620"
+            aria-hidden="true"
+            shape-rendering="geometricPrecision"
+          >
+            <g class="foresight-observatory__construction">
+              <circle class="foresight-orbit foresight-orbit--outer" cx="332" cy="307" r="286" />
+              <circle class="foresight-orbit foresight-orbit--inner" cx="332" cy="307" r="191" />
+              <path class="foresight-orbit foresight-orbit--arc" d="M 172 307 A 160 160 0 0 1 421 174" />
+              <path class="foresight-orbit foresight-orbit--arc" d="M 196 307 A 136 136 0 0 1 409 194" />
+              <path class="foresight-orbit foresight-orbit--arc" d="M 230 307 A 102 102 0 0 1 388 222" />
+              <path class="foresight-axis" d="M 0 307 H 720 M 332 8 V 202 M 332 462 V 620" />
+              <path class="foresight-vector" d="M 430 204 L 515 76" />
+              <path class="foresight-horizon" d="M 16 382 H 704" />
+              <path class="foresight-waterline" d="M 36 370 H 151 M 54 390 H 187 M 510 373 H 670 M 547 395 H 708" />
+            </g>
+
+            <g class="foresight-orbit-rotor foresight-orbit-rotor--slow">
+              <circle class="foresight-orbit foresight-orbit--dashed" cx="332" cy="307" r="238" />
+              <circle class="foresight-node foresight-node--solid" cx="164" cy="139" r="5" />
+              <circle class="foresight-node foresight-node--open" cx="500" cy="475" r="4" />
+            </g>
+
+            <g class="foresight-orbit-rotor foresight-orbit-rotor--counter">
+              <circle class="foresight-orbit foresight-orbit--guide" cx="332" cy="307" r="262" />
+              <circle class="foresight-node foresight-node--solid" cx="91" cy="205" r="5" />
+              <circle class="foresight-node foresight-node--open" cx="573" cy="409" r="4" />
+            </g>
+
+            <g class="foresight-observatory__rays">
+              <path d="M 373 263 L 706 82" />
+              <path d="M 373 263 L 706 99" />
+              <path d="M 373 263 L 706 116" />
+              <path d="M 373 263 L 706 133" />
+              <path d="M 373 263 L 706 150" />
+              <path d="M 373 263 L 706 167" />
+              <path d="M 373 263 L 706 184" />
+              <path d="M 373 263 L 706 201" />
+              <path d="M 373 263 L 706 218" />
+              <path d="M 373 263 L 706 235" />
+              <path d="M 373 263 L 706 252" />
+              <circle class="foresight-signal-ring" cx="585" cy="171" r="4" />
+              <circle class="foresight-signal-dot" cx="585" cy="171" r="1.8" />
+            </g>
+
+            <g class="foresight-observatory__labels">
+              <text class="foresight-observatory__readout" x="548" y="584">OPEN SIGNAL / 01</text>
+            </g>
+
+            <g class="foresight-observatory__fixed-nodes">
+              <circle class="foresight-node foresight-node--solid" cx="230" cy="493" r="5" />
+              <circle class="foresight-node foresight-node--open" cx="175" cy="518" r="4" />
+              <circle class="foresight-node foresight-node--open" cx="225" cy="245" r="3.5" />
+              <circle class="foresight-node foresight-node--solid" cx="646" cy="205" r="4" />
+            </g>
+          </svg>
+
+          <img
+            class="foresight-observatory__swan"
+            src="assets/img/foresight/black-swan-cutout-v2.png"
+            alt=""
+            width="1346"
+            height="1169"
+            decoding="async"
+            fetchpriority="high"
+          />
+          <figcaption class="visually-hidden" id="foresight-observatory-caption">
+            A black swan at the center of Foresight's connected signals for About, Resources,
+            Talks, and Events.
+          </figcaption>
+        </figure>
+
+        <a class="foresight-scroll-cue" href="#about" aria-label="Continue to About Foresight">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6" /></svg>
+        </a>
+      </section>
+
+      <section class="foresight-about" id="about" aria-labelledby="foresight-about-title">
+        <div class="foresight-about-copy" data-foresight-reveal>
+          <p class="foresight-section-index">01 / About</p>
+          <h2 id="foresight-about-title">Built to connect what research needs next.</h2>
+          <p>
+            Foresight extends OpenEnvision beyond research projects. It connects people, curates
+            useful opportunities, and convenes conversations that help ideas travel between
+            academic and industrial practice.
+          </p>
+        </div>
+
+        <div class="foresight-functions" aria-label="Foresight community functions">
+          <article data-foresight-reveal>
+            <svg viewBox="0 0 52 52" aria-hidden="true">
+              <rect x="7" y="8" width="27" height="27" />
+              <rect x="18" y="19" width="27" height="27" />
+            </svg>
+            <span>01</span>
+            <h3>Connect</h3>
+            <p>Link people across disciplines and sectors to build lasting relationships.</p>
+          </article>
+          <article data-foresight-reveal>
+            <svg viewBox="0 0 52 52" aria-hidden="true">
+              <path d="M7 11h27M7 19h20M7 27h14" />
+              <rect x="24" y="25" width="21" height="21" />
+            </svg>
+            <span>02</span>
+            <h3>Curate</h3>
+            <p>Surface opportunities and resources that are relevant, rigorous, and actionable.</p>
+          </article>
+          <article data-foresight-reveal>
+            <svg viewBox="0 0 52 52" aria-hidden="true">
+              <circle cx="17" cy="17" r="7" />
+              <circle cx="35" cy="17" r="7" />
+              <path d="M5 43c0-9 5-14 12-14s12 5 12 14M23 43c0-9 5-14 12-14s12 5 12 14" />
+            </svg>
+            <span>03</span>
+            <h3>Convene</h3>
+            <p>Host talks and events that spark dialogue and drive collective progress.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="foresight-resources" id="resources" aria-labelledby="foresight-resources-title">
+        <div class="foresight-resource-rail" data-foresight-reveal>
+          <p class="foresight-section-index">02 / Resources</p>
+          <h2 id="foresight-resources-title">Useful signals, gathered in one place.</h2>
+          <p>A maintained index of opportunities and timelines for people building across research and industry.</p>
+
+          <div class="foresight-resource-filters" aria-label="Filter community resources">
+            <button type="button" class="is-selected" data-resource-filter="all" aria-pressed="true">
+              <span>All</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </button>
+            <button type="button" data-resource-filter="careers" aria-pressed="false">
+              <span>Careers</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </button>
+            <button type="button" data-resource-filter="deadlines" aria-pressed="false">
+              <span>Conference Deadlines</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </button>
+            <button type="button" data-resource-filter="workshops" aria-pressed="false">
+              <span>Workshop Timelines</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </button>
+            <button type="button" data-resource-filter="blogs" aria-pressed="false">
+              <span>Blog Collection</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="foresight-resource-index" data-foresight-reveal>
+          <div class="foresight-resource-head" aria-hidden="true">
+            <span>Resource</span>
+            <span>Type</span>
+          </div>
+
+          <details class="foresight-resource-row" data-resource-kind="careers">
+            <summary>
+              <span class="foresight-resource-number">01</span>
+              <span class="foresight-resource-copy">
+                <strong>Industry opportunities</strong>
+                <small>Research and engineering roles across the AI ecosystem.</small>
+              </span>
+              <span class="foresight-resource-type">Curated directory</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </summary>
+            <div class="foresight-resource-detail">
+              <div class="foresight-career-directory" aria-label="Verified AI industry career directory">
+                <div class="foresight-career-head">
+                  <div>
+                    <span>AI industry hiring radar</span>
+                    <strong><span data-career-count>37</span> verified career portals · checked 01 Aug 2026</strong>
+                  </div>
+                  <span>Official sources only</span>
+                </div>
+
+                <div class="foresight-career-standard">
+                  <span>Live</span>
+                  <p>Links open each company’s live careers portal. Hiring areas summarize the current official listings; role availability and locations may change continuously.</p>
+                </div>
+
+                <div class="foresight-career-toolbar">
+                  <span>Company type</span>
+                  <div class="foresight-career-filters" aria-label="Filter AI career portals by company type">
+                    <button type="button" class="is-selected" data-career-filter="all" aria-pressed="true">All</button>
+                    <button type="button" data-career-filter="frontier" aria-pressed="false">Frontier Labs</button>
+                    <button type="button" data-career-filter="big-tech" aria-pressed="false">Big Tech</button>
+                    <button type="button" data-career-filter="startup" aria-pressed="false">StartUp</button>
+                    <button type="button" data-career-filter="infrastructure" aria-pressed="false">AI Systems</button>
+                    <button type="button" data-career-filter="embodied" aria-pressed="false">Embodied AI</button>
+                    <button type="button" data-career-filter="china-asia" aria-pressed="false">China &amp; Asia</button>
+                  </div>
+                </div>
+
+                <p class="foresight-career-result" data-career-result aria-live="polite">Showing all 37 verified career portals.</p>
+                <div class="foresight-career-grid" data-career-list></div>
+                <noscript>
+                  <p class="foresight-conference-noscript">Enable JavaScript to view the verified AI careers directory.</p>
+                </noscript>
+              </div>
+            </div>
+          </details>
+
+          <details class="foresight-resource-row" data-resource-kind="deadlines">
+            <summary>
+              <span class="foresight-resource-number">02</span>
+              <span class="foresight-resource-copy">
+                <strong>Conference submissions</strong>
+                <small>Official calls and submission windows for leading AI conferences.</small>
+              </span>
+              <span class="foresight-resource-type">Deadline tracker</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </summary>
+            <div class="foresight-resource-detail">
+              <div class="foresight-conference-tracker" aria-label="Conference submission deadline tracker">
+                <div class="foresight-tracker-topline">
+                  <div>
+                    <span>Live deadline radar</span>
+                    <strong><span data-conference-count>27</span> conferences · updates every second</strong>
+                  </div>
+                  <a href="https://ccfddl.com/" target="_blank" rel="noreferrer">
+                    <span>Reference: ccfddl</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                  </a>
+                </div>
+
+                <div class="foresight-tracker-note">
+                  <span>AOE</span>
+                  <p>Countdowns resolve timezone-aware deadlines to one instant. <strong>Official</strong> dates are verified; <strong>Tracked</strong> dates follow community data; <strong>Estimated</strong> dates project the latest cadence until the next CFP appears.</p>
+                </div>
+
+                <div class="foresight-conference-toolbar">
+                  <div class="foresight-conference-filters" aria-label="Filter conference deadlines">
+                    <button type="button" class="is-selected" data-conference-filter="all" aria-pressed="true">All</button>
+                    <button type="button" data-conference-filter="ml" aria-pressed="false">ML</button>
+                    <button type="button" data-conference-filter="vision" aria-pressed="false">Vision</button>
+                    <button type="button" data-conference-filter="nlp" aria-pressed="false">NLP</button>
+                    <button type="button" data-conference-filter="robotics" aria-pressed="false">Robotics</button>
+                    <button type="button" data-conference-filter="graphics" aria-pressed="false">Graphics</button>
+                    <button type="button" data-conference-filter="systems" aria-pressed="false">Systems</button>
+                    <button type="button" data-conference-filter="web" aria-pressed="false">Web</button>
+                  </div>
+                  <div class="foresight-conference-legend" aria-label="Deadline confidence legend">
+                    <span><i class="is-official"></i>Official</span>
+                    <span><i class="is-tracked"></i>Tracked</span>
+                    <span><i class="is-estimated"></i>Estimated</span>
+                  </div>
+                </div>
+
+                <p class="foresight-conference-result" data-conference-result aria-live="polite">Showing all 27 tracked conferences.</p>
+                <div class="foresight-conference-grid" data-conference-grid></div>
+                <noscript>
+                  <p class="foresight-conference-noscript">Enable JavaScript to run the live conference countdowns.</p>
+                </noscript>
+              </div>
+            </div>
+          </details>
+
+          <details class="foresight-resource-row" data-resource-kind="workshops">
+            <summary>
+              <span class="foresight-resource-number">03</span>
+              <span class="foresight-resource-copy">
+                <strong>Workshop timelines</strong>
+                <small>Calls, deadlines, and program dates across research workshops.</small>
+              </span>
+              <span class="foresight-resource-type">Timeline index</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </summary>
+            <div class="foresight-resource-detail">
+              <div class="foresight-workshop-radar" aria-label="Curated AI workshop timeline tracker">
+                <div class="foresight-workshop-head">
+                  <div>
+                    <span>Curated workshop radar</span>
+                    <strong><span data-workshop-count>13</span> vetted programs · updated 01 Aug 2026</strong>
+                  </div>
+                  <div class="foresight-workshop-hosts" aria-label="Official host references">
+                    <a href="https://neurips.cc/Conferences/2026/CallForWorkshops" target="_blank" rel="noreferrer">NeurIPS</a>
+                    <a href="https://eccv.ecva.net/Conferences/2026/Workshops" target="_blank" rel="noreferrer">ECCV</a>
+                  </div>
+                </div>
+
+                <div class="foresight-workshop-standard">
+                  <span>Vetted</span>
+                  <p>Included only when the workshop is attached to a leading research conference, publishes a verifiable call and timeline, and names an established cross-institutional organizing team.</p>
+                </div>
+
+                <div class="foresight-workshop-toolbar">
+                  <span>Research focus</span>
+                  <div class="foresight-workshop-filters" aria-label="Filter workshops by research topic">
+                    <button type="button" class="is-selected" data-workshop-filter="all" aria-pressed="true">All</button>
+                    <button type="button" data-workshop-filter="world-models" aria-pressed="false">World Models</button>
+                    <button type="button" data-workshop-filter="multimodal" aria-pressed="false">Multimodal AI</button>
+                    <button type="button" data-workshop-filter="vision" aria-pressed="false">Computer Vision</button>
+                    <button type="button" data-workshop-filter="agents" aria-pressed="false">Agents</button>
+                    <button type="button" data-workshop-filter="embodied" aria-pressed="false">Embodied AI</button>
+                    <button type="button" data-workshop-filter="efficient" aria-pressed="false">Efficient AI</button>
+                  </div>
+                </div>
+
+                <p class="foresight-workshop-result" data-workshop-result aria-live="polite">Showing all 13 vetted workshops.</p>
+                <div class="foresight-workshop-list" data-workshop-list></div>
+                <noscript>
+                  <p class="foresight-conference-noscript">Enable JavaScript to view the curated workshop timeline.</p>
+                </noscript>
+              </div>
+            </div>
+          </details>
+
+          <a
+            class="foresight-resource-row foresight-resource-link"
+            data-resource-kind="blogs"
+            href="community.html"
+            aria-label="Open the Blog Collection in BlogrXiv"
+          >
+            <span class="foresight-resource-number">04</span>
+            <span class="foresight-resource-copy">
+              <strong>Blog Collection</strong>
+              <small>Research perspectives, field notes, and experience sharing from the community.</small>
+            </span>
+            <span class="foresight-resource-type">Explore BlogrXiv</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+
+          <p class="visually-hidden" aria-live="polite" data-resource-status>Showing all resource categories.</p>
+          <a
+            class="foresight-inline-action"
+            href="mailto:juanxitian1031@gmail.com?subject=Foresight%20Resource%20Suggestion"
+          >
+            <span>Suggest a Resource</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="foresight-talks" id="talks" aria-labelledby="foresight-talks-title">
+        <div class="foresight-talks-head" data-foresight-reveal>
+          <span class="foresight-talks-number" aria-hidden="true">03</span>
+          <div>
+            <p class="foresight-section-index">03 / Talks</p>
+            <h2 id="foresight-talks-title">Conversations that move ideas across the boundary.</h2>
+            <p>
+              Foresight Talks creates a shared forum for research frontiers, industry practice,
+              and the shared experience connecting them.
+            </p>
+          </div>
+          <svg class="foresight-signal" viewBox="0 0 420 150" aria-hidden="true">
+            <path d="M0 75h72l7-15 8 31 10-57 10 82 10-52 10 21 12-10h46l8-20 9 39 10-72 10 108 10-82 10 49 10-22 10 30 11-50 10 38 10-18h83" />
+            <path class="foresight-signal-red" d="M72 75h15M127 75h22M195 75h17M292 75h20M337 75h18" />
+          </svg>
+        </div>
+
+        <div class="foresight-talk-list">
+          <a href="mailto:juanxitian1031@gmail.com?subject=Foresight%20Talk%20Proposal%20-%20Research%20Frontiers" data-foresight-reveal>
+            <span>01</span>
+            <strong>Research Frontiers</strong>
+            <p>Emerging questions, methods, and evidence from the research community.</p>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+          <a href="mailto:juanxitian1031@gmail.com?subject=Foresight%20Talk%20Proposal%20-%20Industry%20Practice" data-foresight-reveal>
+            <span>02</span>
+            <strong>Industry Practice</strong>
+            <p>Engineering lessons and constraints from real-world AI systems.</p>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+          <a href="mailto:juanxitian1031@gmail.com?subject=Foresight%20Talk%20Proposal%20-%20Experience%20Sharing" data-foresight-reveal>
+            <span>03</span>
+            <strong>Experience Sharing</strong>
+            <p>First-hand lessons, practical insights, and hard-won experience from research and industry.</p>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+        </div>
+
+        <a
+          class="foresight-inline-action foresight-inline-action-dark"
+          href="mailto:juanxitian1031@gmail.com?subject=Foresight%20Talk%20Proposal"
+          data-foresight-reveal
+        >
+          <span>Propose a Talk</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </a>
+      </section>
+
+      <section class="foresight-events" id="events" aria-labelledby="foresight-events-title">
+        <div class="foresight-events-head" data-foresight-reveal>
+          <div>
+            <p class="foresight-section-index">04 / Events</p>
+            <h2 id="foresight-events-title">Where the community meets, builds, and shares.</h2>
+            <p>Foresight brings people together through focused gatherings that turn shared interests into useful exchange.</p>
+          </div>
+          <a
+            class="foresight-inline-action"
+            href="mailto:juanxitian1031@gmail.com?subject=Foresight%20Event%20Proposal"
+          >
+            <span>Propose an Event</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+        </div>
+
+        <div class="foresight-event-formats" aria-label="Foresight event formats">
+          <a href="mailto:juanxitian1031@gmail.com?subject=Foresight%20Community%20Meetup%20Proposal" data-foresight-reveal>
+            <span>01</span>
+            <h3>Community Meetups</h3>
+            <p>Open conversations for researchers, students, engineers, and collaborators.</p>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+          <a href="mailto:juanxitian1031@gmail.com?subject=Foresight%20Research%20Workshop%20Proposal" data-foresight-reveal>
+            <span>02</span>
+            <h3>Research Workshops</h3>
+            <p>Focused programmes around emerging questions and shared technical challenges.</p>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+          <a href="mailto:juanxitian1031@gmail.com?subject=Foresight%20Open%20Session%20Proposal" data-foresight-reveal>
+            <span>03</span>
+            <h3>Open Sessions</h3>
+            <p>Project showcases, resource exchanges, and community-led discussions.</p>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="foresight-closing" aria-label="Connect with Foresight" data-foresight-reveal>
+        <img src="assets/img/brand/openenvision_mark.png" alt="" />
+        <h2>Help shape what Foresight gathers next.</h2>
+        <a href="join-us.html#contact">
+          <span>Connect with OpenEnvision</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer foresight-footer">
+      <div>
+        <img class="footer-logo" src="assets/img/brand/openenvision_mark.png" alt="OpenEnvision logo" loading="lazy" decoding="async" />
+        <a class="footer-brand" href="index.html">OpenEnvision</a>
+        <p>Open Vision Intelligence through Academia-Industry Collaboration.</p>
+      </div>
+      <div class="footer-links">
+        <a href="team.html">Team</a>
+        <a href="news.html">News</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="code-datasets.html">Code | Datasets</a>
+        <a href="foresight.html" aria-current="page">Community</a>
+        <a href="community.html">BlogrXiv</a>
+        <a href="join-us.html">Join Us</a>
+      </div>
+      <p class="footer-copyright">© 2026 OpenEnvision. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/main.js?v=20260801-ai-careers-evolvent"></script>
+  </body>
+</html>
