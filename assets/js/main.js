@@ -653,6 +653,20 @@ function initConferenceTracker() {
 
   const conferences = [
     {
+      name: "KDD",
+      edition: "2027",
+      fullName: "ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+      category: "ml",
+      categoryLabel: "Data Science / AI",
+      target: "2026-07-27T11:59:59Z",
+      deadlineType: "First-cycle paper",
+      deadlineLabel: "26 Jul 2026",
+      timezone: "AoE",
+      confidence: "official",
+      venue: "San Jose · 1–5 Aug 2027",
+      url: "https://kdd2027.kdd.org/research-track-call-for-papers/",
+    },
+    {
       name: "AAAI",
       edition: "2027",
       fullName: "AAAI Conference on Artificial Intelligence",
@@ -760,9 +774,24 @@ function initConferenceTracker() {
       deadlineType: "Paper deadline",
       deadlineLabel: "25 Sep 2026",
       timezone: "AoE",
-      confidence: "tracked",
-      venue: "San Francisco · Dates TBA",
+      confidence: "official",
+      venue: "California · 26–30 Apr 2027",
       url: "https://iclr.cc/Conferences/2027",
+    },
+    {
+      name: "ICASSP",
+      edition: "2027",
+      fullName: "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      category: "signal",
+      categoryLabel: "Signal / Speech",
+      target: null,
+      sortTarget: "2026-09-17T00:00:00Z",
+      deadlineType: "Full paper",
+      deadlineLabel: "16 Sep 2026",
+      timezone: "Time TBA",
+      confidence: "official",
+      venue: "Toronto · 16–21 May 2027",
+      url: "https://2027.ieeeicassp.org/call-for-papers/",
     },
     {
       name: "AISTATS",
@@ -793,6 +822,20 @@ function initConferenceTracker() {
       url: "https://www.thewebconf.org/",
     },
     {
+      name: "AAMAS",
+      edition: "2027",
+      fullName: "International Conference on Autonomous Agents and Multiagent Systems",
+      category: "ml",
+      categoryLabel: "Agents / AI",
+      target: "2026-10-09T11:59:59Z",
+      deadlineType: "Paper deadline",
+      deadlineLabel: "08 Oct 2026",
+      timezone: "AoE",
+      confidence: "official",
+      venue: "Hanoi · 3–7 May 2027",
+      url: "https://warwick.ac.uk/fac/sci/dcs/aamas2027/calls/",
+    },
+    {
       name: "NAACL",
       edition: "2027",
       fullName: "Nations of the Americas Chapter of the ACL",
@@ -805,6 +848,20 @@ function initConferenceTracker() {
       confidence: "official",
       venue: "San Francisco · 1–5 Jun 2027",
       url: "https://2027.naacl.org/",
+    },
+    {
+      name: "COLING",
+      edition: "2027",
+      fullName: "International Conference on Computational Linguistics",
+      category: "nlp",
+      categoryLabel: "NLP",
+      target: "2026-10-13T11:59:59Z",
+      deadlineType: "ARR submission",
+      deadlineLabel: "12 Oct 2026",
+      timezone: "AoE",
+      confidence: "official",
+      venue: "Macau · 9–14 May 2027",
+      url: "https://2027.coling-iccl.org/",
     },
     {
       name: "CVPR",
@@ -1034,8 +1091,8 @@ function initConferenceTracker() {
 
   const now = Date.now();
   conferences.sort((a, b) => {
-    const aTime = Date.parse(a.target);
-    const bTime = Date.parse(b.target);
+    const aTime = Date.parse(a.target || a.sortTarget);
+    const bTime = Date.parse(b.target || b.sortTarget);
     const aPast = aTime <= now;
     const bPast = bTime <= now;
     if (aPast !== bPast) return aPast ? 1 : -1;
@@ -1054,7 +1111,7 @@ function initConferenceTracker() {
         <article
           class="foresight-conference-card"
           data-conference-category="${conference.category}"
-          data-conference-deadline="${conference.target}"
+          data-conference-deadline="${conference.target || ""}"
           data-conference-confidence="${conference.confidence}"
         >
           <header>
@@ -1127,6 +1184,18 @@ function initConferenceTracker() {
     const currentTime = Date.now();
     cards.forEach((card) => {
       const deadline = Date.parse(card.dataset.conferenceDeadline);
+      const state = card.querySelector("[data-countdown-state]");
+
+      if (!Number.isFinite(deadline)) {
+        card.querySelector("[data-countdown-days]").textContent = "---";
+        card.querySelector("[data-countdown-hours]").textContent = "--";
+        card.querySelector("[data-countdown-minutes]").textContent = "--";
+        card.querySelector("[data-countdown-seconds]").textContent = "--";
+        card.classList.remove("is-closed", "is-urgent", "is-soon");
+        state.textContent = "Time TBA";
+        return;
+      }
+
       const remaining = Math.max(0, deadline - currentTime);
       const days = Math.floor(remaining / 86400000);
       const hours = Math.floor((remaining % 86400000) / 3600000);
@@ -1138,7 +1207,6 @@ function initConferenceTracker() {
       card.querySelector("[data-countdown-minutes]").textContent = pad(minutes);
       card.querySelector("[data-countdown-seconds]").textContent = pad(seconds);
 
-      const state = card.querySelector("[data-countdown-state]");
       const isClosed = deadline <= currentTime;
       const isUrgent = !isClosed && remaining <= 7 * 86400000;
       const isSoon = !isClosed && remaining <= 30 * 86400000;
@@ -1177,6 +1245,26 @@ function initWorkshopTracker() {
       ],
       format: "Non-archival · OpenReview · full day",
       url: "https://eccv2026-3d-world-models.github.io/",
+    },
+    {
+      shortName: "PhysUnderstand",
+      name: "Physical Understanding for Decision-Making",
+      host: "NeurIPS 2026",
+      location: "Sydney, Australia",
+      topics: ["world-models", "vision", "agents", "embodied", "multimodal"],
+      topicLabels: ["World Models", "Computer Vision", "Agents", "Embodied AI", "Multimodal AI"],
+      description: "Physical reasoning, causal world models, vision-language-action systems, and reliable decision-making for embodied agents.",
+      institutions: "Google DeepMind · Apple · McGill · University of Bristol",
+      organizers: "Felix Juefei-Xu · Tianyu Shi · Shirley Rong Zou · Mengyue Yang",
+      deadline: "2026-08-26T08:00:00Z",
+      program: "2026-12-11T00:00:00Z",
+      timeline: [
+        { label: "Submission", value: "26 Aug 2026 · 08:00 UTC" },
+        { label: "Notification", value: "By 29 Sep 2026" },
+        { label: "Workshop", value: "11 / 12 Dec 2026" },
+      ],
+      format: "NeurIPS format · OpenReview · full day",
+      url: "https://sites.google.com/view/neurips-2026-workshop-pudm",
     },
     {
       shortName: "WM–PAI",
@@ -1259,6 +1347,68 @@ function initWorkshopTracker() {
       url: "https://rtcaneurips26.github.io/",
     },
     {
+      shortName: "Verify Agents",
+      name: "Who Verifies the Agents?",
+      host: "NeurIPS 2026",
+      location: "Sydney, Australia",
+      topics: ["agents", "multimodal"],
+      topicLabels: ["Agents", "Multimodal AI"],
+      description: "Robust verifiers, environment-grounded evaluation, multimodal signals, and scalable oversight for long-horizon agents.",
+      institutions: "UC Berkeley · MIT–IBM Watson AI Lab · Stanford · Meta",
+      organizers: "Ahmad Beirami · Mert Cemri · Zhang-Wei Hong · Dilara Soylu",
+      deadline: "2026-08-30T11:59:59Z",
+      program: "2026-12-11T00:00:00Z",
+      timeline: [
+        { label: "Submission", value: "29 Aug 2026 · AoE" },
+        { label: "Notification", value: "29 Sep 2026" },
+        { label: "Workshop", value: "11 / 12 Dec 2026" },
+      ],
+      format: "Non-archival · OpenReview · papers + demos",
+      url: "https://verify-agents-workshop.github.io/",
+    },
+    {
+      shortName: "Meta-Agents",
+      name: "Managing Agents that Manage Agents",
+      host: "NeurIPS 2026",
+      location: "Sydney, Australia",
+      topics: ["agents", "efficient"],
+      topicLabels: ["Agents", "Efficient AI"],
+      description: "Meta-agents that design, optimize, supervise, and evaluate other agents, with emphasis on safety, oversight, and responsible use.",
+      institutions: "Stanford · Carnegie Mellon · Northeastern · Google DeepMind",
+      organizers: "Simon Yu · Dilara Soylu · Christopher Manning · Weiyan Shi",
+      deadline: "2026-08-30T11:59:59Z",
+      program: "2026-12-11T00:00:00Z",
+      timeline: [
+        { label: "Submission", value: "29 Aug 2026 · AoE" },
+        { label: "Notification", value: "By 29 Sep 2026" },
+        { label: "Workshop", value: "11 / 12 Dec 2026" },
+      ],
+      format: "Non-archival · OpenReview · papers + demos",
+      url: "https://meta-agents-workshop.github.io/",
+    },
+    {
+      shortName: "VLM4RWD",
+      name: "Grounded and Faithful Vision-Language Models for Real-World Deployment",
+      host: "NeurIPS 2026",
+      location: "Sydney, Australia",
+      topics: ["multimodal", "vision", "agents", "embodied", "world-models"],
+      topicLabels: ["Multimodal AI", "Computer Vision", "Agents", "Embodied AI", "World Models"],
+      description: "Grounding, faithful multimodal reasoning, vision-language-action models, world models, and reliable embodied deployment.",
+      institutions: "Stanford · Waterloo · UPenn · University of Sydney · Wayve",
+      organizers: "Mozhgan Nasr Azadani · Yimu Wang · Jiayuan Mao · Elahe Arani",
+      deadline: "2026-08-31T11:59:59Z",
+      deadlinePrecision: "date",
+      deadlineLabel: "30 Aug",
+      program: "2026-12-11T00:00:00Z",
+      timeline: [
+        { label: "Submission", value: "30 Aug 2026 · time TBA" },
+        { label: "Notification", value: "29 Sep 2026" },
+        { label: "Workshop", value: "11 Dec 2026" },
+      ],
+      format: "Non-archival · OpenReview · up to 8 pages",
+      url: "https://vlm4rwd.github.io/",
+    },
+    {
       shortName: "MMDA",
       name: "Multimodal Digital Agents",
       host: "ECCV 2026",
@@ -1308,12 +1458,12 @@ function initWorkshopTracker() {
       description: "Zero-shot physical intelligence, vision-language-action policies, cross-embodiment generalization, robot data, and safe deployment.",
       institutions: "Microsoft Research · Google DeepMind · TU Dresden · NVIDIA",
       organizers: "Andrey Kolobov · Alex Bewley · Roberto Calandra · Moritz Reuss",
-      deadline: "2026-08-23T11:59:59Z",
+      deadline: "2026-08-27T11:59:59Z",
       program: "2026-12-11T00:00:00Z",
       timeline: [
-        { label: "Submission", value: "22 Aug 2026 · AoE" },
+        { label: "Submission", value: "26 Aug 2026 · AoE" },
         { label: "Notification", value: "29 Sep 2026" },
-        { label: "Workshop", value: "NeurIPS · Sydney" },
+        { label: "Workshop", value: "11 / 12 Dec 2026" },
       ],
       format: "8th edition · non-archival · papers + demos",
       url: "https://www.robot-learning.ml/2026/",
@@ -1420,6 +1570,16 @@ function initWorkshopTracker() {
     },
   ];
 
+  const workshopNow = Date.now();
+  workshops.sort((a, b) => {
+    const aDeadline = Date.parse(a.deadline);
+    const bDeadline = Date.parse(b.deadline);
+    const aClosed = aDeadline <= workshopNow;
+    const bClosed = bDeadline <= workshopNow;
+    if (aClosed !== bClosed) return aClosed ? 1 : -1;
+    return aDeadline - bDeadline;
+  });
+
   list.innerHTML = workshops
     .map(
       (workshop) => `
@@ -1427,6 +1587,8 @@ function initWorkshopTracker() {
           class="foresight-workshop-card"
           data-workshop-topics="${workshop.topics.join(" ")}"
           data-workshop-deadline="${workshop.deadline}"
+          data-workshop-deadline-precision="${workshop.deadlinePrecision || "time"}"
+          data-workshop-deadline-label="${workshop.deadlineLabel || ""}"
           data-workshop-program="${workshop.program}"
         >
           <header>
@@ -1513,13 +1675,18 @@ function initWorkshopTracker() {
       const status = card.querySelector("[data-workshop-status]");
       const isOpen = deadline > currentTime;
       const isUpcoming = !isOpen && program > currentTime;
+      const deadlineIsDateOnly = card.dataset.workshopDeadlinePrecision === "date";
       card.classList.toggle("is-open", isOpen);
       card.classList.toggle("is-program-upcoming", isUpcoming);
       card.classList.toggle("is-complete", !isOpen && !isUpcoming);
 
       if (isOpen) {
-        const days = Math.max(1, Math.ceil((deadline - currentTime) / 86400000));
-        status.textContent = `${days} ${days === 1 ? "day" : "days"} to submit`;
+        if (deadlineIsDateOnly) {
+          status.textContent = `Deadline ${card.dataset.workshopDeadlineLabel}`;
+        } else {
+          const days = Math.max(1, Math.ceil((deadline - currentTime) / 86400000));
+          status.textContent = `${days} ${days === 1 ? "day" : "days"} to submit`;
+        }
       } else if (isUpcoming) {
         const days = Math.max(1, Math.ceil((program - currentTime) / 86400000));
         status.textContent = `Program in ${days} ${days === 1 ? "day" : "days"}`;
