@@ -861,7 +861,12 @@ h3,
 }
 
 .collab-map .leaflet-tile-pane {
-  filter: grayscale(1) contrast(1.08);
+  /* Keep the public OSM basemap dark without changing country highlights. */
+  filter: grayscale(1) invert(1) brightness(0.82) contrast(1.08);
+}
+
+.collab-map .leaflet-tile {
+  filter: none;
 }
 
 .collab-map .leaflet-control-attribution {
@@ -3260,7 +3265,8 @@ a.worldfoundry-card-row:focus-visible {
   background: var(--ink);
 }
 
-.foresight-conference-legend i.is-estimated {
+.foresight-conference-legend i.is-estimated,
+.foresight-conference-legend i.is-pending {
   border-style: dashed;
 }
 
@@ -3363,7 +3369,8 @@ a.worldfoundry-card-row:focus-visible {
   background: var(--ink);
 }
 
-.foresight-countdown-source.is-estimated {
+.foresight-countdown-source.is-estimated,
+.foresight-countdown-source.is-pending {
   color: var(--ink);
   border-style: dashed;
   background: #fff;
@@ -3485,6 +3492,18 @@ a.worldfoundry-card-row:focus-visible {
 
 .foresight-conference-card.is-closed .foresight-conference-deadline > span {
   color: var(--ink);
+}
+
+.foresight-timeline-note {
+  margin: 0 0 16px;
+  color: rgba(5, 5, 5, 0.68);
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.foresight-workshop-card > .foresight-timeline-note {
+  margin-top: 16px;
 }
 
 .foresight-conference-card > footer {

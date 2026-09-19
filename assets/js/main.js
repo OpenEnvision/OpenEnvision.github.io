@@ -653,456 +653,498 @@ function initConferenceTracker() {
 
   const conferences = [
     {
-      name: "KDD",
-      edition: "2027",
-      fullName: "ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
-      category: "ml",
-      categoryLabel: "Data Science / AI",
-      target: "2026-07-27T11:59:59Z",
-      deadlineType: "First-cycle paper",
-      deadlineLabel: "26 Jul 2026",
-      timezone: "AoE",
-      confidence: "official",
-      venue: "San Jose · 1–5 Aug 2027",
-      url: "https://kdd2027.kdd.org/research-track-call-for-papers/",
+      "name": "KDD",
+      "edition": "2027",
+      "fullName": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+      "category": "ml",
+      "categoryLabel": "Data Science / AI",
+      "target": null,
+      "deadlineType": "Second-cycle paper",
+      "deadlineLabel": "Feb 2027 · Date TBA",
+      "timezone": "",
+      "confidence": "pending",
+      "venue": "San Jose · 1–5 Aug 2027",
+      "url": "https://kdd2027.kdd.org/research-track-call-for-papers/",
+      "note": "First cycle closed 26 Jul 2026. February cycle announced; exact deadline pending.",
+      "checkedAt": "2026-09-20"
     },
     {
-      name: "AAAI",
-      edition: "2027",
-      fullName: "AAAI Conference on Artificial Intelligence",
-      category: "ml",
-      categoryLabel: "AI / ML",
-      target: "2026-08-01T11:59:59Z",
-      deadlineType: "Supplemental deadline",
-      deadlineLabel: "31 Jul 2026",
-      timezone: "AoE",
-      confidence: "official",
-      venue: "Montréal · 16–23 Feb 2027",
-      url: "https://aaai.org/conference/aaai/aaai-27/",
+      "name": "AAAI",
+      "edition": "2027",
+      "fullName": "AAAI Conference on Artificial Intelligence",
+      "category": "ml",
+      "categoryLabel": "AI / ML",
+      "target": "2026-07-29T11:59:59Z",
+      "deadlineType": "Main-track paper",
+      "deadlineLabel": "28 Jul 2026",
+      "timezone": "AoE",
+      "confidence": "official",
+      "venue": "Montréal · 16–23 Feb 2027",
+      "url": "https://aaai.org/conference/aaai/aaai-27/",
+      "note": "Main-track submissions closed; supplementary material was due 31 Jul.",
+      "checkedAt": "2026-09-20"
     },
     {
-      name: "EMNLP",
-      edition: "2026",
-      fullName: "Empirical Methods in Natural Language Processing",
-      category: "nlp",
-      categoryLabel: "NLP",
-      target: "2026-08-03T11:59:59Z",
-      deadlineType: "ARR commitment",
-      deadlineLabel: "02 Aug 2026",
-      timezone: "AoE",
-      confidence: "official",
-      venue: "Budapest · 24–29 Oct 2026",
-      url: "https://2026.emnlp.org/",
+      "name": "EMNLP",
+      "edition": "2026",
+      "fullName": "Empirical Methods in Natural Language Processing",
+      "category": "nlp",
+      "categoryLabel": "NLP",
+      "target": "2026-08-03T11:59:59Z",
+      "deadlineType": "ARR commitment",
+      "deadlineLabel": "02 Aug 2026",
+      "timezone": "AoE",
+      "confidence": "official",
+      "venue": "Budapest · 24–29 Oct 2026",
+      "url": "https://2026.emnlp.org/",
+      "note": "2026 main-track commitment closed. The next submission deadline is not yet announced.",
+      "checkedAt": "2026-09-20"
     },
     {
-      name: "EACL",
-      edition: "2027",
-      fullName: "European Chapter of the ACL",
-      category: "nlp",
-      categoryLabel: "NLP",
-      target: "2026-08-04T11:59:59Z",
-      deadlineType: "ARR submission",
-      deadlineLabel: "03 Aug 2026",
-      timezone: "AoE",
-      confidence: "official",
-      venue: "Athens · 9–14 Mar 2027",
-      url: "https://2027.eacl.org/",
+      "name": "EACL",
+      "edition": "2027",
+      "fullName": "European Chapter of the ACL",
+      "category": "nlp",
+      "categoryLabel": "NLP",
+      "target": "2026-10-12T11:59:59Z",
+      "deadlineType": "ARR commitment",
+      "deadlineLabel": "11 Oct 2026",
+      "timezone": "AoE",
+      "confidence": "official",
+      "venue": "Athens · 9–14 Mar 2027",
+      "url": "https://2027.eacl.org/calls/papers/",
+      "note": "For papers reviewed in the August 2026 ARR cycle or earlier.",
+      "checkedAt": "2026-09-20"
     },
     {
-      name: "3DV",
-      edition: "2027",
-      fullName: "International Conference on 3D Vision",
-      category: "vision",
-      categoryLabel: "Vision",
-      target: "2026-08-28T18:00:00Z",
-      deadlineType: "Paper deadline",
-      deadlineLabel: "28 Aug 2026",
-      timezone: "UTC−7",
-      confidence: "official",
-      venue: "Thessaloniki · 6–9 Apr 2027",
-      url: "https://3dvconf.github.io/2027/call-for-papers/",
+      "name": "3DV",
+      "edition": "2027",
+      "fullName": "International Conference on 3D Vision",
+      "category": "vision",
+      "categoryLabel": "Vision",
+      "target": "2026-08-29T11:59:59Z",
+      "deadlineType": "Paper deadline",
+      "deadlineLabel": "28 Aug 2026",
+      "timezone": "AoE",
+      "confidence": "official",
+      "venue": "Thessaloniki · 6–9 Apr 2027",
+      "url": "https://3dvconf.github.io/2027/call-for-papers/",
+      "note": "Paper submissions closed. The official paper deadline uses AoE.",
+      "checkedAt": "2026-09-20"
     },
     {
-      name: "WACV",
-      edition: "2027",
-      fullName: "Winter Conference on Applications of Computer Vision",
-      category: "vision",
-      categoryLabel: "Vision",
-      target: "2026-08-29T11:59:59Z",
-      deadlineType: "Round 2 paper",
-      deadlineLabel: "28 Aug 2026",
-      timezone: "AoE",
-      confidence: "official",
-      venue: "Florida · 4–8 Jan 2027",
-      url: "https://wacv.thecvf.com/Conferences/2027/CallForPapers",
+      "name": "WACV",
+      "edition": "2027",
+      "fullName": "Winter Conference on Applications of Computer Vision",
+      "category": "vision",
+      "categoryLabel": "Vision",
+      "target": "2026-08-29T11:59:59Z",
+      "deadlineType": "Round 2 paper",
+      "deadlineLabel": "28 Aug 2026",
+      "timezone": "AoE",
+      "confidence": "official",
+      "venue": "Orlando · 4–8 Jan 2027",
+      "url": "https://wacv.thecvf.com/Conferences/2027/CallForPapers",
+      "note": "Both main-paper submission rounds are closed.",
+      "checkedAt": "2026-09-20"
     },
     {
-      name: "ICRA",
-      edition: "2027",
-      fullName: "International Conference on Robotics and Automation",
-      category: "robotics",
-      categoryLabel: "Robotics",
-      target: "2026-09-16T06:59:59Z",
-      deadlineType: "Contributed paper",
-      deadlineLabel: "15 Sep 2026",
-      timezone: "UTC−7",
-      confidence: "official",
-      venue: "Seoul · 24–28 May 2027",
-      url: "https://2027.ieee-icra.org/announcements/call-for-technical-papers/",
+      "name": "ICRA",
+      "edition": "2027",
+      "fullName": "International Conference on Robotics and Automation",
+      "category": "robotics",
+      "categoryLabel": "Robotics",
+      "target": "2026-09-17T07:59:00Z",
+      "deadlineType": "Extended paper",
+      "deadlineLabel": "16 Sep 2026",
+      "timezone": "PST (UTC−8)",
+      "confidence": "official",
+      "venue": "Seoul · 24–28 May 2027",
+      "url": "https://2027.ieee-icra.org/contribute/call-for-icra-2027-papers-now-accepting-submissions/",
+      "note": "Paper submissions closed after the extension; accompanying videos due 22 Sep (23:59 PST).",
+      "checkedAt": "2026-09-20"
     },
     {
-      name: "MMSys",
-      edition: "2027",
-      fullName: "ACM International Conference on Multimedia Systems",
-      category: "systems",
-      categoryLabel: "Multimedia Systems",
-      target: "2026-09-18T11:59:59Z",
-      deadlineType: "Research paper",
-      deadlineLabel: "17 Sep 2026",
-      timezone: "AoE",
-      confidence: "official",
-      venue: "Ghent · 30 Mar–2 Apr 2027",
-      url: "https://2027.acmmmsys.org/deadlines.html",
+      "name": "MMSys",
+      "edition": "2027",
+      "fullName": "ACM International Conference on Multimedia Systems",
+      "category": "systems",
+      "categoryLabel": "Multimedia Systems",
+      "target": null,
+      "deadlineType": "Round 2 research paper",
+      "deadlineLabel": "19 Nov 2026",
+      "timezone": "Time TBA",
+      "confidence": "official",
+      "venue": "Ghent · 30 Mar–2 Apr 2027",
+      "url": "https://2027.acmmmsys.org/deadlines.html",
+      "note": "Registration due 12 Nov. Exact closing time is not stated on the official dates page.",
+      "checkedAt": "2026-09-20",
+      "deadlineDate": "2026-11-19"
     },
     {
-      name: "ICLR",
-      edition: "2027",
-      fullName: "International Conference on Learning Representations",
-      category: "ml",
-      categoryLabel: "Machine Learning",
-      target: "2026-09-26T11:59:59Z",
-      deadlineType: "Paper deadline",
-      deadlineLabel: "25 Sep 2026",
-      timezone: "AoE",
-      confidence: "official",
-      venue: "California · 26–30 Apr 2027",
-      url: "https://iclr.cc/Conferences/2027",
+      "name": "ICLR",
+      "edition": "2027",
+      "fullName": "International Conference on Learning Representations",
+      "category": "ml",
+      "categoryLabel": "Machine Learning",
+      "target": "2026-09-26T11:59:59Z",
+      "deadlineType": "Paper deadline",
+      "deadlineLabel": "25 Sep 2026",
+      "timezone": "AoE",
+      "confidence": "official",
+      "venue": "California · 26–30 Apr 2027",
+      "url": "https://iclr.cc/Conferences/2027/CallForPapers",
+      "note": "Requires an abstract registered by 18 Sep 2026 AoE; abstract registration is closed.",
+      "checkedAt": "2026-09-20"
     },
     {
-      name: "ICASSP",
-      edition: "2027",
-      fullName: "IEEE International Conference on Acoustics, Speech, and Signal Processing",
-      category: "signal",
-      categoryLabel: "Signal / Speech",
-      target: null,
-      sortTarget: "2026-09-17T00:00:00Z",
-      deadlineType: "Full paper",
-      deadlineLabel: "16 Sep 2026",
-      timezone: "Time TBA",
-      confidence: "official",
-      venue: "Toronto · 16–21 May 2027",
-      url: "https://2027.ieeeicassp.org/call-for-papers/",
+      "name": "AISTATS",
+      "edition": "2027",
+      "fullName": "Artificial Intelligence and Statistics",
+      "category": "ml",
+      "categoryLabel": "Machine Learning",
+      "target": "2026-10-07T11:59:59Z",
+      "deadlineType": "Full paper + supplement",
+      "deadlineLabel": "06 Oct 2026",
+      "timezone": "AoE",
+      "confidence": "official",
+      "venue": "Montréal · 3–6 May 2027",
+      "url": "https://virtual.aistats.org/Conferences/2027/CallForPapers",
+      "note": "Abstract registration due 29 Sep 2026 AoE.",
+      "checkedAt": "2026-09-20"
     },
     {
-      name: "AISTATS",
-      edition: "2027",
-      fullName: "Artificial Intelligence and Statistics",
-      category: "ml",
-      categoryLabel: "Machine Learning",
-      target: "2026-10-02T11:59:59Z",
-      deadlineType: "Estimated paper",
-      deadlineLabel: "01 Oct 2026",
-      timezone: "AoE",
-      confidence: "estimated",
-      venue: "Montréal · Dates TBA",
-      url: "https://virtual.aistats.org/",
+      "name": "AAMAS",
+      "edition": "2027",
+      "fullName": "International Conference on Autonomous Agents and Multiagent Systems",
+      "category": "ml",
+      "categoryLabel": "Agents / AI",
+      "target": "2026-10-09T11:59:59Z",
+      "deadlineType": "Paper deadline",
+      "deadlineLabel": "08 Oct 2026",
+      "timezone": "AoE",
+      "confidence": "official",
+      "venue": "Hanoi · 3–7 May 2027",
+      "url": "https://warwick.ac.uk/fac/sci/dcs/aamas2027/calls/call-for-main-track/",
+      "note": "Abstract registration due 01 Oct 2026 AoE.",
+      "checkedAt": "2026-09-20"
     },
     {
-      name: "WWW",
-      edition: "2027",
-      fullName: "The Web Conference",
-      category: "web",
-      categoryLabel: "Web",
-      target: "2026-10-08T11:59:59Z",
-      deadlineType: "Estimated paper",
-      deadlineLabel: "07 Oct 2026",
-      timezone: "AoE",
-      confidence: "estimated",
-      venue: "Next edition · Details TBA",
-      url: "https://www.thewebconf.org/",
+      "name": "NAACL",
+      "edition": "2027",
+      "fullName": "Nations of the Americas Chapter of the ACL",
+      "category": "nlp",
+      "categoryLabel": "NLP",
+      "target": "2026-10-13T11:59:59Z",
+      "deadlineType": "ARR submission",
+      "deadlineLabel": "12 Oct 2026",
+      "timezone": "AoE",
+      "confidence": "official",
+      "venue": "San Francisco · 1–5 Jun 2027",
+      "url": "https://2027.naacl.org/",
+      "note": "Main-track papers use the October 2026 ARR cycle.",
+      "checkedAt": "2026-09-20"
     },
     {
-      name: "AAMAS",
-      edition: "2027",
-      fullName: "International Conference on Autonomous Agents and Multiagent Systems",
-      category: "ml",
-      categoryLabel: "Agents / AI",
-      target: "2026-10-09T11:59:59Z",
-      deadlineType: "Paper deadline",
-      deadlineLabel: "08 Oct 2026",
-      timezone: "AoE",
-      confidence: "official",
-      venue: "Hanoi · 3–7 May 2027",
-      url: "https://warwick.ac.uk/fac/sci/dcs/aamas2027/calls/",
+      "name": "COLING",
+      "edition": "2027",
+      "fullName": "International Conference on Computational Linguistics",
+      "category": "nlp",
+      "categoryLabel": "NLP",
+      "target": "2026-10-13T11:59:59Z",
+      "deadlineType": "ARR submission",
+      "deadlineLabel": "12 Oct 2026",
+      "timezone": "AoE",
+      "confidence": "official",
+      "venue": "Macau · 9–14 May 2027",
+      "url": "https://2027.coling-iccl.org/",
+      "note": "ARR submission: 12 Oct; conference commitment: 23 Dec 2026 AoE.",
+      "checkedAt": "2026-09-20"
     },
     {
-      name: "NAACL",
-      edition: "2027",
-      fullName: "Nations of the Americas Chapter of the ACL",
-      category: "nlp",
-      categoryLabel: "NLP",
-      target: "2026-10-13T11:59:59Z",
-      deadlineType: "ARR submission",
-      deadlineLabel: "12 Oct 2026",
-      timezone: "AoE",
-      confidence: "official",
-      venue: "San Francisco · 1–5 Jun 2027",
-      url: "https://2027.naacl.org/",
+      "name": "CVPR",
+      "edition": "2027",
+      "fullName": "Computer Vision and Pattern Recognition",
+      "category": "vision",
+      "categoryLabel": "Vision",
+      "target": "2026-11-17T11:59:59Z",
+      "deadlineType": "Paper deadline",
+      "deadlineLabel": "16 Nov 2026",
+      "timezone": "AoE",
+      "confidence": "official",
+      "venue": "Seattle · 20–25 Jun 2027",
+      "url": "https://cvpr.thecvf.com/Conferences/2027/CallForPapers",
+      "checkedAt": "2026-09-20",
+      "note": "Paper registration closes 10 Nov 2026 AoE; supplementary materials close 23 Nov."
     },
     {
-      name: "COLING",
-      edition: "2027",
-      fullName: "International Conference on Computational Linguistics",
-      category: "nlp",
-      categoryLabel: "NLP",
-      target: "2026-10-13T11:59:59Z",
-      deadlineType: "ARR submission",
-      deadlineLabel: "12 Oct 2026",
-      timezone: "AoE",
-      confidence: "official",
-      venue: "Macau · 9–14 May 2027",
-      url: "https://2027.coling-iccl.org/",
+      "name": "ACL",
+      "edition": "2027",
+      "fullName": "Annual Meeting of the ACL",
+      "category": "nlp",
+      "categoryLabel": "NLP",
+      "target": null,
+      "deadlineType": "Submission dates",
+      "deadlineLabel": "TBA",
+      "timezone": "",
+      "confidence": "pending",
+      "venue": "Kyoto · 17–22 Aug 2027",
+      "url": "https://2027.aclweb.org/",
+      "checkedAt": "2026-09-20",
+      "note": "The official 2027 site lists the ARR submission and commitment deadlines as TBA."
     },
     {
-      name: "CVPR",
-      edition: "2027",
-      fullName: "Computer Vision and Pattern Recognition",
-      category: "vision",
-      categoryLabel: "Vision",
-      target: "2026-11-13T11:59:59Z",
-      deadlineType: "Estimated paper",
-      deadlineLabel: "12 Nov 2026",
-      timezone: "AoE",
-      confidence: "estimated",
-      venue: "Next edition · Details TBA",
-      url: "https://cvpr.thecvf.com/",
+      "name": "IJCAI",
+      "edition": "2027",
+      "fullName": "International Joint Conference on Artificial Intelligence",
+      "category": "ml",
+      "categoryLabel": "AI / ML",
+      "target": null,
+      "deadlineType": "Submission dates",
+      "deadlineLabel": "TBA",
+      "timezone": "",
+      "confidence": "pending",
+      "venue": "Kyoto · 7–13 Aug; Hengqin · 15–17 Aug 2027",
+      "url": "https://www.ijcai.org/node/8",
+      "checkedAt": "2026-09-20",
+      "note": "2027 submission dates are not yet confirmed on the official site."
     },
     {
-      name: "ACL",
-      edition: "2027",
-      fullName: "Annual Meeting of the ACL",
-      category: "nlp",
-      categoryLabel: "NLP",
-      target: "2027-01-11T11:59:59Z",
-      deadlineType: "Estimated ARR cycle",
-      deadlineLabel: "10 Jan 2027",
-      timezone: "AoE",
-      confidence: "estimated",
-      venue: "Kyoto · 17–22 Aug 2027",
-      url: "https://2027.aclweb.org/",
+      "name": "SIGGRAPH",
+      "edition": "2027",
+      "fullName": "ACM SIGGRAPH Annual Conference",
+      "category": "graphics",
+      "categoryLabel": "Graphics",
+      "target": null,
+      "deadlineType": "Submission dates",
+      "deadlineLabel": "TBA",
+      "timezone": "",
+      "confidence": "pending",
+      "venue": "Anaheim · 8–12 Aug 2027",
+      "url": "https://www.siggraph.org/siggraph-events/conferences/",
+      "checkedAt": "2026-09-20",
+      "note": "2027 submission dates are not yet confirmed on the official site."
     },
     {
-      name: "IJCAI",
-      edition: "2027",
-      fullName: "International Joint Conference on Artificial Intelligence",
-      category: "ml",
-      categoryLabel: "AI / ML",
-      target: "2027-01-20T11:59:59Z",
-      deadlineType: "Estimated paper",
-      deadlineLabel: "19 Jan 2027",
-      timezone: "AoE",
-      confidence: "estimated",
-      venue: "Next edition · Details TBA",
-      url: "https://www.ijcai.org/",
+      "name": "ICML",
+      "edition": "2027",
+      "fullName": "International Conference on Machine Learning",
+      "category": "ml",
+      "categoryLabel": "Machine Learning",
+      "target": null,
+      "deadlineType": "Submission dates",
+      "deadlineLabel": "TBA",
+      "timezone": "",
+      "confidence": "pending",
+      "venue": "South America · Dates TBA",
+      "url": "https://icml.cc/Conferences/FutureMeetings",
+      "checkedAt": "2026-09-20",
+      "note": "2027 submission dates are not yet confirmed on the official site."
     },
     {
-      name: "SIGGRAPH",
-      edition: "2027",
-      fullName: "ACM SIGGRAPH Annual Conference",
-      category: "graphics",
-      categoryLabel: "Graphics",
-      target: "2027-01-21T22:00:00Z",
-      deadlineType: "Estimated paper",
-      deadlineLabel: "21 Jan 2027",
-      timezone: "UTC",
-      confidence: "estimated",
-      venue: "Next edition · Details TBA",
-      url: "https://www.siggraph.org/",
+      "name": "RSS",
+      "edition": "2027",
+      "fullName": "Robotics: Science and Systems",
+      "category": "robotics",
+      "categoryLabel": "Robotics",
+      "target": null,
+      "deadlineType": "Submission dates",
+      "deadlineLabel": "TBA",
+      "timezone": "",
+      "confidence": "pending",
+      "venue": "Athens · 6–11 Jul 2027",
+      "url": "https://roboticsconference.org/",
+      "checkedAt": "2026-09-20",
+      "note": "The official 2027 site lists all submission deadlines as TBA."
     },
     {
-      name: "ICML",
-      edition: "2027",
-      fullName: "International Conference on Machine Learning",
-      category: "ml",
-      categoryLabel: "Machine Learning",
-      target: "2027-01-29T11:59:59Z",
-      deadlineType: "Estimated paper",
-      deadlineLabel: "28 Jan 2027",
-      timezone: "AoE",
-      confidence: "estimated",
-      venue: "Next edition · Details TBA",
-      url: "https://icml.cc/",
+      "name": "UAI",
+      "edition": "2027",
+      "fullName": "Conference on Uncertainty in Artificial Intelligence",
+      "category": "ml",
+      "categoryLabel": "AI / ML",
+      "target": null,
+      "deadlineType": "Submission dates",
+      "deadlineLabel": "TBA",
+      "timezone": "",
+      "confidence": "pending",
+      "venue": "Next edition · Details TBA",
+      "url": "https://www.auai.org/",
+      "checkedAt": "2026-09-20",
+      "note": "2027 submission dates are not yet confirmed on the official site."
     },
     {
-      name: "RSS",
-      edition: "2027",
-      fullName: "Robotics: Science and Systems",
-      category: "robotics",
-      categoryLabel: "Robotics",
-      target: "2027-01-30T11:59:59Z",
-      deadlineType: "Estimated paper",
-      deadlineLabel: "29 Jan 2027",
-      timezone: "AoE",
-      confidence: "estimated",
-      venue: "Next edition · Details TBA",
-      url: "https://roboticsconference.org/",
+      "name": "IROS",
+      "edition": "2027",
+      "fullName": "Intelligent Robots and Systems",
+      "category": "robotics",
+      "categoryLabel": "Robotics",
+      "target": null,
+      "deadlineType": "Submission dates",
+      "deadlineLabel": "TBA",
+      "timezone": "",
+      "confidence": "pending",
+      "venue": "Florence · 26 Sep–1 Oct 2027",
+      "url": "https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/iros/iros-past-and-future-venues/",
+      "checkedAt": "2026-09-20",
+      "note": "2027 submission dates are not yet confirmed on the official site."
     },
     {
-      name: "UAI",
-      edition: "2027",
-      fullName: "Conference on Uncertainty in Artificial Intelligence",
-      category: "ml",
-      categoryLabel: "AI / ML",
-      target: "2027-02-26T11:59:59Z",
-      deadlineType: "Estimated paper",
-      deadlineLabel: "25 Feb 2027",
-      timezone: "AoE",
-      confidence: "estimated",
-      venue: "Next edition · Details TBA",
-      url: "https://www.auai.org/",
+      "name": "ICCV",
+      "edition": "2027",
+      "fullName": "International Conference on Computer Vision",
+      "category": "vision",
+      "categoryLabel": "Vision",
+      "target": null,
+      "deadlineType": "Submission dates",
+      "deadlineLabel": "TBA",
+      "timezone": "",
+      "confidence": "pending",
+      "venue": "Hong Kong · 2–8 Oct 2027",
+      "url": "https://www.thecvf.com/?p=137",
+      "checkedAt": "2026-09-20",
+      "note": "2027 submission dates are not yet confirmed on the official site."
     },
     {
-      name: "IROS",
-      edition: "2027",
-      fullName: "Intelligent Robots and Systems",
-      category: "robotics",
-      categoryLabel: "Robotics",
-      target: "2027-03-02T07:59:59Z",
-      deadlineType: "Estimated paper",
-      deadlineLabel: "01 Mar 2027",
-      timezone: "UTC−8",
-      confidence: "estimated",
-      venue: "Next edition · Details TBA",
-      url: "https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/iros",
+      "name": "COLM",
+      "edition": "2027",
+      "fullName": "Conference on Language Modeling",
+      "category": "nlp",
+      "categoryLabel": "NLP",
+      "target": null,
+      "deadlineType": "Submission dates",
+      "deadlineLabel": "TBA",
+      "timezone": "",
+      "confidence": "pending",
+      "venue": "Next edition · Details TBA",
+      "url": "https://colm.cc/",
+      "checkedAt": "2026-09-20",
+      "note": "2027 submission dates are not yet confirmed on the official site."
     },
     {
-      name: "ICCV",
-      edition: "2027",
-      fullName: "International Conference on Computer Vision",
-      category: "vision",
-      categoryLabel: "Vision",
-      target: "2027-03-08T09:59:59Z",
-      deadlineType: "Estimated paper",
-      deadlineLabel: "08 Mar 2027",
-      timezone: "UTC",
-      confidence: "estimated",
-      venue: "Next edition · Details TBA",
-      url: "https://iccv.thecvf.com/",
+      "name": "ACM MM",
+      "edition": "2027",
+      "fullName": "ACM International Conference on Multimedia",
+      "category": "graphics",
+      "categoryLabel": "Multimedia",
+      "target": null,
+      "deadlineType": "Submission dates",
+      "deadlineLabel": "TBA",
+      "timezone": "",
+      "confidence": "pending",
+      "venue": "Hong Kong · Dates TBA",
+      "url": "https://acmmm.hosting2.acm.org/",
+      "checkedAt": "2026-09-20",
+      "note": "2027 submission dates are not yet confirmed on the official site."
     },
     {
-      name: "COLM",
-      edition: "2027",
-      fullName: "Conference on Language Modeling",
-      category: "nlp",
-      categoryLabel: "NLP",
-      target: "2027-04-01T11:59:59Z",
-      deadlineType: "Estimated paper",
-      deadlineLabel: "31 Mar 2027",
-      timezone: "AoE",
-      confidence: "estimated",
-      venue: "Next edition · Details TBA",
-      url: "https://colmweb.org/",
+      "name": "NeurIPS",
+      "edition": "2027",
+      "fullName": "Neural Information Processing Systems",
+      "category": "ml",
+      "categoryLabel": "Machine Learning",
+      "target": null,
+      "deadlineType": "Submission dates",
+      "deadlineLabel": "TBA",
+      "timezone": "",
+      "confidence": "pending",
+      "venue": "Europe · Dates TBA",
+      "url": "https://neurips.cc/Conferences/FutureMeetings",
+      "checkedAt": "2026-09-20",
+      "note": "2027 submission dates are not yet confirmed on the official site."
     },
     {
-      name: "ACM MM",
-      edition: "2027",
-      fullName: "ACM International Conference on Multimedia",
-      category: "graphics",
-      categoryLabel: "Multimedia",
-      target: "2027-04-02T11:59:59Z",
-      deadlineType: "Estimated paper",
-      deadlineLabel: "01 Apr 2027",
-      timezone: "AoE",
-      confidence: "estimated",
-      venue: "Hong Kong · Dates TBA",
-      url: "https://www.acmmm.org/",
+      "name": "SIGGRAPH Asia",
+      "edition": "2027",
+      "fullName": "ACM SIGGRAPH Conference in Asia",
+      "category": "graphics",
+      "categoryLabel": "Graphics",
+      "target": null,
+      "deadlineType": "Submission dates",
+      "deadlineLabel": "TBA",
+      "timezone": "",
+      "confidence": "pending",
+      "venue": "Next edition · Details TBA",
+      "url": "https://asia.siggraph.org/",
+      "checkedAt": "2026-09-20",
+      "note": "2027 submission dates are not yet confirmed on the official site."
     },
     {
-      name: "NeurIPS",
-      edition: "2027",
-      fullName: "Neural Information Processing Systems",
-      category: "ml",
-      categoryLabel: "Machine Learning",
-      target: "2027-05-07T11:59:59Z",
-      deadlineType: "Estimated paper",
-      deadlineLabel: "06 May 2027",
-      timezone: "AoE",
-      confidence: "estimated",
-      venue: "Next edition · Details TBA",
-      url: "https://neurips.cc/",
+      "name": "CoRL",
+      "edition": "2027",
+      "fullName": "Conference on Robot Learning",
+      "category": "robotics",
+      "categoryLabel": "Robotics",
+      "target": null,
+      "deadlineType": "Submission dates",
+      "deadlineLabel": "TBA",
+      "timezone": "",
+      "confidence": "pending",
+      "venue": "Next edition · Details TBA",
+      "url": "https://www.corl.org/",
+      "checkedAt": "2026-09-20",
+      "note": "2027 submission dates are not yet confirmed on the official site."
     },
     {
-      name: "SIGGRAPH Asia",
-      edition: "2027",
-      fullName: "ACM SIGGRAPH Conference in Asia",
-      category: "graphics",
-      categoryLabel: "Graphics",
-      target: "2027-05-21T11:59:59Z",
-      deadlineType: "Estimated paper",
-      deadlineLabel: "20 May 2027",
-      timezone: "AoE",
-      confidence: "estimated",
-      venue: "Next edition · Details TBA",
-      url: "https://asia.siggraph.org/",
+      "name": "BMVC",
+      "edition": "2027",
+      "fullName": "British Machine Vision Conference",
+      "category": "vision",
+      "categoryLabel": "Vision",
+      "target": null,
+      "deadlineType": "Submission dates",
+      "deadlineLabel": "TBA",
+      "timezone": "",
+      "confidence": "pending",
+      "venue": "Next edition · Details TBA",
+      "url": "https://www.bmva.org/bmvc",
+      "checkedAt": "2026-09-20",
+      "note": "2027 submission dates are not yet confirmed on the official site."
     },
     {
-      name: "CoRL",
-      edition: "2027",
-      fullName: "Conference on Robot Learning",
-      category: "robotics",
-      categoryLabel: "Robotics",
-      target: "2027-05-28T11:59:59Z",
-      deadlineType: "Estimated paper",
-      deadlineLabel: "27 May 2027",
-      timezone: "AoE",
-      confidence: "estimated",
-      venue: "Next edition · Details TBA",
-      url: "https://www.corl.org/",
-    },
-    {
-      name: "BMVC",
-      edition: "2027",
-      fullName: "British Machine Vision Conference",
-      category: "vision",
-      categoryLabel: "Vision",
-      target: "2027-05-28T23:59:59Z",
-      deadlineType: "Estimated paper",
-      deadlineLabel: "28 May 2027",
-      timezone: "UTC",
-      confidence: "estimated",
-      venue: "Next edition · Details TBA",
-      url: "https://britishmachinevisionassociation.github.io/bmvc",
-    },
-    {
-      name: "ECCV",
-      edition: "2028",
-      fullName: "European Conference on Computer Vision",
-      category: "vision",
-      categoryLabel: "Vision",
-      target: "2028-03-02T22:00:00Z",
-      deadlineType: "Estimated paper",
-      deadlineLabel: "02 Mar 2028",
-      timezone: "UTC−8",
-      confidence: "estimated",
-      venue: "Biennial · Next edition TBA",
-      url: "https://eccv.ecva.net/",
-    },
+      "name": "ECCV",
+      "edition": "2028",
+      "fullName": "European Conference on Computer Vision",
+      "category": "vision",
+      "categoryLabel": "Vision",
+      "target": null,
+      "deadlineType": "Submission dates",
+      "deadlineLabel": "TBA",
+      "timezone": "",
+      "confidence": "pending",
+      "venue": "Biennial · Next edition TBA",
+      "url": "https://eccv.ecva.net/",
+      "checkedAt": "2026-09-20",
+      "note": "2028 submission dates are not yet confirmed on the official site."
+    }
   ];
 
   const now = Date.now();
   conferences.sort((a, b) => {
-    const aTime = Date.parse(a.target || a.sortTarget);
-    const bTime = Date.parse(b.target || b.sortTarget);
-    const aPast = aTime <= now;
-    const bPast = bTime <= now;
-    if (aPast !== bPast) return aPast ? 1 : -1;
-    return aTime - bTime;
+    const aTime = conferenceDeadline(a);
+    const bTime = conferenceDeadline(b);
+    const rank = (time) => !Number.isFinite(time) ? 1 : time <= now ? 2 : 0;
+    const order = rank(aTime) - rank(bTime);
+    if (order) return order;
+    if (Number.isFinite(aTime) && Number.isFinite(bTime)) {
+      return rank(aTime) === 2 ? bTime - aTime : aTime - bTime;
+    }
+    return a.name.localeCompare(b.name);
   });
+
+  function conferenceDeadline(conference) {
+    if (conference.target) return Date.parse(conference.target);
+    // Date-only entries close only once that date has ended in every timezone.
+    // This boundary is used for status and ordering, never for a countdown.
+    if (conference.deadlineDate) return Date.parse(`${conference.deadlineDate}T00:00:00Z`) + 36 * 3600000;
+    return NaN;
+  }
 
   const confidenceLabels = {
     official: "Official",
     tracked: "Tracked",
     estimated: "Estimated",
+    pending: "Awaiting CFP",
   };
 
   grid.innerHTML = conferences
@@ -1112,6 +1154,7 @@ function initConferenceTracker() {
           class="foresight-conference-card"
           data-conference-category="${conference.category}"
           data-conference-deadline="${conference.target || ""}"
+          data-conference-date="${conference.deadlineDate || ""}"
           data-conference-confidence="${conference.confidence}"
         >
           <header>
@@ -1132,10 +1175,11 @@ function initConferenceTracker() {
           <div class="foresight-conference-deadline">
             <div>
               <small>${conference.deadlineType}</small>
-              <strong>${conference.deadlineLabel} · ${conference.timezone}</strong>
+              <strong>${conference.deadlineLabel}${conference.timezone ? ` · ${conference.timezone}` : ""}</strong>
             </div>
             <span data-countdown-state>Calculating</span>
           </div>
+          ${conference.note ? `<p class="foresight-timeline-note">${conference.note}</p>` : ""}
           <footer>
             <span>${conference.venue}</span>
             <a href="${conference.url}" target="_blank" rel="noreferrer" aria-label="Open ${conference.name} ${conference.edition} official website">
@@ -1182,7 +1226,7 @@ function initConferenceTracker() {
   const pad = (value, length = 2) => String(value).padStart(length, "0");
   const updateCountdowns = () => {
     const currentTime = Date.now();
-    cards.forEach((card) => {
+    cards.forEach((card, index) => {
       const deadline = Date.parse(card.dataset.conferenceDeadline);
       const state = card.querySelector("[data-countdown-state]");
 
@@ -1191,8 +1235,10 @@ function initConferenceTracker() {
         card.querySelector("[data-countdown-hours]").textContent = "--";
         card.querySelector("[data-countdown-minutes]").textContent = "--";
         card.querySelector("[data-countdown-seconds]").textContent = "--";
-        card.classList.remove("is-closed", "is-urgent", "is-soon");
-        state.textContent = "Time TBA";
+        const isClosed = conferenceDeadline(conferences[index]) <= currentTime;
+        card.classList.toggle("is-closed", isClosed);
+        card.classList.remove("is-urgent", "is-soon");
+        state.textContent = isClosed ? "Closed" : card.dataset.conferenceDate ? "Time TBA" : "Date TBA";
         return;
       }
 
@@ -1227,475 +1273,861 @@ function initWorkshopTracker() {
 
   const workshops = [
     {
-      shortName: "3DWM",
-      name: "3D in the Era of World Models",
-      host: "ECCV 2026",
-      location: "Malmö, Sweden",
-      topics: ["world-models", "vision"],
-      topicLabels: ["World Models", "Computer Vision"],
-      description: "Explicit 3D structure, spatial intelligence, video generation, and physical reasoning for scalable world models.",
-      institutions: "UT Austin · Stanford · Adobe · Google DeepMind · NVIDIA",
-      organizers: "Qixing Huang · Leonidas Guibas · Kalyan Sunkavalli · Zhengqi Li",
-      deadline: "2026-08-16T11:59:59Z",
-      program: "2026-09-09T07:00:00Z",
-      timeline: [
-        { label: "Submission", value: "15 Aug 2026 · AoE" },
-        { label: "Notification", value: "24 Aug 2026" },
-        { label: "Workshop", value: "09 Sep 2026" },
+      "shortName": "3DWM",
+      "name": "3D in the Era of World Models",
+      "host": "ECCV 2026",
+      "location": "Malmö Arena · Panorama 1, Sweden",
+      "topics": [
+        "world-models",
+        "vision"
       ],
-      format: "Non-archival · OpenReview · full day",
-      url: "https://eccv2026-3d-world-models.github.io/",
+      "topicLabels": [
+        "World Models",
+        "Computer Vision"
+      ],
+      "description": "Explicit 3D structure, spatial intelligence, video generation, and physical reasoning for scalable world models.",
+      "institutions": "UT Austin · Stanford · Adobe · Google DeepMind · NVIDIA",
+      "organizers": "Qixing Huang · Leonidas Guibas · Kalyan Sunkavalli · Zhengqi Li",
+      "deadline": "2026-08-16T11:59:59Z",
+      "program": "2026-09-09T07:00:00Z",
+      "timeline": [
+        {
+          "label": "Submission",
+          "value": "15 Aug 2026 · AoE"
+        },
+        {
+          "label": "Notification",
+          "value": "24 Aug 2026"
+        },
+        {
+          "label": "Workshop",
+          "value": "09 Sep 2026 · 09:00–16:25 CEST"
+        }
+      ],
+      "format": "Non-archival · OpenReview · full day",
+      "url": "https://eccv2026-3d-world-models.github.io/",
+      "checkedAt": "2026-09-20",
+      "deadlinePrecision": "time",
+      "programPrecision": "time",
+      "programEnd": "2026-09-09T14:25:00Z",
+      "deadlineLabel": "15 Aug 2026 · AoE",
+      "sources": [
+        "https://eccv2026-3d-world-models.github.io/"
+      ],
+      "note": "Completed 09 Sep. The workshop site labels its submission timeline tentative."
     },
     {
-      shortName: "PhysUnderstand",
-      name: "Physical Understanding for Decision-Making",
-      host: "NeurIPS 2026",
-      location: "Sydney, Australia",
-      topics: ["world-models", "vision", "agents", "embodied", "multimodal"],
-      topicLabels: ["World Models", "Computer Vision", "Agents", "Embodied AI", "Multimodal AI"],
-      description: "Physical reasoning, causal world models, vision-language-action systems, and reliable decision-making for embodied agents.",
-      institutions: "Google DeepMind · Apple · McGill · University of Bristol",
-      organizers: "Felix Juefei-Xu · Tianyu Shi · Shirley Rong Zou · Mengyue Yang",
-      deadline: "2026-08-26T08:00:00Z",
-      program: "2026-12-11T00:00:00Z",
-      timeline: [
-        { label: "Submission", value: "26 Aug 2026 · 08:00 UTC" },
-        { label: "Notification", value: "By 29 Sep 2026" },
-        { label: "Workshop", value: "11 / 12 Dec 2026" },
+      "shortName": "PhysUnderstand",
+      "name": "Physical Understanding for Decision-Making",
+      "host": "NeurIPS 2026",
+      "location": "Sydney, Australia",
+      "topics": [
+        "world-models",
+        "vision",
+        "agents",
+        "embodied",
+        "multimodal"
       ],
-      format: "NeurIPS format · OpenReview · full day",
-      url: "https://sites.google.com/view/neurips-2026-workshop-pudm",
+      "topicLabels": [
+        "World Models",
+        "Computer Vision",
+        "Agents",
+        "Embodied AI",
+        "Multimodal AI"
+      ],
+      "description": "Physical reasoning, causal world models, vision-language-action systems, and reliable decision-making for embodied agents.",
+      "institutions": "Google DeepMind · Apple · McGill · University of Bristol",
+      "organizers": "Felix Juefei-Xu · Tianyu Shi · Shirley Rong Zou · Mengyue Yang",
+      "deadline": "2026-09-02T11:59:59Z",
+      "program": null,
+      "timeline": [
+        {
+          "label": "Submission",
+          "value": "01 Sep 2026 · AoE · extended"
+        },
+        {
+          "label": "Notification",
+          "value": "By 29 Sep 2026 · host deadline"
+        },
+        {
+          "label": "Workshop",
+          "value": "11 / 12 Dec 2026 · day TBA"
+        }
+      ],
+      "format": "NeurIPS format · OpenReview · full day",
+      "url": "https://sites.google.com/view/neurips-2026-workshop-pudm/home",
+      "checkedAt": "2026-09-20",
+      "deadlinePrecision": "time",
+      "programPrecision": "unknown",
+      "programEnd": null,
+      "deadlineLabel": "01 Sep 2026 · AoE",
+      "sources": [
+        "https://sites.google.com/view/neurips-2026-workshop-pudm/home",
+        "https://neurips.cc/Conferences/2026/WorkshopsGuidance"
+      ],
+      "programWindow": "11 / 12 Dec 2026 · day TBA",
+      "note": "Submission extended to 01 Sep AoE. Notification by 29 Sep is the host-wide deadline; exact workshop day TBA."
     },
     {
-      shortName: "WM–PAI",
-      name: "World Models in Physical AI",
-      host: "NeurIPS 2026",
-      location: "Sydney, Australia",
-      topics: ["world-models", "vision", "agents", "embodied"],
-      topicLabels: ["World Models", "Computer Vision", "Agents", "Embodied AI"],
-      description: "Physically grounded world models for robotics, autonomous driving, generative simulation, planning, and control.",
-      institutions: "NVIDIA · UT Austin",
-      organizers: "Jenny Schmalfuss · German Ros · Roberto Martín-Martín · Jose M. Alvarez",
-      deadline: "2026-08-30T11:59:59Z",
-      program: "2026-12-12T00:00:00Z",
-      timeline: [
-        { label: "Submission", value: "29 Aug 2026 · AoE" },
-        { label: "Notification", value: "29 Sep 2026" },
-        { label: "Workshop", value: "12 / 13 Dec 2026" },
+      "shortName": "WM–PAI",
+      "name": "World Models in Physical AI",
+      "host": "NeurIPS 2026",
+      "location": "Sydney, Australia",
+      "topics": [
+        "world-models",
+        "vision",
+        "agents",
+        "embodied"
       ],
-      format: "Non-archival · OpenReview · one day",
-      url: "https://www.worldmodels-physicalai.com/",
+      "topicLabels": [
+        "World Models",
+        "Computer Vision",
+        "Agents",
+        "Embodied AI"
+      ],
+      "description": "Physically grounded world models for robotics, autonomous driving, generative simulation, planning, and control.",
+      "institutions": "NVIDIA · UT Austin",
+      "organizers": "Jenny Schmalfuss · German Ros · Roberto Martín-Martín · Jose M. Alvarez",
+      "deadline": "2026-09-06T11:59:59Z",
+      "program": null,
+      "timeline": [
+        {
+          "label": "Submission",
+          "value": "05 Sep 2026 · AoE · extended"
+        },
+        {
+          "label": "Notification",
+          "value": "29 Sep 2026 · AoE"
+        },
+        {
+          "label": "Workshop",
+          "value": "Dec 2026 · day TBA"
+        }
+      ],
+      "format": "Non-archival · OpenReview · one day",
+      "url": "https://www.worldmodels-physicalai.com/",
+      "checkedAt": "2026-09-20",
+      "deadlinePrecision": "time",
+      "programPrecision": "unknown",
+      "programEnd": null,
+      "deadlineLabel": "05 Sep 2026 · AoE",
+      "sources": [
+        "https://www.worldmodels-physicalai.com/",
+        "https://blog.neurips.cc/2026/08/10/announcing-the-neurips-2026-workshops/"
+      ],
+      "programWindow": "Dec 2026 · day TBA",
+      "note": "Submission extended to 05 Sep AoE. Workshop and host pages give conflicting December dates; exact day TBA."
     },
     {
-      shortName: "PTA",
-      name: "From Pretrained Representations to Acting Agents",
-      host: "NeurIPS 2026",
-      location: "Sydney, Australia",
-      topics: ["agents", "world-models", "multimodal", "embodied"],
-      topicLabels: ["Agents", "World Models", "Multimodal AI", "Embodied AI"],
-      description: "Connects multimodal pretraining and world representations to planning, control, and reliable sequential decision making.",
-      institutions: "Google DeepMind · Georgia Tech · TU Darmstadt · UW / NVIDIA",
-      organizers: "Kuang-Huei Lee · Bo Dai · Georgia Chalvatzaki · Karen Leung",
-      deadline: "2026-08-30T11:59:59Z",
-      program: "2026-12-11T00:00:00Z",
-      timeline: [
-        { label: "Submission", value: "29 Aug 2026 · AoE" },
-        { label: "Notification", value: "29 Sep 2026" },
-        { label: "Workshop", value: "11 / 12 Dec 2026" },
+      "shortName": "PTA",
+      "name": "From Pretrained Representations to Acting Agents",
+      "host": "NeurIPS 2026",
+      "location": "ICC Sydney · Parkside 2, Australia",
+      "topics": [
+        "agents",
+        "world-models",
+        "multimodal",
+        "embodied"
       ],
-      format: "NeurIPS format · OpenReview · full day",
-      url: "https://ptaworkshop.github.io/",
+      "topicLabels": [
+        "Agents",
+        "World Models",
+        "Multimodal AI",
+        "Embodied AI"
+      ],
+      "description": "Connects multimodal pretraining and world representations to planning, control, and reliable sequential decision making.",
+      "institutions": "Google DeepMind · Georgia Tech · TU Darmstadt · UW / NVIDIA",
+      "organizers": "Kuang-Huei Lee · Bo Dai · Georgia Chalvatzaki · Karen Leung",
+      "deadline": "2026-09-06T11:59:59Z",
+      "program": null,
+      "timeline": [
+        {
+          "label": "Submission",
+          "value": "05 Sep 2026 · AoE · extended"
+        },
+        {
+          "label": "Notification",
+          "value": "29 Sep 2026 · AoE"
+        },
+        {
+          "label": "Workshop",
+          "value": "12 Dec 2026"
+        }
+      ],
+      "format": "NeurIPS format · OpenReview · full day",
+      "url": "https://ptaworkshop.github.io/",
+      "checkedAt": "2026-09-20",
+      "deadlinePrecision": "time",
+      "programPrecision": "date",
+      "programEnd": null,
+      "deadlineLabel": "05 Sep 2026 · AoE",
+      "sources": [
+        "https://ptaworkshop.github.io/",
+        "https://ptaworkshop.github.io/schedule.html"
+      ],
+      "programDate": "2026-12-12",
+      "note": "Submission extended to 05 Sep AoE. Workshop confirmed for 12 Dec at ICC Sydney, Parkside 2."
     },
     {
-      shortName: "OD–Agents",
-      name: "Efficient and On-Device AI Agents",
-      host: "NeurIPS 2026",
-      location: "Sydney, Australia",
-      topics: ["agents", "efficient"],
-      topicLabels: ["Agents", "Efficient AI"],
-      description: "Efficient architectures, local reasoning, privacy, and multi-agent coordination on mobile and edge hardware.",
-      institutions: "Qualcomm AI Research · IBM Research · SJTU · Tsinghua",
-      organizers: "Davide Belli · Asim Munawar · Weiwen Liu · Yuanchun Li",
-      deadline: "2026-08-30T11:59:59Z",
-      program: "2026-12-11T00:00:00Z",
-      timeline: [
-        { label: "Submission", value: "29 Aug 2026 · AoE" },
-        { label: "Notification", value: "26 Sep 2026" },
-        { label: "Workshop", value: "11 / 12 Dec 2026" },
+      "shortName": "RTCA",
+      "name": "Real-Time Conversational Agents",
+      "host": "NeurIPS 2026",
+      "location": "Sydney, Australia",
+      "topics": [
+        "multimodal",
+        "agents"
       ],
-      format: "Non-archival · OpenReview · full day",
-      url: "https://efficient-ondevice-ai-agents.github.io/",
+      "topicLabels": [
+        "Multimodal AI",
+        "Agents"
+      ],
+      "description": "Streaming speech, video, language, avatars, and tool use for natural low-latency multimodal interaction.",
+      "institutions": "Tavus · King’s College London · QMUL · University of Verona",
+      "organizers": "Niki Foteinopoulou · Oya Celiktutan · Cigdem Beyan · Ioannis Patras",
+      "deadline": "2026-09-11T11:59:59Z",
+      "program": null,
+      "timeline": [
+        {
+          "label": "Submission",
+          "value": "10 Sep 2026 · AoE · extended"
+        },
+        {
+          "label": "Notification",
+          "value": "29 Sep 2026 · AoE"
+        },
+        {
+          "label": "Workshop",
+          "value": "11 / 12 Dec 2026 · day TBA"
+        }
+      ],
+      "format": "Non-archival · papers + demos · full day",
+      "url": "https://rtcaneurips26.github.io/",
+      "checkedAt": "2026-09-20",
+      "deadlinePrecision": "time",
+      "programPrecision": "unknown",
+      "programEnd": null,
+      "deadlineLabel": "10 Sep 2026 · AoE",
+      "sources": [
+        "https://rtcaneurips26.github.io/"
+      ],
+      "programWindow": "11 / 12 Dec 2026 · day TBA",
+      "note": "Paper and demo submissions extended to 10 Sep AoE. Exact workshop day TBA."
     },
     {
-      shortName: "RTCA",
-      name: "Real-Time Conversational Agents",
-      host: "NeurIPS 2026",
-      location: "Sydney, Australia",
-      topics: ["multimodal", "agents"],
-      topicLabels: ["Multimodal AI", "Agents"],
-      description: "Streaming speech, video, language, avatars, and tool use for natural low-latency multimodal interaction.",
-      institutions: "Tavus · King’s College London · QMUL · University of Verona",
-      organizers: "Niki Foteinopoulou · Oya Celiktutan · Cigdem Beyan · Ioannis Patras",
-      deadline: "2026-08-30T11:59:59Z",
-      program: "2026-12-11T00:00:00Z",
-      timeline: [
-        { label: "Submission", value: "29 Aug 2026 · AoE" },
-        { label: "Notification", value: "29 Sep 2026" },
-        { label: "Workshop", value: "11 / 12 Dec 2026" },
+      "shortName": "Verify Agents",
+      "name": "Who Verifies the Agents?",
+      "host": "NeurIPS 2026",
+      "location": "Sydney, Australia",
+      "topics": [
+        "agents",
+        "multimodal"
       ],
-      format: "Non-archival · papers + demos · full day",
-      url: "https://rtcaneurips26.github.io/",
+      "topicLabels": [
+        "Agents",
+        "Multimodal AI"
+      ],
+      "description": "Robust verifiers, environment-grounded evaluation, multimodal signals, and scalable oversight for long-horizon agents.",
+      "institutions": "UC Berkeley · MIT–IBM Watson AI Lab · Stanford · Meta",
+      "organizers": "Ahmad Beirami · Mert Cemri · Zhang-Wei Hong · Dilara Soylu",
+      "deadline": "2026-08-30T11:59:00Z",
+      "program": null,
+      "timeline": [
+        {
+          "label": "Submission",
+          "value": "29 Aug 2026 · 23:59 AoE"
+        },
+        {
+          "label": "Notification",
+          "value": "29 Sep 2026 · AoE"
+        },
+        {
+          "label": "Workshop",
+          "value": "11 / 12 Dec 2026 · day TBA"
+        }
+      ],
+      "format": "Non-archival · OpenReview · papers + demos",
+      "url": "https://verify-agents-workshop.github.io/",
+      "checkedAt": "2026-09-20",
+      "deadlinePrecision": "time",
+      "programPrecision": "unknown",
+      "programEnd": null,
+      "deadlineLabel": "29 Aug 2026 · 23:59 AoE",
+      "sources": [
+        "https://verify-agents-workshop.github.io/"
+      ],
+      "programWindow": "11 / 12 Dec 2026 · day TBA",
+      "note": "Submissions closed; late submissions are not accepted. Exact workshop day TBA."
     },
     {
-      shortName: "Verify Agents",
-      name: "Who Verifies the Agents?",
-      host: "NeurIPS 2026",
-      location: "Sydney, Australia",
-      topics: ["agents", "multimodal"],
-      topicLabels: ["Agents", "Multimodal AI"],
-      description: "Robust verifiers, environment-grounded evaluation, multimodal signals, and scalable oversight for long-horizon agents.",
-      institutions: "UC Berkeley · MIT–IBM Watson AI Lab · Stanford · Meta",
-      organizers: "Ahmad Beirami · Mert Cemri · Zhang-Wei Hong · Dilara Soylu",
-      deadline: "2026-08-30T11:59:59Z",
-      program: "2026-12-11T00:00:00Z",
-      timeline: [
-        { label: "Submission", value: "29 Aug 2026 · AoE" },
-        { label: "Notification", value: "29 Sep 2026" },
-        { label: "Workshop", value: "11 / 12 Dec 2026" },
+      "shortName": "Meta-Agents",
+      "name": "Managing Agents that Manage Agents",
+      "host": "NeurIPS 2026",
+      "location": "Sydney, Australia",
+      "topics": [
+        "agents",
+        "efficient"
       ],
-      format: "Non-archival · OpenReview · papers + demos",
-      url: "https://verify-agents-workshop.github.io/",
+      "topicLabels": [
+        "Agents",
+        "Efficient AI"
+      ],
+      "description": "Meta-agents that design, optimize, supervise, and evaluate other agents, with emphasis on safety, oversight, and responsible use.",
+      "institutions": "Stanford · Carnegie Mellon · Northeastern · Google DeepMind",
+      "organizers": "Simon Yu · Dilara Soylu · Christopher Manning · Weiyan Shi",
+      "deadline": "2026-09-06T11:59:59Z",
+      "program": null,
+      "timeline": [
+        {
+          "label": "Submission",
+          "value": "05 Sep 2026 · AoE · extended"
+        },
+        {
+          "label": "Notification",
+          "value": "By 29 Sep 2026 · AoE"
+        },
+        {
+          "label": "Workshop",
+          "value": "11 / 12 Dec 2026 · day TBA"
+        }
+      ],
+      "format": "Non-archival · OpenReview · papers + demos",
+      "url": "https://meta-agents-workshop.github.io/",
+      "checkedAt": "2026-09-20",
+      "deadlinePrecision": "time",
+      "programPrecision": "unknown",
+      "programEnd": null,
+      "deadlineLabel": "05 Sep 2026 · AoE",
+      "sources": [
+        "https://meta-agents-workshop.github.io/"
+      ],
+      "programWindow": "11 / 12 Dec 2026 · day TBA",
+      "note": "Submission extended to 05 Sep AoE. Exact workshop day TBA."
     },
     {
-      shortName: "Meta-Agents",
-      name: "Managing Agents that Manage Agents",
-      host: "NeurIPS 2026",
-      location: "Sydney, Australia",
-      topics: ["agents", "efficient"],
-      topicLabels: ["Agents", "Efficient AI"],
-      description: "Meta-agents that design, optimize, supervise, and evaluate other agents, with emphasis on safety, oversight, and responsible use.",
-      institutions: "Stanford · Carnegie Mellon · Northeastern · Google DeepMind",
-      organizers: "Simon Yu · Dilara Soylu · Christopher Manning · Weiyan Shi",
-      deadline: "2026-08-30T11:59:59Z",
-      program: "2026-12-11T00:00:00Z",
-      timeline: [
-        { label: "Submission", value: "29 Aug 2026 · AoE" },
-        { label: "Notification", value: "By 29 Sep 2026" },
-        { label: "Workshop", value: "11 / 12 Dec 2026" },
+      "shortName": "VLM4RWD",
+      "name": "Grounded and Faithful Vision-Language Models for Real-World Deployment",
+      "host": "NeurIPS 2026",
+      "location": "Sydney, Australia",
+      "topics": [
+        "multimodal",
+        "vision",
+        "agents",
+        "embodied",
+        "world-models"
       ],
-      format: "Non-archival · OpenReview · papers + demos",
-      url: "https://meta-agents-workshop.github.io/",
+      "topicLabels": [
+        "Multimodal AI",
+        "Computer Vision",
+        "Agents",
+        "Embodied AI",
+        "World Models"
+      ],
+      "description": "Grounding, faithful multimodal reasoning, vision-language-action models, world models, and reliable embodied deployment.",
+      "institutions": "Stanford · Waterloo · UPenn · University of Sydney · Wayve",
+      "organizers": "Mozhgan Nasr Azadani · Yimu Wang · Jiayuan Mao · Elahe Arani",
+      "deadline": null,
+      "deadlinePrecision": "date",
+      "deadlineLabel": "05 Sep 2026",
+      "program": null,
+      "timeline": [
+        {
+          "label": "Submission",
+          "value": "05 Sep 2026 · extended · time TBA"
+        },
+        {
+          "label": "Notification",
+          "value": "29 Sep 2026"
+        },
+        {
+          "label": "Workshop",
+          "value": "Dec 2026 · day TBA"
+        }
+      ],
+      "format": "Non-archival · OpenReview · up to 8 pages",
+      "url": "https://vlm4rwd.github.io/",
+      "checkedAt": "2026-09-20",
+      "programPrecision": "unknown",
+      "programEnd": null,
+      "sources": [
+        "https://vlm4rwd.github.io/"
+      ],
+      "deadlineDate": "2026-09-05",
+      "programWindow": "Dec 2026 · day TBA",
+      "note": "Submission extended to 05 Sep; cutoff time was not specified. December workshop day TBA."
     },
     {
-      shortName: "VLM4RWD",
-      name: "Grounded and Faithful Vision-Language Models for Real-World Deployment",
-      host: "NeurIPS 2026",
-      location: "Sydney, Australia",
-      topics: ["multimodal", "vision", "agents", "embodied", "world-models"],
-      topicLabels: ["Multimodal AI", "Computer Vision", "Agents", "Embodied AI", "World Models"],
-      description: "Grounding, faithful multimodal reasoning, vision-language-action models, world models, and reliable embodied deployment.",
-      institutions: "Stanford · Waterloo · UPenn · University of Sydney · Wayve",
-      organizers: "Mozhgan Nasr Azadani · Yimu Wang · Jiayuan Mao · Elahe Arani",
-      deadline: "2026-08-31T11:59:59Z",
-      deadlinePrecision: "date",
-      deadlineLabel: "30 Aug",
-      program: "2026-12-11T00:00:00Z",
-      timeline: [
-        { label: "Submission", value: "30 Aug 2026 · time TBA" },
-        { label: "Notification", value: "29 Sep 2026" },
-        { label: "Workshop", value: "11 Dec 2026" },
+      "shortName": "MMDA",
+      "name": "Multimodal Digital Agents",
+      "host": "ECCV 2026",
+      "location": "Quality Hotel View · Helsingör 1 · Malmö, Sweden",
+      "topics": [
+        "multimodal",
+        "vision",
+        "agents"
       ],
-      format: "Non-archival · OpenReview · up to 8 pages",
-      url: "https://vlm4rwd.github.io/",
+      "topicLabels": [
+        "Multimodal AI",
+        "Computer Vision",
+        "Agents"
+      ],
+      "description": "Vision-centric agents that perceive, reason, and act across web, desktop, and mobile interfaces.",
+      "institutions": "Ai2 · University of Washington",
+      "organizers": "Ranjay Krishna · Tanmay Gupta · Piper Wolters · Yue Yang",
+      "deadline": "2026-08-06T11:59:00Z",
+      "program": "2026-09-08T07:00:00Z",
+      "timeline": [
+        {
+          "label": "Submission (extended)",
+          "value": "05 Aug 2026 · 23:59 AoE"
+        },
+        {
+          "label": "Notification",
+          "value": "15 Aug 2026"
+        },
+        {
+          "label": "Workshop",
+          "value": "08 Sep 2026 · 09:00–17:20 CEST"
+        }
+      ],
+      "format": "Non-archival · full papers + abstracts",
+      "url": "https://mda-workshop.allen.ai/",
+      "deadlinePrecision": "time",
+      "deadlineDate": "2026-08-05",
+      "deadlineLabel": "05 Aug 2026 · 23:59 AoE",
+      "programPrecision": "time",
+      "programDate": "2026-09-08",
+      "programEnd": "2026-09-08T15:20:00Z",
+      "note": "Submission extended to 05 Aug AoE. Camera-ready deadline: 21 Aug. Completed 08 Sep.",
+      "checkedAt": "2026-09-20"
     },
     {
-      shortName: "MMDA",
-      name: "Multimodal Digital Agents",
-      host: "ECCV 2026",
-      location: "Malmö, Sweden",
-      topics: ["multimodal", "vision", "agents"],
-      topicLabels: ["Multimodal AI", "Computer Vision", "Agents"],
-      description: "Vision-centric agents that perceive, reason, and act across web, desktop, and mobile interfaces.",
-      institutions: "Ai2 · University of Washington",
-      organizers: "Ranjay Krishna · Tanmay Gupta · Piper Wolters · Yue Yang",
-      deadline: "2026-07-30T11:59:59Z",
-      program: "2026-09-08T07:00:00Z",
-      timeline: [
-        { label: "Submission", value: "29 Jul 2026 · AoE" },
-        { label: "Program", value: "Full day" },
-        { label: "Workshop", value: "08 Sep 2026" },
+      "shortName": "WMEAI",
+      "name": "How to Build Effective World Models for Embodied AI",
+      "host": "ECCV 2026",
+      "location": "Malmö Arena Hotel · Terrassen · Malmö, Sweden",
+      "topics": [
+        "world-models",
+        "multimodal",
+        "vision",
+        "agents",
+        "embodied"
       ],
-      format: "Non-archival · full papers + abstracts",
-      url: "https://mda-workshop.allen.ai/",
+      "topicLabels": [
+        "World Models",
+        "Multimodal AI",
+        "Computer Vision",
+        "Agents",
+        "Embodied AI"
+      ],
+      "description": "World-model design, multimodal training, physical representation learning, evaluation, planning, and sim-to-real transfer.",
+      "institutions": "Meta · Noah’s Ark Lab · Université de Montréal · Waterloo",
+      "organizers": "Amir Rasouli · Mahmoud Assran · Liam Paull · Krzysztof Czarnecki",
+      "deadline": null,
+      "program": "2026-09-09T07:00:00Z",
+      "timeline": [
+        {
+          "label": "Submission (extended)",
+          "value": "27 Jul 2026 · time not specified"
+        },
+        {
+          "label": "Notification",
+          "value": "07 Aug 2026"
+        },
+        {
+          "label": "Workshop",
+          "value": "09 Sep 2026 · 09:00–17:00 CEST"
+        }
+      ],
+      "format": "Archival + non-archival · OpenReview",
+      "url": "https://eccv26wmeai.github.io/",
+      "deadlinePrecision": "date",
+      "deadlineDate": "2026-07-27",
+      "deadlineLabel": "27 Jul 2026 · time not specified",
+      "programPrecision": "time",
+      "programDate": "2026-09-09",
+      "programEnd": "2026-09-09T15:00:00Z",
+      "note": "Submission extended to 27 Jul; cutoff time was not specified. Completed 09 Sep.",
+      "checkedAt": "2026-09-20"
     },
     {
-      shortName: "WMEAI",
-      name: "How to Build Effective World Models for Embodied AI",
-      host: "ECCV 2026",
-      location: "Malmö, Sweden",
-      topics: ["world-models", "multimodal", "vision", "agents", "embodied"],
-      topicLabels: ["World Models", "Multimodal AI", "Computer Vision", "Agents", "Embodied AI"],
-      description: "World-model design, multimodal training, physical representation learning, evaluation, planning, and sim-to-real transfer.",
-      institutions: "Meta · Noah’s Ark Lab · Université de Montréal · Waterloo",
-      organizers: "Amir Rasouli · Mahmoud Assran · Liam Paull · Krzysztof Czarnecki",
-      deadline: "2026-07-28T11:59:59Z",
-      program: "2026-09-09T07:00:00Z",
-      timeline: [
-        { label: "Submission", value: "27 Jul 2026 · AoE" },
-        { label: "Notification", value: "07 Aug 2026" },
-        { label: "Workshop", value: "09 Sep 2026" },
+      "shortName": "RLW",
+      "name": "8th Robot Learning Workshop: Is Physical AI Going Zero-Shot?",
+      "host": "NeurIPS 2026",
+      "location": "Sydney, Australia",
+      "topics": [
+        "embodied",
+        "agents",
+        "world-models",
+        "multimodal"
       ],
-      format: "Archival + non-archival · OpenReview",
-      url: "https://eccv26wmeai.github.io/",
+      "topicLabels": [
+        "Embodied AI",
+        "Agents",
+        "World Models",
+        "Multimodal AI"
+      ],
+      "description": "Zero-shot physical intelligence, vision-language-action policies, cross-embodiment generalization, robot data, and safe deployment.",
+      "institutions": "Microsoft Research · Google DeepMind · TU Dresden · NVIDIA",
+      "organizers": "Andrey Kolobov · Alex Bewley · Roberto Calandra · Moritz Reuss",
+      "deadline": "2026-09-03T11:59:00Z",
+      "program": null,
+      "timeline": [
+        {
+          "label": "Submission (extended)",
+          "value": "02 Sep 2026 · 23:59 AoE"
+        },
+        {
+          "label": "Notification",
+          "value": "29 Sep 2026"
+        },
+        {
+          "label": "Workshop window",
+          "value": "11–12 Dec 2026 · exact day TBA"
+        }
+      ],
+      "format": "8th edition · non-archival · papers + demos",
+      "url": "https://www.robot-learning.ml/2026/",
+      "deadlinePrecision": "time",
+      "deadlineDate": "2026-09-02",
+      "deadlineLabel": "02 Sep 2026 · 23:59 AoE",
+      "programPrecision": "unknown",
+      "programWindow": "11–12 Dec 2026 · exact day TBA",
+      "note": "Submission extended to 02 Sep AoE. Exact workshop day TBA within the 11–12 Dec host window.",
+      "checkedAt": "2026-09-20"
     },
     {
-      shortName: "RLW",
-      name: "8th Robot Learning Workshop: Is Physical AI Going Zero-Shot?",
-      host: "NeurIPS 2026",
-      location: "Sydney, Australia",
-      topics: ["embodied", "agents", "world-models", "multimodal"],
-      topicLabels: ["Embodied AI", "Agents", "World Models", "Multimodal AI"],
-      description: "Zero-shot physical intelligence, vision-language-action policies, cross-embodiment generalization, robot data, and safe deployment.",
-      institutions: "Microsoft Research · Google DeepMind · TU Dresden · NVIDIA",
-      organizers: "Andrey Kolobov · Alex Bewley · Roberto Calandra · Moritz Reuss",
-      deadline: "2026-08-27T11:59:59Z",
-      program: "2026-12-11T00:00:00Z",
-      timeline: [
-        { label: "Submission", value: "26 Aug 2026 · AoE" },
-        { label: "Notification", value: "29 Sep 2026" },
-        { label: "Workshop", value: "11 / 12 Dec 2026" },
+      "shortName": "X–REASON",
+      "name": "Visual Perception and Reasoning in the Interactable World",
+      "host": "ECCV 2026",
+      "location": "Malmö Arena · Palissad South · Malmö, Sweden",
+      "topics": [
+        "embodied",
+        "vision",
+        "multimodal",
+        "agents"
       ],
-      format: "8th edition · non-archival · papers + demos",
-      url: "https://www.robot-learning.ml/2026/",
+      "topicLabels": [
+        "Embodied AI",
+        "Computer Vision",
+        "Multimodal AI",
+        "Agents"
+      ],
+      "description": "Actionable 3D representations, active perception, spatial reasoning, and multimodal fusion for navigation and manipulation.",
+      "institutions": "Stanford · UC Berkeley · MIT · Toyota Research Institute",
+      "organizers": "Jitendra Malik · Leonidas Guibas · Katie Z. Luo · Vitor Guizilini",
+      "deadline": "2026-08-05T00:00:00Z",
+      "program": null,
+      "timeline": [
+        {
+          "label": "Submission (extended)",
+          "value": "04 Aug 2026 · 12:00 AoE"
+        },
+        {
+          "label": "Notification",
+          "value": "19 Aug 2026"
+        },
+        {
+          "label": "Workshop",
+          "value": "08 Sep 2026"
+        }
+      ],
+      "format": "Non-archival · OpenReview · full day",
+      "url": "https://xreason-workshop.github.io/",
+      "deadlinePrecision": "time",
+      "deadlineDate": "2026-08-04",
+      "deadlineLabel": "04 Aug 2026 · 12:00 AoE",
+      "programPrecision": "date",
+      "programDate": "2026-09-08",
+      "note": "Submission extended to 04 Aug; camera-ready extended to 30 Aug. Completed 08 Sep.",
+      "checkedAt": "2026-09-20"
     },
     {
-      shortName: "X–REASON",
-      name: "Visual Perception and Reasoning in the Interactable World",
-      host: "ECCV 2026",
-      location: "Malmö, Sweden",
-      topics: ["embodied", "vision", "multimodal", "agents"],
-      topicLabels: ["Embodied AI", "Computer Vision", "Multimodal AI", "Agents"],
-      description: "Actionable 3D representations, active perception, spatial reasoning, and multimodal fusion for navigation and manipulation.",
-      institutions: "Stanford · UC Berkeley · MIT · Toyota Research Institute",
-      organizers: "Jitendra Malik · Leonidas Guibas · Katie Z. Luo · Vitor Guizilini",
-      deadline: "2026-08-05T00:00:00Z",
-      program: "2026-09-08T07:00:00Z",
-      timeline: [
-        { label: "Submission", value: "04 Aug 2026 · 12:00 AoE" },
-        { label: "Notification", value: "19 Aug 2026" },
-        { label: "Workshop", value: "08 Sep 2026" },
+      "shortName": "EMR",
+      "name": "Embodied Multimodal Reasoning in Physical Environments",
+      "host": "ECCV 2026",
+      "location": "Malmö Arena · Palissad West · Malmö, Sweden",
+      "topics": [
+        "embodied",
+        "multimodal",
+        "vision",
+        "agents"
       ],
-      format: "Non-archival · OpenReview · full day",
-      url: "https://xreason-workshop.github.io/",
+      "topicLabels": [
+        "Embodied AI",
+        "Multimodal AI",
+        "Computer Vision",
+        "Agents"
+      ],
+      "description": "Robot-centric sensing, physically grounded reasoning, interaction, navigation, manipulation, and long-horizon planning.",
+      "institutions": "Google / TUM · Naver Labs Europe · A*STAR · University of Adelaide",
+      "organizers": "Federico Tombari · Christian Wolf · Shijie Li · Qi Wu",
+      "deadline": "2026-07-20T11:59:00Z",
+      "program": null,
+      "timeline": [
+        {
+          "label": "Full paper",
+          "value": "19 Jul 2026 · 23:59 AoE"
+        },
+        {
+          "label": "Notification",
+          "value": "07 Aug 2026"
+        },
+        {
+          "label": "Workshop",
+          "value": "09 Sep 2026"
+        }
+      ],
+      "format": "Archival + non-archival · OpenReview · challenge",
+      "url": "https://emr-workshop.github.io/",
+      "deadlinePrecision": "time",
+      "deadlineDate": "2026-07-19",
+      "deadlineLabel": "19 Jul 2026 · 23:59 AoE (full papers)",
+      "programPrecision": "date",
+      "programDate": "2026-09-09",
+      "note": "Full-paper deadline: 19 Jul; extended abstracts: 24 Jul AoE. Completed 09 Sep.",
+      "checkedAt": "2026-09-20"
     },
     {
-      shortName: "EMR",
-      name: "Embodied Multimodal Reasoning in Physical Environments",
-      host: "ECCV 2026",
-      location: "Malmö, Sweden",
-      topics: ["embodied", "multimodal", "vision", "agents"],
-      topicLabels: ["Embodied AI", "Multimodal AI", "Computer Vision", "Agents"],
-      description: "Robot-centric sensing, physically grounded reasoning, interaction, navigation, manipulation, and long-horizon planning.",
-      institutions: "Google / TUM · Naver Labs Europe · A*STAR · University of Adelaide",
-      organizers: "Federico Tombari · Christian Wolf · Shijie Li · Qi Wu",
-      deadline: "2026-07-20T11:59:59Z",
-      program: "2026-09-09T07:00:00Z",
-      timeline: [
-        { label: "Full paper", value: "19 Jul 2026 · AoE" },
-        { label: "Abstract", value: "24 Jul 2026 · AoE" },
-        { label: "Workshop", value: "09 Sep 2026" },
+      "shortName": "ODI",
+      "name": "On-Device Intelligence: Foundation Models under Real-World Constraints",
+      "host": "NeurIPS 2026",
+      "location": "ICC Sydney · MR C3.6 · Sydney, Australia",
+      "topics": [
+        "efficient",
+        "embodied",
+        "multimodal"
       ],
-      format: "Archival + non-archival · OpenReview · challenge",
-      url: "https://emr-workshop.github.io/",
+      "topicLabels": [
+        "Efficient AI",
+        "Embodied AI",
+        "Multimodal AI"
+      ],
+      "description": "Algorithms, systems, hardware, adaptation, and reliability for foundation models operating beyond the cloud.",
+      "institutions": "ETH Zurich · MPI-IS · MIT · ELLIS Institute Tübingen",
+      "organizers": "Niao He · Daniela Rus · Michael Muehlebach · Melanie Zeilinger",
+      "deadline": "2026-09-06T11:59:00Z",
+      "program": "2026-12-11T21:00:00Z",
+      "timeline": [
+        {
+          "label": "Submission (extended)",
+          "value": "05 Sep 2026 · 23:59 AoE"
+        },
+        {
+          "label": "Notification",
+          "value": "29 Sep 2026 · 23:59 AoE"
+        },
+        {
+          "label": "Workshop",
+          "value": "12 Dec 2026 · 08:00–17:00 AEDT"
+        }
+      ],
+      "format": "Non-archival · OpenReview · up to 5 pages · in person",
+      "url": "https://odi2026.github.io/",
+      "deadlinePrecision": "time",
+      "deadlineDate": "2026-09-05",
+      "deadlineLabel": "05 Sep 2026 · 23:59 AoE",
+      "programPrecision": "time",
+      "programDate": "2026-12-12",
+      "programEnd": "2026-12-12T06:00:00Z",
+      "note": "Submission extended to 05 Sep AoE. Program confirmed for 12 Dec, 08:00–17:00 AEDT; detailed agenda TBA.",
+      "checkedAt": "2026-09-20"
     },
     {
-      shortName: "ODI",
-      name: "On-Device Intelligence: Foundation Models under Real-World Constraints",
-      host: "NeurIPS 2026",
-      location: "Sydney, Australia",
-      topics: ["efficient", "embodied", "multimodal"],
-      topicLabels: ["Efficient AI", "Embodied AI", "Multimodal AI"],
-      description: "Algorithms, systems, hardware, adaptation, and reliability for foundation models operating beyond the cloud.",
-      institutions: "ETH Zurich · MPI-IS · MIT · ELLIS Institute Tübingen",
-      organizers: "Niao He · Daniela Rus · Michael Muehlebach · Melanie Zeilinger",
-      deadline: "2026-08-30T11:59:59Z",
-      program: "2026-12-11T00:00:00Z",
-      timeline: [
-        { label: "Submission", value: "29 Aug 2026 · AoE" },
-        { label: "Notification", value: "29 Sep 2026" },
-        { label: "Workshop", value: "11 / 12 Dec 2026" },
+      "shortName": "CDEL",
+      "name": "Curated Data for Efficient Learning",
+      "host": "ECCV 2026",
+      "location": "Malmö Arena · Panorama 2 · Malmö, Sweden",
+      "topics": [
+        "efficient"
       ],
-      format: "OpenReview · talks + posters + panel",
-      url: "https://odi2026.github.io/",
-    },
-    {
-      shortName: "CoDA",
-      name: "Closed-Loop Co-Design for Efficient Agentic AI",
-      host: "NeurIPS 2026",
-      location: "Sydney · Paris · Atlanta",
-      topics: ["efficient", "agents"],
-      topicLabels: ["Efficient AI", "Agents"],
-      description: "Model, runtime, compiler, memory, and hardware co-design for persistent agents, plus agents that optimize AI systems.",
-      institutions: "AMD · NVIDIA · Alibaba · Huawei Noah’s Ark Lab",
-      organizers: "Vikram Appia · Mohammadmahdi Kamani · Niyu Ge · Boxing Chen",
-      deadline: "2026-08-30T11:59:59Z",
-      program: "2026-12-12T00:00:00Z",
-      timeline: [
-        { label: "Submission", value: "29 Aug 2026 · AoE" },
-        { label: "Notification", value: "22 Sep 2026" },
-        { label: "Workshop", value: "12 / 13 Dec 2026" },
+      "topicLabels": [
+        "Efficient AI"
       ],
-      format: "Non-archival · papers + demos + benchmarks",
-      url: "https://coda-neurips2026.github.io/",
-    },
-    {
-      shortName: "CDEL",
-      name: "Curated Data for Efficient Learning",
-      host: "ECCV 2026",
-      location: "Malmö, Sweden",
-      topics: ["efficient"],
-      topicLabels: ["Efficient AI"],
-      description: "Dataset pruning, distillation, synthetic data, and sampling strategies that reduce training cost without discarding signal.",
-      institutions: "MIT · Princeton · NUS · Carnegie Mellon",
-      organizers: "George Cazenavette · Xindi Wu · Jun-Yan Zhu · Kai Wang",
-      deadline: "2026-07-30T11:59:59Z",
-      program: "2026-09-09T07:00:00Z",
-      timeline: [
-        { label: "Submission", value: "29 Jul 2026 · AoE" },
-        { label: "Notification", value: "07 Aug 2026" },
-        { label: "Workshop", value: "09 Sep 2026" },
+      "description": "Dataset pruning, distillation, synthetic data, and sampling strategies that reduce training cost without discarding signal.",
+      "institutions": "MIT · Princeton · NUS · Carnegie Mellon",
+      "organizers": "George Cazenavette · Xindi Wu · Jun-Yan Zhu · Kai Wang",
+      "deadline": null,
+      "program": "2026-09-09T06:15:00Z",
+      "timeline": [
+        {
+          "label": "Submission",
+          "value": "29 Jul 2026 · AoE (time unspecified)"
+        },
+        {
+          "label": "Notification",
+          "value": "07 Aug 2026"
+        },
+        {
+          "label": "Workshop",
+          "value": "09 Sep 2026 · 08:15 CEST"
+        }
       ],
-      format: "2nd edition · archival + non-archival · OpenReview",
-      url: "https://curateddata.github.io/",
-    },
+      "format": "2nd edition · archival + non-archival · OpenReview",
+      "url": "https://curateddata.github.io/",
+      "deadlinePrecision": "date",
+      "deadlineDate": "2026-07-29",
+      "deadlineLabel": "29 Jul 2026 · AoE (time unspecified)",
+      "programPrecision": "time",
+      "programDate": "2026-09-09",
+      "note": "Completed 09 Sep. The official page still leaves the camera-ready date unspecified.",
+      "checkedAt": "2026-09-20"
+    }
   ];
-
-  const workshopNow = Date.now();
-  workshops.sort((a, b) => {
-    const aDeadline = Date.parse(a.deadline);
-    const bDeadline = Date.parse(b.deadline);
-    const aClosed = aDeadline <= workshopNow;
-    const bClosed = bDeadline <= workshopNow;
-    if (aClosed !== bClosed) return aClosed ? 1 : -1;
-    return aDeadline - bDeadline;
+  const dayMs = 86400000;
+  const escape = (value) => String(value ?? "").replace(/[&<>"']/g, (character) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+  })[character]);
+  const timestamp = (value) => typeof value === "string" && value.includes("T") ? Date.parse(value) : NaN;
+  const dateValue = (value) => {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(value || "")) return NaN;
+    const parsed = Date.parse(`${value}T00:00:00Z`);
+    return Number.isFinite(parsed) && new Date(parsed).toISOString().slice(0, 10) === value ? parsed : NaN;
+  };
+  const dateLabel = (value) => new Date(value).toLocaleDateString("en-GB", {
+    day: "2-digit", month: "short", year: "numeric", timeZone: "UTC",
   });
 
-  list.innerHTML = workshops
-    .map(
-      (workshop) => `
-        <article
-          class="foresight-workshop-card"
-          data-workshop-topics="${workshop.topics.join(" ")}"
-          data-workshop-deadline="${workshop.deadline}"
-          data-workshop-deadline-precision="${workshop.deadlinePrecision || "time"}"
-          data-workshop-deadline-label="${workshop.deadlineLabel || ""}"
-          data-workshop-program="${workshop.program}"
-        >
-          <header>
-            <div>
-              <span>${workshop.host}</span>
-              <small>${workshop.location}</small>
-            </div>
-            <span class="foresight-workshop-status" data-workshop-status>Checking timeline</span>
-          </header>
-          <div class="foresight-workshop-copy">
-            <span>${workshop.shortName}</span>
-            <div>
-              <div class="foresight-workshop-tags">${workshop.topicLabels.map((topic) => `<span>${topic}</span>`).join("")}</div>
-              <h3>${workshop.name}</h3>
-              <p>${workshop.description}</p>
-            </div>
+  // Date-only bounds are used for classification, never for an exact countdown.
+  // A calendar day has ended everywhere 36 hours after its UTC midnight.
+  const classify = (workshop, now) => {
+    const deadlineIsDateOnly = workshop.deadlinePrecision === "date";
+    const deadlineDate = dateValue(workshop.deadlineDate);
+    const deadline = deadlineIsDateOnly
+      ? deadlineDate + 1.5 * dayMs
+      : workshop.deadlinePrecision === "unknown" ? NaN : timestamp(workshop.deadline);
+    if (Number.isFinite(deadline) && now < deadline) {
+      const days = Math.max(1, Math.ceil((deadline - now) / dayMs));
+      return {
+        rank: 0, order: deadline, kind: "open",
+        label: deadlineIsDateOnly
+          ? `Deadline ${dateLabel(deadlineDate)} · Time TBA`
+          : `${days} ${days === 1 ? "day" : "days"} to submit`,
+      };
+    }
+
+    const precision = workshop.programPrecision || (workshop.program ? "time" : "unknown");
+    const program = precision === "time" ? timestamp(workshop.program) : NaN;
+    const programDate = dateValue(workshop.programDate || (Number.isFinite(program) ? workshop.program.slice(0, 10) : ""));
+    const explicitEnd = timestamp(workshop.programEnd);
+    const programEnd = Number.isFinite(explicitEnd) ? explicitEnd : programDate + 1.5 * dayMs;
+    if (precision !== "unknown" && Number.isFinite(programEnd) && now >= programEnd) {
+      return { rank: 3, order: -programEnd, kind: "completed", label: "Completed" };
+    }
+    if (Number.isFinite(program)) {
+      if (now >= program) {
+        return { rank: 1, order: program, kind: "in-progress", label: "Program in progress" };
+      }
+      const days = Math.max(1, Math.ceil((program - now) / dayMs));
+      return { rank: 1, order: program, kind: "scheduled", label: `Program in ${days} ${days === 1 ? "day" : "days"}` };
+    }
+    if (precision === "date" && Number.isFinite(programDate)) {
+      return { rank: 1, order: programDate, kind: "scheduled", label: `Program ${dateLabel(programDate)}` };
+    }
+    return { rank: 2, order: 0, kind: "unconfirmed", label: "Program date TBA" };
+  };
+
+  const displayedWorkshops = workshops.filter((workshop) => !workshop.excluded);
+  list.innerHTML = displayedWorkshops.map((workshop) => `
+    <article
+      class="foresight-workshop-card"
+      data-workshop-topics="${escape(workshop.topics.join(" "))}"
+      data-workshop-deadline="${escape(workshop.deadline)}"
+      data-workshop-deadline-date="${escape(workshop.deadlineDate)}"
+      data-workshop-deadline-precision="${escape(workshop.deadlinePrecision || "time")}"
+      data-workshop-deadline-label="${escape(workshop.deadlineLabel)}"
+      data-workshop-program="${escape(workshop.program)}"
+      data-workshop-program-date="${escape(workshop.programDate)}"
+      data-workshop-program-window="${escape(workshop.programWindow)}"
+      data-workshop-program-precision="${escape(workshop.programPrecision || (workshop.program ? "time" : "unknown"))}"
+      data-workshop-program-end="${escape(workshop.programEnd)}"
+    >
+      <header>
+        <div>
+          <span>${escape(workshop.host)}</span>
+          <small>${escape(workshop.location)}</small>
+        </div>
+        <span class="foresight-workshop-status" data-workshop-status>Checking timeline</span>
+      </header>
+      <div class="foresight-workshop-copy">
+        <span>${escape(workshop.shortName)}</span>
+        <div>
+          <div class="foresight-workshop-tags">${workshop.topicLabels.map((topic) => `<span>${escape(topic)}</span>`).join("")}</div>
+          <h3>${escape(workshop.name)}</h3>
+          <p>${escape(workshop.description)}</p>
+        </div>
+      </div>
+      <div class="foresight-workshop-organizers">
+        <small>Organizer signal</small>
+        <strong>${escape(workshop.institutions)}</strong>
+        <span>${escape(workshop.organizers)}</span>
+      </div>
+      <div class="foresight-workshop-timeline" aria-label="${escape(workshop.name)} timeline">
+        ${workshop.timeline.map((item, index) => `
+          <div>
+            <span>${String(index + 1).padStart(2, "0")}</span>
+            <small>${escape(item.label)}</small>
+            <strong>${escape(item.value)}</strong>
           </div>
-          <div class="foresight-workshop-organizers">
-            <small>Organizer signal</small>
-            <strong>${workshop.institutions}</strong>
-            <span>${workshop.organizers}</span>
-          </div>
-          <div class="foresight-workshop-timeline" aria-label="${workshop.name} timeline">
-            ${workshop.timeline
-              .map(
-                (item, index) => `
-                  <div>
-                    <span>0${index + 1}</span>
-                    <small>${item.label}</small>
-                    <strong>${item.value}</strong>
-                  </div>
-                `,
-              )
-              .join("")}
-          </div>
-          <footer>
-            <span>${workshop.format}</span>
-            <a href="${workshop.url}" target="_blank" rel="noreferrer" aria-label="Open ${workshop.name} official website">
-              <span>Official site</span>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-            </a>
-          </footer>
-        </article>
-      `,
-    )
-    .join("");
+        `).join("")}
+      </div>
+      ${workshop.note ? `<p class="foresight-timeline-note">${escape(workshop.note)}</p>` : ""}
+      <footer>
+        <span>${escape(workshop.format)}</span>
+        <a href="${escape(workshop.url)}" target="_blank" rel="noreferrer" aria-label="Open ${escape(workshop.name)} official website">
+          <span>Official site</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </a>
+      </footer>
+    </article>
+  `).join("");
 
   const count = document.querySelector("[data-workshop-count]");
   const result = document.querySelector("[data-workshop-result]");
   const filterButtons = [...document.querySelectorAll("[data-workshop-filter]")];
   const cards = [...list.querySelectorAll("[data-workshop-topics]")];
-  if (count) count.textContent = String(cards.length);
+  const entries = displayedWorkshops.map((workshop, index) => ({ workshop, card: cards[index], index }));
+  let selectedButton = filterButtons.find((button) => button.getAttribute("aria-pressed") === "true") || filterButtons[0];
 
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const filter = button.dataset.workshopFilter;
-      filterButtons.forEach((candidate) => {
-        const selected = candidate === button;
-        candidate.classList.toggle("is-selected", selected);
-        candidate.setAttribute("aria-pressed", String(selected));
-      });
-
-      let visibleCount = 0;
-      cards.forEach((card) => {
-        const visible = filter === "all" || card.dataset.workshopTopics.split(" ").includes(filter);
-        card.hidden = !visible;
-        if (visible) visibleCount += 1;
-      });
-
-      if (result) {
-        const label = button.textContent.trim();
-        const workshopNoun = visibleCount === 1 ? "workshop" : "workshops";
-        const topicLabel = label === "All" ? "vetted " : `${label} `;
-        result.textContent = `Showing ${visibleCount} ${topicLabel}${workshopNoun}.`;
-      }
+  const applyFilter = () => {
+    const filter = selectedButton?.dataset.workshopFilter || "all";
+    filterButtons.forEach((button) => {
+      const selected = button === selectedButton;
+      button.classList.toggle("is-selected", selected);
+      button.setAttribute("aria-pressed", String(selected));
     });
-  });
+    let visibleCount = 0;
+    entries.forEach(({ workshop, card }) => {
+      const visible = filter === "all" || workshop.topics.includes(filter);
+      card.hidden = !visible;
+      if (visible) visibleCount += 1;
+    });
+    if (count) count.textContent = String(displayedWorkshops.length);
+    if (result) {
+      const topic = filter === "all" ? "" : `${selectedButton.textContent.trim()} `;
+      result.textContent = `Showing ${visibleCount} ${topic}${visibleCount === 1 ? "workshop" : "workshops"}.`;
+    }
+  };
+  filterButtons.forEach((button) => button.addEventListener("click", () => {
+    selectedButton = button;
+    applyFilter();
+  }));
 
   const updateWorkshopStatus = () => {
-    const currentTime = Date.now();
-    cards.forEach((card) => {
-      const deadline = Date.parse(card.dataset.workshopDeadline);
-      const program = Date.parse(card.dataset.workshopProgram);
-      const status = card.querySelector("[data-workshop-status]");
-      const isOpen = deadline > currentTime;
-      const isUpcoming = !isOpen && program > currentTime;
-      const deadlineIsDateOnly = card.dataset.workshopDeadlinePrecision === "date";
-      card.classList.toggle("is-open", isOpen);
-      card.classList.toggle("is-program-upcoming", isUpcoming);
-      card.classList.toggle("is-complete", !isOpen && !isUpcoming);
-
-      if (isOpen) {
-        if (deadlineIsDateOnly) {
-          status.textContent = `Deadline ${card.dataset.workshopDeadlineLabel}`;
-        } else {
-          const days = Math.max(1, Math.ceil((deadline - currentTime) / 86400000));
-          status.textContent = `${days} ${days === 1 ? "day" : "days"} to submit`;
-        }
-      } else if (isUpcoming) {
-        const days = Math.max(1, Math.ceil((program - currentTime) / 86400000));
-        status.textContent = `Program in ${days} ${days === 1 ? "day" : "days"}`;
-      } else {
-        status.textContent = "Completed";
-      }
+    const now = Date.now();
+    entries.forEach((entry) => {
+      entry.state = classify(entry.workshop, now);
+      entry.card.dataset.workshopState = entry.state.kind;
+      entry.card.classList.toggle("is-open", entry.state.kind === "open");
+      entry.card.classList.toggle("is-program-upcoming", entry.state.rank === 1 || entry.state.rank === 2);
+      entry.card.classList.toggle("is-complete", entry.state.kind === "completed");
+      entry.card.querySelector("[data-workshop-status]").textContent = entry.state.label;
     });
+    entries.sort((a, b) => a.state.rank - b.state.rank || a.state.order - b.state.order || a.index - b.index);
+    entries.forEach(({ card }, index) => {
+      if (list.children[index] !== card) list.insertBefore(card, list.children[index] || null);
+    });
+    applyFilter();
   };
-
   updateWorkshopStatus();
   window.setInterval(updateWorkshopStatus, 60000);
 }
@@ -2268,11 +2700,13 @@ function initCollaborationMap() {
 
   L.control.zoom({ position: "bottomright" }).addTo(map);
 
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
+  // Use the public OSM tiles; CARTO now watermarks requests without an API key.
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution:
-      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    maxZoom: 18,
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>',
+    maxZoom: 19,
     minZoom: 0,
+    referrerPolicy: "strict-origin-when-cross-origin",
   }).addTo(map);
 
   map.createPane("countryHighlightPane");
