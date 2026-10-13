@@ -2788,7 +2788,7 @@ function initCollaborationMap() {
     if (region === "all") {
       return {
         city: "OpenEnvision Network",
-        partners: ["50+ collaborators", `${totalRegions} regions`, "6 industry labs"],
+        partners: ["50+ collaborators", `${totalRegions} regions`, "10+ industry labs"],
         description:
           "A growing collaboration network linking open vision research, evaluation, and public artifact releases.",
       };

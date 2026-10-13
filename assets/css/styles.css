@@ -2826,6 +2826,10 @@ canvas {
   pointer-events: none;
 }
 
+#worldatlas .worldfoundry-copy::after {
+  content: "WA";
+}
+
 .worldfoundry-copy h2 {
   max-width: 760px;
   margin: 0;
@@ -8775,6 +8779,7 @@ body.join-page {
 
 .join-page .join-contact-actions {
   width: 100%;
+  grid-template-columns: minmax(0, 1fr);
   gap: 0;
   overflow: hidden;
   border: 1px solid var(--join-line);
