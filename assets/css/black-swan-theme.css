@@ -707,7 +707,6 @@ h3,
 .resource-types-section,
 .worldfoundry-section,
 .catalog-preview-section,
-.release-workflow-section,
 .release-standards-section,
 .news-feed-section,
 .team-showcase,
@@ -719,7 +718,6 @@ h3,
 .research-method-copy h2,
 .publication-section-head h2,
 .resource-section-head h2,
-.release-workflow-copy h2,
 .release-standards-head h2,
 .news-feed-head h2,
 .join-page .join-section-head h2,
@@ -738,7 +736,6 @@ h3,
 .publication-next,
 .worldfoundry-panel,
 .catalog-preview-panel,
-.release-workflow-panel,
 .release-standards-grid,
 .join-value-list article,
 .join-page .join-contact-inner {
@@ -812,14 +809,12 @@ h3,
   background: #fff;
 }
 
-.research-method-panel,
-.release-workflow-panel {
+.research-method-panel {
   border-radius: 0;
   background: var(--ink);
 }
 
 .research-loop-list div,
-.release-steps div,
 .release-standards-grid div {
   background: #fff;
 }
@@ -911,7 +906,6 @@ h3,
   background: var(--ink);
 }
 
-.team-member-featured h2,
 .team-member-featured h3,
 .team-member-featured .member-copy,
 .team-member-featured .member-index {
@@ -1840,7 +1834,7 @@ a.worldfoundry-card-row:focus-visible {
 .news-links a,
 .news-day a,
 .detail-label,
-.network-counts span,
+.network-counts strong,
 .map-toolbar button,
 .partner-strip span,
 .partner-logo-card::after,
@@ -1910,7 +1904,6 @@ a.worldfoundry-card-row:focus-visible {
 .research-method-copy h2,
 .publication-section-head h2,
 .resource-section-head h2,
-.release-workflow-copy h2,
 .release-standards-head h2,
 .news-feed-head h2,
 .join-page .join-section-head h2,
@@ -1949,8 +1942,8 @@ a.worldfoundry-card-row:focus-visible {
   letter-spacing: -0.03em;
 }
 
-.member-copy h2,
-.team-member-featured .member-copy h2 {
+.member-copy h3,
+.team-member-featured .member-copy h3 {
   font-size: 33px;
   font-weight: 800;
   letter-spacing: -0.03em;

@@ -17,7 +17,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=visual-system-20260710-community" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261115-research-covers" />
     <link rel="stylesheet" href="assets/css/black-swan-theme.css?v=20260801-foresight" />
   </head>
   <body data-page="publications">
@@ -94,92 +94,124 @@
       </section>
 
       <section class="publication-feature-section" aria-labelledby="featured-publication-title">
-        <div class="publication-section-head">
-          <div>
-            <p class="section-kicker">Selected Work</p>
-            <h2 id="featured-publication-title">Selected work</h2>
-          </div>
-          <p>
-            Featured OpenEnvision publications will be shown here when the paper, artifact record,
-            and public release links are ready.
-          </p>
+        <div class="publication-section-head compact-head">
+          <h2 id="featured-publication-title">Selected work</h2>
         </div>
 
-        <article class="publication-featured-card publication-template-card" aria-label="Selected publication template">
-          <div class="publication-year-block publication-template-block">
-            <div class="year-block-meta">
-              <span>Year</span>
-              <strong>Venue</strong>
-              <em>Identifier</em>
-            </div>
-            <div class="publication-mini-figure" aria-hidden="true">
-              <div class="mini-figure-head">
-                <span>Paper</span>
-                <span>Artifacts</span>
+        <section class="publication-category" aria-labelledby="world-model-publications-title">
+          <h3 id="world-model-publications-title">World Model</h3>
+          <article class="publication-featured-card publication-paper" id="worldfoundry" aria-labelledby="worldfoundry-paper-title">
+            <div class="publication-feature-copy">
+              <p class="publication-meta">
+                <span>arXiv:2611.10771</span>
+                <time datetime="2026-11-07">7 Nov 2026</time>
+              </p>
+              <h4 id="worldfoundry-paper-title">WorldFoundry: Towards Unified Infrastructure for World Intelligence</h4>
+              <p class="publication-authors">
+                Juanxi Tian, Jiadong Hou, Baiang Li, Xin Lin, Zhengbo Jiao, Weijia Zhang, Yeying Jin,
+                Truong Nguyen, Haitian Zheng, Zhifei Zhang, Jianfei Yang, Ming-Hsuan Yang, Felix Heide,
+                Wei Xiong, Enze Xie, Wanhua Li
+              </p>
+              <p>
+                Open-source infrastructure for running and evaluating world models reproducibly across
+                video, 3D and 4D, embodied action, and interactive environments.
+              </p>
+              <div class="publication-actions">
+                <a href="https://arxiv.org/pdf/2611.10771" aria-label="Read WorldFoundry PDF">Read PDF</a>
+                <a href="https://arxiv.org/abs/2611.10771" aria-label="Read the WorldFoundry abstract on arXiv">Abstract</a>
+                <a href="https://openenvision.org/WorldFoundry/">Project page</a>
               </div>
-              <i class="mini-bar mini-bar-one"></i>
-              <i class="mini-bar mini-bar-two"></i>
-              <i class="mini-bar mini-bar-three"></i>
-              <div class="mini-node-row">
-                <b></b>
-                <b></b>
-                <b></b>
-              </div>
             </div>
-          </div>
+            <figure class="publication-paper-figure">
+              <a href="assets/img/publications/worldfoundry-research-cover.png" aria-label="View the full-size WorldFoundry workflow diagram">
+                <img
+                  src="assets/img/publications/worldfoundry-research-cover.png"
+                  alt="Video, 3D and 4D, interactive worlds, and embodied models share a workflow: discover, prepare, run, inspect, and evaluate. Runs produce reusable artifacts for evaluation."
+                  width="1440"
+                  height="960"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+              <figcaption>
+                Workflow adapted from <a href="https://arxiv.org/html/2611.10771v1#S1.F1">paper Figure 1</a>
+                and the <a href="https://openenvision.org/WorldFoundry/">project documentation</a>.
+              </figcaption>
+            </figure>
+          </article>
+        </section>
 
-          <div class="publication-feature-copy publication-template-copy">
-            <div class="publication-tags" aria-label="Template research fields">
-              <span>Research Area</span>
-              <span>Artifact Type</span>
-              <span>Release Status</span>
-            </div>
-            <h3>Featured publication slot</h3>
-            <p>
-              This template is reserved for a public OpenEnvision paper with authors, abstract,
-              contribution summary, artifact links, and citation metadata.
-            </p>
-
-            <div class="publication-insight-panel" aria-label="Template publication fields">
-              <div>
-                <span>Contribution</span>
-                <p>Briefly state the research contribution and why the work is selected.</p>
+        <section class="publication-category" aria-labelledby="vision-publications-title">
+          <h3 id="vision-publications-title">Vision</h3>
+          <article class="publication-featured-card publication-paper" id="pixel-diffusion" aria-labelledby="pixel-diffusion-paper-title">
+            <div class="publication-feature-copy">
+              <p class="publication-meta">
+                <span>arXiv:2609.38170</span>
+                <time datetime="2026-09-29">29 Sep 2026</time>
+              </p>
+              <h4 id="pixel-diffusion-paper-title">Adversarial Training for Pixel Diffusion</h4>
+              <p class="publication-authors">
+                Xin Lin, Zhifei Zhang, Yuqian Zhou, Haitian Zheng, Zhe Lin, Ming-Hsuan Yang, Truong Nguyen
+              </p>
+              <p>
+                During post-training, the authors add a GAN loss to the predicted clean RGB image
+                at timesteps below a noise cutoff. On DeCo and PixelGen, this restores high-frequency
+                detail and improves fidelity, diversity, and alignment with text prompts.
+              </p>
+              <div class="publication-actions">
+                <a href="https://arxiv.org/pdf/2609.38170" aria-label="Read Adversarial Training for Pixel Diffusion PDF">Read PDF</a>
+                <a href="https://arxiv.org/abs/2609.38170" aria-label="Read the Adversarial Training for Pixel Diffusion abstract on arXiv">Abstract</a>
               </div>
-              <div>
-                <span>Reusable Artifact</span>
-                <p>Attach public code, model, dataset, benchmark, project page, or release notes.</p>
-              </div>
             </div>
-          </div>
-        </article>
+            <figure class="publication-paper-figure">
+              <a href="assets/img/publications/pixel-diffusion-research-cover.png" aria-label="View the full-size Pixel Diffusion results chart">
+                <img
+                  src="assets/img/publications/pixel-diffusion-research-cover.png"
+                  alt="High-frequency power share rises from 2.1% to 3.9% for DeCo and from 3.9% to 6.4% for PixelGen with adversarial post-training."
+                  width="1440"
+                  height="960"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+              <figcaption>
+                High-frequency power increases with GAN post-training in both models.
+                <a href="https://arxiv.org/html/2609.38170v1#S4.SS2">Paper Figure 3</a>
+              </figcaption>
+            </figure>
+          </article>
+        </section>
       </section>
 
       <section class="publication-index-section" aria-labelledby="publication-index-title">
         <div class="publication-section-head compact-head">
-          <div>
-            <p class="section-kicker">Index</p>
-            <h2 id="publication-index-title">Publication list</h2>
-          </div>
+          <h2 id="publication-index-title">Publication index</h2>
         </div>
 
         <div class="publication-index">
-          <article class="publication-index-row publication-index-template" aria-label="Publication list template">
-            <div class="index-year">Year</div>
+          <article class="publication-index-row">
+            <div class="index-year">2026</div>
             <div class="index-main">
-              <p>Venue / identifier</p>
-              <h3>Publication title</h3>
-              <span>One-sentence contribution summary and release status.</span>
+              <p>World Model · arXiv:2611.10771</p>
+              <h3><a href="#worldfoundry">WorldFoundry: Towards Unified Infrastructure for World Intelligence</a></h3>
+              <span>Juanxi Tian et al.</span>
             </div>
-            <div class="index-links index-template-links" aria-label="Template publication links">
-              <span>Paper</span>
-              <span>Artifact</span>
+            <div class="index-links">
+              <a href="https://arxiv.org/pdf/2611.10771" aria-label="Read WorldFoundry PDF">PDF</a>
             </div>
           </article>
 
-          <div class="publication-next">
-            <p class="section-kicker">Coming Next</p>
-            <h3>Forthcoming releases will appear here.</h3>
-          </div>
+          <article class="publication-index-row">
+            <div class="index-year">2026</div>
+            <div class="index-main">
+              <p>Vision · arXiv:2609.38170</p>
+              <h3><a href="#pixel-diffusion">Adversarial Training for Pixel Diffusion</a></h3>
+              <span>Xin Lin et al.</span>
+            </div>
+            <div class="index-links">
+              <a href="https://arxiv.org/pdf/2609.38170" aria-label="Read Adversarial Training for Pixel Diffusion PDF">PDF</a>
+            </div>
+          </article>
         </div>
       </section>
     </main>

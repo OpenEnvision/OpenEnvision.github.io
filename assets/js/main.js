@@ -2151,8 +2151,6 @@ function initSiteReveals() {
     ".resource-section-head > *",
     ".resource-type-card",
     ".worldfoundry-panel",
-    ".release-workflow-copy",
-    ".release-steps > div",
     ".release-standards-grid > div",
     ".team-title-block > *",
     ".team-member",
@@ -2439,13 +2437,14 @@ if (collaborationMap) {
 }
 
 function initCollaborationMap() {
+  const labelEl = document.querySelector("[data-partner-label]");
   const nameEl = document.querySelector("[data-partner-name]");
   const locationEl = document.querySelector("[data-partner-location]");
   const descriptionEl = document.querySelector("[data-partner-description]");
   const filterButtons = [...document.querySelectorAll("[data-map-filter]")];
   const logoCards = [...document.querySelectorAll(".partner-logo-card[data-region]")];
 
-  if (!nameEl || !locationEl || !descriptionEl) return;
+  if (!labelEl || !nameEl || !locationEl || !descriptionEl) return;
 
   const locations = [
     {
@@ -2508,7 +2507,7 @@ function initCollaborationMap() {
       region: "united-states",
       lat: 40.3431,
       lng: -74.6551,
-      partners: ["PrincetonU"],
+      partners: ["Princeton"],
       description: "Academic collaborator in Princeton.",
     },
     {
@@ -2680,8 +2679,6 @@ function initCollaborationMap() {
     },
   ];
 
-  const totalRegions = new Set(locations.map((item) => item.region)).size;
-
   if (!window.L) {
     collaborationMap.classList.add("map-fallback");
     collaborationMap.textContent = "Interactive map loading requires Leaflet.";
@@ -2731,7 +2728,6 @@ function initCollaborationMap() {
     button.addEventListener("click", () => applyFilter(button.dataset.mapFilter || "all"));
   });
 
-  updateInfo(regionSummary("all", locations));
   applyFilter("all", false);
   setTimeout(() => map.invalidateSize(), 150);
 
@@ -2769,7 +2765,7 @@ function initCollaborationMap() {
       }
     }
 
-    updateInfo(regionSummary(region, selected));
+    updateInfo(region, regionSummary(region, selected));
   }
 
   function countryStyle(source, region) {
@@ -2787,14 +2783,17 @@ function initCollaborationMap() {
   function regionSummary(region, selected) {
     if (region === "all") {
       return {
-        city: "OpenEnvision Network",
-        partners: ["50+ collaborators", `${totalRegions} regions`, "10+ industry labs"],
+        city: regionLabels.all,
+        partners: [],
         description:
           "A growing collaboration network linking open vision research, evaluation, and public artifact releases.",
       };
     }
 
-    const partners = selected.flatMap((item) => item.partners);
+    const regionList = document.querySelector(`.partner-strip [data-partner-region="${region}"]`);
+    const partners = regionList
+      ? regionList.textContent.split("·").map((partner) => partner.trim()).filter(Boolean)
+      : selected.flatMap((item) => item.partners);
     return {
       city: regionLabels[region],
       partners,
@@ -2802,8 +2801,10 @@ function initCollaborationMap() {
     };
   }
 
-  function updateInfo(item) {
+  function updateInfo(region, item) {
+    labelEl.textContent = region === "all" ? "All regions" : "Selected region";
     nameEl.textContent = item.city;
+    locationEl.hidden = !item.partners.length;
     locationEl.textContent = item.partners.join(" · ");
     descriptionEl.textContent = item.description;
   }

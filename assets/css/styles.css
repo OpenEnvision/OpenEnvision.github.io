@@ -1213,7 +1213,7 @@ canvas {
   letter-spacing: 0;
 }
 
-.network-head p:last-child {
+.network-overview > p {
   margin: 0;
   color: rgba(255, 255, 255, 0.68);
   font-size: 17px;
@@ -1340,7 +1340,8 @@ canvas {
   min-height: 510px;
   padding: 30px;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 16px;
 }
 
 .detail-label {
@@ -1352,41 +1353,43 @@ canvas {
 }
 
 .network-detail h2 {
-  margin: 18px 0 0;
+  margin: 0;
   font-size: 36px;
   line-height: 1;
   letter-spacing: 0;
 }
 
 .network-detail p {
+  margin: 0;
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.58;
 }
 
 .network-counts {
   display: grid;
-  gap: 1px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.1);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(10px, 1.2vw, 18px);
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
 }
 
-.network-counts span {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 14px;
-  padding: 15px 16px;
-  color: rgba(255, 255, 255, 0.68);
+.network-counts li {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  padding-top: 12px;
+  border-top: 2px solid var(--red);
+  color: rgba(255, 255, 255, 0.76);
   font-size: 13px;
-  font-weight: 760;
-  background: rgba(5, 8, 17, 0.52);
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 .network-counts strong {
   color: #fff;
-  font-size: 24px;
+  font-size: clamp(30px, 3.15vw, 44px);
+  line-height: 1;
 }
 
 .partner-strip {
@@ -1563,6 +1566,18 @@ canvas {
   margin-bottom: 10px;
 }
 
+.team-group + .team-group {
+  margin-top: clamp(40px, 6vw, 72px);
+}
+
+.team-group > h2 {
+  margin: 0 0 18px;
+  font-size: clamp(34px, 3.8vw, 46px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
 .team-roster {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1675,7 +1690,7 @@ canvas {
   color: rgba(255, 255, 255, 0.62);
 }
 
-.member-copy h2 {
+.member-copy h3 {
   max-width: 460px;
   margin: 0;
   font-size: 40px;
@@ -1683,7 +1698,7 @@ canvas {
   letter-spacing: 0;
 }
 
-.team-member-featured .member-copy h2 {
+.team-member-featured .member-copy h3 {
   font-size: 40px;
 }
 
@@ -2453,7 +2468,6 @@ canvas {
 .resources-hero-inner,
 .resource-section-head,
 .resource-type-grid,
-.release-workflow-panel,
 .release-standards-head,
 .release-standards-grid {
   position: relative;
@@ -2642,7 +2656,6 @@ canvas {
 }
 
 .resource-types-section,
-.release-workflow-section,
 .release-standards-section {
   padding: 104px 64px 0;
   scroll-margin-top: 92px;
@@ -2661,7 +2674,6 @@ canvas {
 }
 
 .resource-section-head h2,
-.release-workflow-copy h2,
 .release-standards-head h2 {
   margin: 0;
   font-size: 56px;
@@ -2670,8 +2682,6 @@ canvas {
 }
 
 .resource-section-head p:last-child,
-.release-workflow-copy p:last-child,
-.release-steps p,
 .release-standards-grid p,
 .resource-type-card > span:last-child {
   color: var(--muted);
@@ -3092,60 +3102,6 @@ a.worldfoundry-card-row:focus-visible {
   text-transform: uppercase;
 }
 
-.release-workflow-panel {
-  display: grid;
-  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1fr);
-  gap: 1px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--line);
-  box-shadow: var(--shadow);
-}
-
-.release-workflow-copy {
-  padding: 44px;
-  background: #fff;
-}
-
-.release-workflow-copy p:last-child {
-  max-width: 620px;
-  margin: 22px 0 0;
-  font-size: 17px;
-}
-
-.release-steps {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
-  background: var(--line);
-}
-
-.release-steps div {
-  min-height: 210px;
-  padding: 32px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(247, 247, 242, 0.92)),
-    #fafaf7;
-}
-
-.release-steps span {
-  color: var(--green);
-  font-size: 12px;
-  font-weight: 900;
-}
-
-.release-steps h3 {
-  margin: 46px 0 12px;
-  font-size: 26px;
-  line-height: 1.1;
-}
-
-.release-steps p {
-  margin: 0;
-  font-size: 14px;
-}
-
 .release-standards-head {
   margin-bottom: 28px;
 }
@@ -3332,7 +3288,6 @@ a.worldfoundry-card-row:focus-visible {
   .resource-types-section,
   .worldfoundry-section,
   .catalog-preview-section,
-  .release-workflow-section,
   .release-standards-section,
   .join-landing,
   .collaboration-paths-section,
@@ -3379,7 +3334,6 @@ a.worldfoundry-card-row:focus-visible {
   .resource-section-head,
   .worldfoundry-panel,
   .catalog-preview-panel,
-  .release-workflow-panel,
   .join-landing-inner,
   .join-section-head,
   .join-process-panel,
@@ -3554,7 +3508,6 @@ a.worldfoundry-card-row:focus-visible {
   .research-method-copy h2,
   .publication-section-head h2,
   .resource-section-head h2,
-  .release-workflow-copy h2,
   .release-standards-head h2,
   .join-section-head h2,
   .join-process-copy h2,
@@ -3607,7 +3560,7 @@ a.worldfoundry-card-row:focus-visible {
     font-size: 92px;
   }
 
-  .team-member-featured .member-copy h2 {
+  .team-member-featured .member-copy h3 {
     font-size: 52px;
   }
 
@@ -3668,7 +3621,6 @@ a.worldfoundry-card-row:focus-visible {
   .resource-types-section,
   .worldfoundry-section,
   .catalog-preview-section,
-  .release-workflow-section,
   .release-standards-section,
   .join-landing,
   .collaboration-paths-section,
@@ -3826,8 +3778,7 @@ a.worldfoundry-card-row:focus-visible {
 
   .resource-types-section,
   .worldfoundry-section,
-  .catalog-preview-section,
-  .release-workflow-section {
+  .catalog-preview-section {
     padding-top: 78px;
   }
 
@@ -3841,7 +3792,6 @@ a.worldfoundry-card-row:focus-visible {
   }
 
   .resource-type-grid,
-  .release-steps,
   .release-standards-grid {
     grid-template-columns: 1fr;
   }
@@ -3896,19 +3846,9 @@ a.worldfoundry-card-row:focus-visible {
     min-height: auto;
   }
 
-  .release-workflow-copy,
-  .release-steps div,
   .release-standards-grid div {
     padding: 26px;
-  }
-
-  .release-steps div,
-  .release-standards-grid div {
     min-height: auto;
-  }
-
-  .release-steps h3 {
-    margin-top: 28px;
   }
 
   .release-standards-grid p {
@@ -4105,7 +4045,7 @@ a.worldfoundry-card-row:focus-visible {
     font-size: 40px;
   }
 
-  .network-head p:last-child {
+  .network-overview > p {
     font-size: 15px;
   }
 
@@ -4147,8 +4087,8 @@ a.worldfoundry-card-row:focus-visible {
     font-size: 104px;
   }
 
-  .member-copy h2,
-  .team-member-featured .member-copy h2 {
+  .member-copy h3,
+  .team-member-featured .member-copy h3 {
     font-size: 36px;
   }
 
@@ -4171,7 +4111,6 @@ a.worldfoundry-card-row:focus-visible {
   .research-method-copy h2,
   .publication-section-head h2,
   .resource-section-head h2,
-  .release-workflow-copy h2,
   .release-standards-head h2 {
     font-size: 36px;
   }
@@ -7186,7 +7125,6 @@ summary:focus-visible {
 .resource-type-grid,
 .worldfoundry-panel,
 .catalog-preview-panel,
-.release-workflow-panel,
 .release-standards-head,
 .release-standards-grid {
   width: min(var(--page-width), 100%);
@@ -7299,7 +7237,6 @@ summary:focus-visible {
 .resource-types-section,
 .worldfoundry-section,
 .catalog-preview-section,
-.release-workflow-section,
 .release-standards-section,
 .news-feed-section,
 .team-showcase,
@@ -7327,7 +7264,6 @@ summary:focus-visible {
 .research-method-copy h2,
 .publication-section-head h2,
 .resource-section-head h2,
-.release-workflow-copy h2,
 .release-standards-head h2,
 .news-feed-head h2,
 .join-page .join-section-head h2,
@@ -7345,7 +7281,6 @@ summary:focus-visible {
 .publication-next,
 .worldfoundry-panel,
 .catalog-preview-panel,
-.release-workflow-panel,
 .release-standards-grid,
 .join-value-list article,
 .join-page .join-contact-inner {
@@ -7412,14 +7347,12 @@ summary:focus-visible {
   background: transparent;
 }
 
-.research-method-panel,
-.release-workflow-panel {
+.research-method-panel {
   border-radius: 5px;
   background: var(--line);
 }
 
 .research-loop-list div,
-.release-steps div,
 .release-standards-grid div {
   background: #fff;
 }
@@ -7511,8 +7444,7 @@ summary:focus-visible {
 /* Publications and resource library */
 .publication-featured-card,
 .worldfoundry-panel,
-.catalog-preview-panel,
-.release-workflow-panel {
+.catalog-preview-panel {
   overflow: hidden;
 }
 
@@ -7520,6 +7452,108 @@ summary:focus-visible {
 .worldfoundry-release-card,
 .catalog-board {
   background: var(--ink);
+}
+
+.publication-category {
+  width: min(var(--page-width), 100%);
+  margin-inline: auto;
+}
+
+.publication-category + .publication-category {
+  margin-top: clamp(32px, 5vw, 64px);
+}
+
+.publication-category > h3 {
+  margin: 0 0 14px;
+  font-size: clamp(20px, 2.2vw, 28px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.publication-featured-card.publication-paper {
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  min-height: 0;
+  scroll-margin-top: 106px;
+  border-inline-start: 4px solid var(--red);
+}
+
+.publication-paper .publication-feature-copy {
+  align-self: center;
+  padding: clamp(22px, 3.4vw, 46px);
+}
+
+.publication-paper .publication-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin: 0 0 14px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.publication-meta span {
+  color: var(--red-dark);
+}
+
+.publication-paper .publication-feature-copy h4 {
+  margin: 0;
+  font-size: clamp(24px, 3.2vw, 42px);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+
+.publication-paper .publication-authors {
+  margin: 16px 0 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.publication-paper .publication-actions a {
+  width: auto;
+}
+
+.publication-paper-figure {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  margin: 0;
+  padding: clamp(16px, 2.4vw, 32px);
+  border-inline-start: 1px solid var(--line);
+  background: #f6f6f6;
+}
+
+.publication-paper-figure img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+}
+
+.publication-paper-figure > a:hover img {
+  border-color: var(--ink);
+}
+
+.publication-paper-figure figcaption {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.publication-paper-figure figcaption a,
+.index-main h3 a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .publication-featured-card.publication-paper {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .publication-paper-figure {
+    border-top: 1px solid var(--line);
+    border-inline-start: 0;
+  }
 }
 
 .publication-index {
@@ -8022,7 +8056,6 @@ summary:focus-visible {
   .research-method-copy h2,
   .publication-section-head h2,
   .resource-section-head h2,
-  .release-workflow-copy h2,
   .release-standards-head h2,
   .news-feed-head h2,
   .join-page .join-section-head h2,
